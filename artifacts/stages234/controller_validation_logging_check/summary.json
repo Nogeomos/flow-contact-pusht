@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "method": "rule",
+  "split": "validation",
+  "episodes": [
+    53
+  ],
+  "max_steps_per_episode": 300,
+  "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+  "successes": 0,
+  "count": 1,
+  "success_rate": 0.0,
+  "success_rate_wilson_95": [
+    0.0,
+    0.7934506856227534
+  ],
+  "mean_max_coverage": 0.9315883568703459,
+  "mean_final_coverage": 0.9213817483034441,
+  "mean_final_point_rmse": 4.067382779671051,
+  "mean_steps": 300.0,
+  "total_wall_time_seconds": 1.544678299997031,
+  "total_candidate_rollouts": 190,
+  "total_candidate_physics_substeps": 50410,
+  "total_candidate_rollout_wall_time_seconds": 0.7234909999860974,
+  "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+  "replanning_schedule": "Replan after completing the queued approach, push and hold; executed states are observed every action.",
+  "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+  "checkpoint": null,
+  "checkpoint_sha256": null,
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+  "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+  "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+  "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+  "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+  "controller_note": "8 contact candidates x 2 push lengths, shared simulator-dynamics candidate model and visibility-graph paths; collision warm-start caches are rebuilt",
+  "results": [
+    {
+      "episode_index": 53,
+      "method": "rule",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9213817483034441,
+      "max_coverage": 0.9315883568703459,
+      "wall_time_seconds": 1.544678299997031,
+      "final_point_rmse": 4.067382779671051,
+      "final_angle_error_deg": 1.409717404121267,
+      "contact_intervals": 113,
+      "contact_events": 944,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        75.0,
+        335.0,
+        339.6544828049772,
+        377.54628847074616,
+        3.3964657475986373
+      ],
+      "final_state": [
+        152.96292869824958,
+        319.4523671650721,
+        259.3082921235636,
+        259.63800232816044,
+        0.8100023736220318
+      ],
+      "candidate_rollouts": 190,
+      "candidate_physics_substeps": 50410,
+      "candidate_rollout_wall_time_seconds": 0.7234909999860974
+    }
+  ]
+}

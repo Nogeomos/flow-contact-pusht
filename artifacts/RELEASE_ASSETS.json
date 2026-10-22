@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "release_tag": "v1.0.0-experiments",
+  "assets": [
+    {
+      "filename": "models.zip",
+      "sha256": "d4d2c96ac7da59f9cab13e6b84f9324118e2ba3d6d3389f65a647c9862bf212e",
+      "bytes": 22979298,
+      "file_count": 11
+    },
+    {
+      "filename": "evidence.zip",
+      "sha256": "28b12e3595fa2729bfbf29e6635896f419ba2f29d926fbe7c7dd3060f4c4b122",
+      "bytes": 222688037,
+      "file_count": 1233
+    }
+  ]
+}

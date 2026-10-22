@@ -1,0 +1,106 @@
+{
+  "purpose": "Post-hoc two-case diagnostic, not a wall/corner benchmark or additional samples in the original test score.",
+  "checkpoint_sha256": "3a7dd6a7164dee9f3a30d62149cf8d50ab28632afa932636ea79aed943af3d11",
+  "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+  "results": [
+    {
+      "name": "left_wall",
+      "label": "左墙附近",
+      "initial_state": [
+        180.0,
+        230.0,
+        68.0,
+        170.0,
+        0.0
+      ],
+      "final_state": [
+        186.75141227600975,
+        252.0829805800342,
+        255.79233339152412,
+        255.34987676925365,
+        0.7547691892750744
+      ],
+      "steps": 261,
+      "success": true,
+      "max_coverage": 0.9570320141974633,
+      "final_coverage": 0.9570320141974633,
+      "contact_intervals": 104,
+      "no_feasible_plans": 0,
+      "seconds": 1.0362213999978849
+    },
+    {
+      "name": "top_left_corner",
+      "label": "左上墙角",
+      "initial_state": [
+        180.0,
+        170.0,
+        68.0,
+        128.0,
+        3.141592653589793
+      ],
+      "final_state": [
+        153.29810851350985,
+        309.954655230645,
+        256.40830581275014,
+        259.4383391379172,
+        0.8508822026736627
+      ],
+      "steps": 300,
+      "success": false,
+      "max_coverage": 0.914682925364544,
+      "final_coverage": 0.914682925364544,
+      "contact_intervals": 117,
+      "no_feasible_plans": 1,
+      "seconds": 1.0485302999950363
+    }
+  ],
+  "pusher_wall_probes": [
+    {
+      "target_x": 0.0,
+      "actual_xy": [
+        2.652045467078579e-08,
+        100.0
+      ],
+      "pusher_radius": 15.0,
+      "left_wall_clearance": -21.999999973479547,
+      "right_wall_clearance": 488.99999997347953
+    },
+    {
+      "target_x": 21.0,
+      "actual_xy": [
+        21.000000020951163,
+        100.0
+      ],
+      "pusher_radius": 15.0,
+      "left_wall_clearance": -0.9999999790488374,
+      "right_wall_clearance": 467.9999999790488
+    },
+    {
+      "target_x": 491.0,
+      "actual_xy": [
+        490.99999997586644,
+        100.0
+      ],
+      "pusher_radius": 15.0,
+      "left_wall_clearance": 468.99999997586644,
+      "right_wall_clearance": -1.9999999758664444
+    },
+    {
+      "target_x": 512.0,
+      "actual_xy": [
+        511.99999997029715,
+        100.0
+      ],
+      "pusher_radius": 15.0,
+      "left_wall_clearance": 489.99999997029715,
+      "right_wall_clearance": -22.999999970297154
+    }
+  ],
+  "known_limitations": [
+    "No explicit wall features in learned scores; absolute poses present.",
+    "Desired flow ignores wall feasibility.",
+    "Controller center clipping 21..491 is looser than full circle clearance 22..489.",
+    "Kinematic pusher is collision geometry but is not pushed back by static walls.",
+    "Candidate search has no explicit recovery strategy or requirement to improve current error."
+  ]
+}

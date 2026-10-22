@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "materialized_windows_per_configuration": 9,
+  "selected_windows": {
+    "train": [
+      [
+        0,
+        0
+      ],
+      [
+        107,
+        131
+      ],
+      [
+        204,
+        124
+      ]
+    ],
+    "validation": [
+      [
+        11,
+        0
+      ],
+      [
+        116,
+        116
+      ],
+      [
+        195,
+        91
+      ]
+    ],
+    "test": [
+      [
+        12,
+        0
+      ],
+      [
+        102,
+        32
+      ],
+      [
+        205,
+        40
+      ]
+    ]
+  },
+  "configurations": [
+    {
+      "points": 32,
+      "label": "soft",
+      "windows": 9,
+      "max_absolute_errors": {
+        "flow": 1.1859104009914745e-07,
+        "geometry": 1.1856206860727525e-07,
+        "action": 5.571360417455651e-08,
+        "target": 2.9053808914270007e-08,
+        "distance": 5.413676035459503e-06
+      },
+      "status": "passed"
+    },
+    {
+      "points": 32,
+      "label": "hard",
+      "windows": 9,
+      "max_absolute_errors": {
+        "flow": 1.1859104009914745e-07,
+        "geometry": 1.1856206860727525e-07,
+        "action": 5.571360417455651e-08,
+        "target": 0.0,
+        "distance": 5.413676035459503e-06
+      },
+      "status": "passed"
+    },
+    {
+      "points": 64,
+      "label": "soft",
+      "windows": 9,
+      "max_absolute_errors": {
+        "flow": 1.1859104009914745e-07,
+        "geometry": 1.1856206860727525e-07,
+        "action": 5.571360417455651e-08,
+        "target": 2.9053808914270007e-08,
+        "distance": 6.227822410664885e-06
+      },
+      "status": "passed"
+    },
+    {
+      "points": 64,
+      "label": "hard",
+      "windows": 9,
+      "max_absolute_errors": {
+        "flow": 1.1859104009914745e-07,
+        "geometry": 1.1856206860727525e-07,
+        "action": 5.571360417455651e-08,
+        "target": 0.0,
+        "distance": 6.227822410664885e-06
+      },
+      "status": "passed"
+    },
+    {
+      "points": 128,
+      "label": "soft",
+      "windows": 9,
+      "max_absolute_errors": {
+        "flow": 1.1859104009914745e-07,
+        "geometry": 1.1856206860727525e-07,
+        "action": 5.571360417455651e-08,
+        "target": 2.9141565605073083e-08,
+        "distance": 7.589937837337857e-06
+      },
+      "status": "passed"
+    },
+    {
+      "points": 128,
+      "label": "hard",
+      "windows": 9,
+      "max_absolute_errors": {
+        "flow": 1.1859104009914745e-07,
+        "geometry": 1.1856206860727525e-07,
+        "action": 5.571360417455651e-08,
+        "target": 0.0,
+        "distance": 7.589937837337857e-06
+      },
+      "status": "passed"
+    }
+  ],
+  "script_sha256": "64fb1cd62c49cae315c5394ccff95d95b7e1a153004456f48aa391b7d1972011",
+  "reviewed_contact_learning_sha256": "010148dae7a26a5ed724e0fcaf181a242bf6536b18c8e903cea7e3ccbe77d289",
+  "scope": "Numerical feature/supervision consistency only; no trained performance claim."
+}

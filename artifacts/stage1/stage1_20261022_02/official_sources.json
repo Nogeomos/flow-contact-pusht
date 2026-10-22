@@ -1,0 +1,173 @@
+{
+  "created_at_utc": "2026-10-22T08:04:38.083626+00:00",
+  "status": "passed",
+  "sources": [
+    {
+      "name": "dataset_metadata",
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/meta/info.json",
+      "http_status": 200,
+      "final_url": "https://huggingface.co/api/resolve-cache/datasets/lerobot/pusht/7628202a2180972f291ba1bc6723834921e72c19/meta%2Finfo.json?%2Fdatasets%2Flerobot%2Fpusht%2Fresolve%2F7628202a2180972f291ba1bc6723834921e72c19%2Fmeta%2Finfo.json=&etag=%22de3c71d108d220f5d500416542bb5b8a49574eaa%22",
+      "bytes": 2261,
+      "sha256": "0b46becc21ad92b117da1e95daf44110bb21d0bde75638b4ad167c8ccd959d38",
+      "matches_local": true,
+      "metadata": {
+        "codebase_version": "v3.0",
+        "robot_type": "unknown",
+        "total_episodes": 206,
+        "total_frames": 25650,
+        "total_tasks": 1,
+        "chunks_size": 1000,
+        "fps": 10,
+        "splits": {
+          "train": "0:206"
+        },
+        "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+        "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+        "features": {
+          "observation.image": {
+            "dtype": "video",
+            "shape": [
+              96,
+              96,
+              3
+            ],
+            "names": [
+              "height",
+              "width",
+              "channel"
+            ],
+            "video_info": {
+              "video.fps": 10.0,
+              "video.codec": "av1",
+              "video.pix_fmt": "yuv420p",
+              "video.is_depth_map": false,
+              "has_audio": false
+            }
+          },
+          "observation.state": {
+            "dtype": "float32",
+            "shape": [
+              2
+            ],
+            "names": {
+              "motors": [
+                "motor_0",
+                "motor_1"
+              ]
+            },
+            "fps": 10.0
+          },
+          "action": {
+            "dtype": "float32",
+            "shape": [
+              2
+            ],
+            "names": {
+              "motors": [
+                "motor_0",
+                "motor_1"
+              ]
+            },
+            "fps": 10.0
+          },
+          "episode_index": {
+            "dtype": "int64",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          },
+          "frame_index": {
+            "dtype": "int64",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          },
+          "timestamp": {
+            "dtype": "float32",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          },
+          "next.reward": {
+            "dtype": "float32",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          },
+          "next.done": {
+            "dtype": "bool",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          },
+          "next.success": {
+            "dtype": "bool",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          },
+          "index": {
+            "dtype": "int64",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          },
+          "task_index": {
+            "dtype": "int64",
+            "shape": [
+              1
+            ],
+            "names": null,
+            "fps": 10.0
+          }
+        },
+        "data_files_size_in_mb": 100,
+        "video_files_size_in_mb": 500
+      },
+      "status": "passed"
+    },
+    {
+      "name": "gym-pusht",
+      "url": "https://raw.githubusercontent.com/huggingface/gym-pusht/e49cf07fd32ad6e69443af2921dd8343b0f9ad7d/README.md",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/huggingface/gym-pusht/e49cf07fd32ad6e69443af2921dd8343b0f9ad7d/README.md",
+      "bytes": 4666,
+      "sha256": "4583e76de9955773d31142c9bbc532008dcad7dc1c46c4251248ff9bdcc91001",
+      "matches_local": true,
+      "status": "passed"
+    },
+    {
+      "name": "diffusion_policy",
+      "url": "https://raw.githubusercontent.com/real-stanford/diffusion_policy/5ba07ac6661db573af695b419a7947ecb704690f/README.md",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/real-stanford/diffusion_policy/5ba07ac6661db573af695b419a7947ecb704690f/README.md",
+      "bytes": 25219,
+      "sha256": "51b6717d694a4ea4b476cf07c64651dc58643402beb0a27cda38a87cc58334b0",
+      "matches_local": true,
+      "status": "passed"
+    },
+    {
+      "name": "project_website",
+      "url": "https://diffusion-policy.cs.columbia.edu/",
+      "http_status": 200,
+      "final_url": "https://diffusion-policy.cs.columbia.edu/",
+      "bytes": 35723,
+      "sha256": "361b244003e973cefe369dc0b448a8ef7c5c2892f1a7567b8ddc603954bb584a",
+      "status": "passed"
+    }
+  ]
+}

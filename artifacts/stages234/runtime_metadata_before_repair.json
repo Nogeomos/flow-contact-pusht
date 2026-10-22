@@ -1,0 +1,40 @@
+{
+  "python": ".\\.venv-train\\Scripts\\python.exe",
+  "duplicate_metadata": {
+    "filelock": [
+      {
+        "version": "3.32.3",
+        "path": ".\\.venv-train\\Lib\\site-packages\\filelock-3.32.3.dist-info"
+      },
+      {
+        "version": "4.2.4",
+        "path": ".\\.venv-train\\Lib\\site-packages\\filelock-4.2.4.dist-info"
+      }
+    ],
+    "fsspec": [
+      {
+        "version": "2026.7.0",
+        "path": ".\\.venv-train\\Lib\\site-packages\\fsspec-2026.7.0.dist-info"
+      },
+      {
+        "version": "2026.9.0",
+        "path": ".\\.venv-train\\Lib\\site-packages\\fsspec-2026.9.0.dist-info"
+      }
+    ]
+  },
+  "active_package_record_checks": {
+    "filelock": {
+      "selected_version": "3.32.3",
+      "selected_metadata": ".\\.venv-train\\Lib\\site-packages\\filelock-3.32.3.dist-info",
+      "checked_source_files": 22,
+      "mismatches": []
+    },
+    "fsspec": {
+      "selected_version": "2026.7.0",
+      "selected_metadata": ".\\.venv-train\\Lib\\site-packages\\fsspec-2026.7.0.dist-info",
+      "checked_source_files": 57,
+      "mismatches": []
+    }
+  },
+  "all_selected_source_records_match": true
+}

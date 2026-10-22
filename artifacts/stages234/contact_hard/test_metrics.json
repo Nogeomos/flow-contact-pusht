@@ -1,0 +1,37 @@
+{
+  "split": "test",
+  "checkpoint_sha256": "65b3dc69ee7cfbf5759c23209a707e83f78856eced643148208d8fd572bd41ec",
+  "chosen_epoch": 39,
+  "config": {
+    "command": "train",
+    "output": "runs\\stages234_20261022\\contact_hard",
+    "points": 64,
+    "mode": "sequence",
+    "label": "hard",
+    "task": "contact",
+    "seed": 0,
+    "epochs": 40,
+    "batch": 128,
+    "lr": 0.001,
+    "device": "cuda",
+    "torch": "2.7.1+cu126",
+    "source_sha256": "010148dae7a26a5ed724e0fcaf181a242bf6536b18c8e903cea7e3ccbe77d289",
+    "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+    "label_semantics": "union of geometric contacts during next eight control intervals",
+    "input": "current geometry, pusher, 8 future material-point displacements in anchor body frame",
+    "online_flow": "must come from current-state goal planner, never held-out future trajectory"
+  },
+  "metrics": {
+    "windows": 2281,
+    "contact_windows": 1497,
+    "top1_within10": 0.9412157648630595,
+    "top5_within10": 0.9839679358717435,
+    "mean_contact_distance": 2.9694244861602783,
+    "median_contact_distance": 0.14074760675430298,
+    "episode_macro_top1_within10": 0.9396333592508981,
+    "point_average_precision": 0.8577107581338753,
+    "presence_f1": 0.9902455432223344,
+    "presence_balanced_accuracy": 0.9890989461917031,
+    "no_contact_false_positive_rate": 0.00510204081632653
+  }
+}

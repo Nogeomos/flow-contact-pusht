@@ -1,0 +1,213 @@
+{
+  "status": "partial_passed",
+  "created_at_utc": "2026-10-22T09:35:10.901781+00:00",
+  "script_sha256": "0e5aef12919cb1254424c036f0ba4c09921ba6ebc8543861f99443cb2a82a17d",
+  "command": [
+    "research/verify_experiments.py",
+    "--partial",
+    "--output",
+    "runs/stages234_20261022/acceptance_interim_01.json"
+  ],
+  "partial": true,
+  "errors": [],
+  "controller_freeze": "runs\\stages234_20261022\\controller_freeze_v2.json",
+  "closed_loop": [
+    {
+      "path": "runs\\stages234_20261022\\rule_test\\summary.json",
+      "method": "rule",
+      "checkpoint": null,
+      "summary_sha256": "163efa5afbce8838fad298d6e8db5f7b50470c297e716959daf31c22e7e806e2",
+      "summary": {
+        "episodes": 21,
+        "episode_ids": [
+          12,
+          41,
+          55,
+          62,
+          68,
+          71,
+          83,
+          89,
+          96,
+          97,
+          102,
+          105,
+          115,
+          121,
+          134,
+          145,
+          157,
+          159,
+          162,
+          170,
+          205
+        ],
+        "successes": 13,
+        "success_rate": 0.6190476190476191,
+        "success_rate_wilson_95": [
+          0.4087865377511576,
+          0.7924898863143551
+        ],
+        "mean_final_coverage": 0.8711609294515192,
+        "median_final_coverage": 0.9532316157803913,
+        "mean_max_coverage": 0.8832685474377386,
+        "mean_steps": 256.8095238095238,
+        "statistical_unit": "episode; single trained checkpoint unless explicitly stated otherwise",
+        "success_criterion": "max_coverage >= 0.95"
+      },
+      "trajectory_checks": [
+        {
+          "episode_index": 12,
+          "steps": 300,
+          "max_coverage_recompute_error": 5.551115123125783e-16,
+          "max_current_state_planner_flow_error": 1.8884837231780693e-06,
+          "trajectory_sha256": "4e43c1935313d977e88e2ce1023162c26c14a9e79595c7eab73f31d5d7363b18"
+        },
+        {
+          "episode_index": 41,
+          "steps": 264,
+          "max_coverage_recompute_error": 6.661338147750939e-16,
+          "max_current_state_planner_flow_error": 1.9069054246756423e-06,
+          "trajectory_sha256": "63424f35bd3d7156d4ba975322de1657502de00d533344333d37686d874870f8"
+        },
+        {
+          "episode_index": 55,
+          "steps": 186,
+          "max_coverage_recompute_error": 4.440892098500626e-16,
+          "max_current_state_planner_flow_error": 1.8928774352389155e-06,
+          "trajectory_sha256": "3ff11f378fe9134691f8c4e616398d7724066d1659246076bf9cfa6d0f8ba4bc"
+        },
+        {
+          "episode_index": 62,
+          "steps": 198,
+          "max_coverage_recompute_error": 1.3322676295501878e-15,
+          "max_current_state_planner_flow_error": 1.8962191177251952e-06,
+          "trajectory_sha256": "e1ee7f0edc18bbef5338e703bd268eb9dd87becb454a9d1a86e18257a76086ef"
+        },
+        {
+          "episode_index": 68,
+          "steps": 240,
+          "max_coverage_recompute_error": 9.992007221626409e-16,
+          "max_current_state_planner_flow_error": 1.903000566016999e-06,
+          "trajectory_sha256": "5ac862972544cc83d6815a99999dbb744255e771db3a66ef0f7d84194cadd432"
+        },
+        {
+          "episode_index": 71,
+          "steps": 300,
+          "max_coverage_recompute_error": 9.992007221626409e-16,
+          "max_current_state_planner_flow_error": 1.9045456838284736e-06,
+          "trajectory_sha256": "c9270e3459033ac83a4a0ae558106649ac7403d6db66bb917b9f66e609dac1ce"
+        },
+        {
+          "episode_index": 83,
+          "steps": 300,
+          "max_coverage_recompute_error": 1.2212453270876722e-15,
+          "max_current_state_planner_flow_error": 1.9062010210291191e-06,
+          "trajectory_sha256": "5f3113dd099737ed48a46ece4bceea96e3caae754c437b1061bd4c73619dcf09"
+        },
+        {
+          "episode_index": 89,
+          "steps": 300,
+          "max_coverage_recompute_error": 8.881784197001252e-16,
+          "max_current_state_planner_flow_error": 1.907347780161217e-06,
+          "trajectory_sha256": "68d5e1bdf5d1f33c7746571c582697774bf0e0ce7a669a5ce3aa655345932fcb"
+        },
+        {
+          "episode_index": 96,
+          "steps": 300,
+          "max_coverage_recompute_error": 7.216449660063518e-16,
+          "max_current_state_planner_flow_error": 1.8847364344765083e-06,
+          "trajectory_sha256": "606b1322994290e9a9a1bfa2dc71697b5f315d843bf27b91a8520af564fce0a8"
+        },
+        {
+          "episode_index": 97,
+          "steps": 248,
+          "max_coverage_recompute_error": 4.440892098500626e-16,
+          "max_current_state_planner_flow_error": 1.9039181324842502e-06,
+          "trajectory_sha256": "5c70cb97311af810de203a54eecabc03977e03ef9791256746906ff863c1b6ad"
+        },
+        {
+          "episode_index": 102,
+          "steps": 300,
+          "max_coverage_recompute_error": 7.771561172376096e-16,
+          "max_current_state_planner_flow_error": 1.902370854622859e-06,
+          "trajectory_sha256": "7c61230ba93e6687de6c75498b940e90ac33a3e16e88e8189e06742487c3893d"
+        },
+        {
+          "episode_index": 105,
+          "steps": 277,
+          "max_coverage_recompute_error": 9.992007221626409e-16,
+          "max_current_state_planner_flow_error": 1.906855686684139e-06,
+          "trajectory_sha256": "43039dc45aff7727451e86a5bf96212d79b08116e7cadaecb275b3e67a4add49"
+        },
+        {
+          "episode_index": 115,
+          "steps": 247,
+          "max_coverage_recompute_error": 8.881784197001252e-16,
+          "max_current_state_planner_flow_error": 1.9073116277468216e-06,
+          "trajectory_sha256": "cc6af979a8db4cc5bf6fe020d1189f298e674801da369974c7a8b8b76db9422c"
+        },
+        {
+          "episode_index": 121,
+          "steps": 275,
+          "max_coverage_recompute_error": 8.326672684688674e-16,
+          "max_current_state_planner_flow_error": 1.9070809003096656e-06,
+          "trajectory_sha256": "390bf1c4f7993971d14aa4d53c1b7c6c4fca3605dd71a002c09415100548c931"
+        },
+        {
+          "episode_index": 134,
+          "steps": 244,
+          "max_coverage_recompute_error": 5.551115123125783e-16,
+          "max_current_state_planner_flow_error": 1.8585743646326591e-06,
+          "trajectory_sha256": "149db0f692c7e6b9a7e7b0506d1abcd42d628be13e6b7f00bb56f8f68a503b07"
+        },
+        {
+          "episode_index": 145,
+          "steps": 300,
+          "max_coverage_recompute_error": 1.2212453270876722e-15,
+          "max_current_state_planner_flow_error": 1.904818105913364e-06,
+          "trajectory_sha256": "307eb67f1ca0000d9b1c52692e8caa171b4dd9a90af4d8eec7b3e8bee27325bc"
+        },
+        {
+          "episode_index": 157,
+          "steps": 282,
+          "max_coverage_recompute_error": 9.43689570931383e-16,
+          "max_current_state_planner_flow_error": 1.9056857070154365e-06,
+          "trajectory_sha256": "58043f6ffa95739ccbee961ca392596cfd86a0d453abe8cbbed2420510bc1329"
+        },
+        {
+          "episode_index": 159,
+          "steps": 228,
+          "max_coverage_recompute_error": 8.881784197001252e-16,
+          "max_current_state_planner_flow_error": 1.9065327592215908e-06,
+          "trajectory_sha256": "7fae703f9995d89803220aca6d08b98a7af1656491aba268757efcf1265f9f2b"
+        },
+        {
+          "episode_index": 162,
+          "steps": 300,
+          "max_coverage_recompute_error": 9.992007221626409e-16,
+          "max_current_state_planner_flow_error": 1.5635779675449157e-06,
+          "trajectory_sha256": "5b19f673927d954a11e7c21e6606e2a10f501b53ff4501ac5cb15da708f33b63"
+        },
+        {
+          "episode_index": 170,
+          "steps": 162,
+          "max_coverage_recompute_error": 8.881784197001252e-16,
+          "max_current_state_planner_flow_error": 1.9010433049970743e-06,
+          "trajectory_sha256": "c3697ca2ff5ac23b25996b4897419ab2f3d8610e14b3367b0aee77949bf5a62e"
+        },
+        {
+          "episode_index": 205,
+          "steps": 142,
+          "max_coverage_recompute_error": 8.326672684688674e-16,
+          "max_current_state_planner_flow_error": 1.9018211219190562e-06,
+          "trajectory_sha256": "280d824e36d49ca5309de382a2f8c9c0a1aad0cdecf71a2c1770c1cab9a69395"
+        }
+      ]
+    }
+  ],
+  "offline_models": [],
+  "visual_training": [],
+  "scope": "Saved experiment consistency and declared leakage guards; not proof of scientific superiority or real-world generalization.",
+  "elapsed_seconds": 2.730714999997872
+}

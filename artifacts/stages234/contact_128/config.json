@@ -1,0 +1,19 @@
+{
+  "command": "train",
+  "output": "runs\\stages234_20261022\\contact_128",
+  "points": 128,
+  "mode": "sequence",
+  "label": "soft",
+  "task": "contact",
+  "seed": 0,
+  "epochs": 40,
+  "batch": 128,
+  "lr": 0.001,
+  "device": "cuda",
+  "torch": "2.7.1+cu126",
+  "source_sha256": "010148dae7a26a5ed724e0fcaf181a242bf6536b18c8e903cea7e3ccbe77d289",
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+  "label_semantics": "union of geometric contacts during next eight control intervals",
+  "input": "current geometry, pusher, 8 future material-point displacements in anchor body frame",
+  "online_flow": "must come from current-state goal planner, never held-out future trajectory"
+}

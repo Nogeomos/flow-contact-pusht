@@ -1,0 +1,16 @@
+{
+  "record_type": "summary_of_observed_tool_execution_not_raw_stdout",
+  "command": "& .\\research\\repair_training_metadata.ps1",
+  "working_directory": ".",
+  "execution_session": 54218,
+  "exit_code": 0,
+  "timing_constraint": "Executed after visual DP training session 95393 exited 0, before visual validation or test processes.",
+  "package_versions_unchanged": {"filelock": "3.32.3", "fsspec": "2026.7.0"},
+  "preserved_original_directories": 6,
+  "pip_check": "No broken requirements found.",
+  "duplicate_metadata_after": {},
+  "verified_source_files": 79,
+  "source_record_mismatches": 0,
+  "warnings": "pip reported inability to clean four sandbox temporary directories (build tracker, unpack, ephemeral wheel cache, install). Installation, dependency check and source hash verification succeeded. No manual deletion of those temporary directories was performed.",
+  "evidence_files": ["runtime_repair_targets.json", "runtime_metadata_before_repair.json", "runtime_metadata_after_repair.json"]
+}

@@ -1,0 +1,62 @@
+{
+
+  "output_dir": "$CLEAN_CHECKOUT\\runs\\simple_push",
+
+  "observed": {
+
+    "block_origin_displacement_world": [
+
+      61.38251056638137,
+
+      10.828776999743354
+
+    ],
+
+    "block_cog_displacement_world": [
+
+      47.1377729441495,
+
+      8.514693296266415
+
+    ],
+
+    "block_cog_displacement_norm": 47.90062254359203,
+
+    "block_angle_change_rad": 0.32208994810297836,
+
+    "block_angle_change_degrees": 18.454394649888375,
+
+    "pusher_displacement_world": [
+
+      111.09777520943007,
+
+      0.0
+
+    ],
+
+    "contact_point_events": 316,
+
+    "contact_control_intervals": 32,
+
+    "first_contact_action_index": 28,
+
+    "last_contact_action_index": 59,
+
+    "internal_contact_events": 0,
+
+    "max_rigid_point_transform_abs_error": 0.0,
+
+    "no_contact_labels_are_zero": true
+
+  },
+
+  "steps": 70,
+
+  "duration_s": 7.0
+
+}
+
+
+
+STDERR:
+

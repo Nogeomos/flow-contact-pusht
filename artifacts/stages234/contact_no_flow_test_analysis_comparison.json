@@ -1,0 +1,22 @@
+{
+  "role": "supplementary post-primary-test diagnostic, not a replacement main method",
+  "main_successes": 15,
+  "no_flow_successes": 6,
+  "same_test_scenarios": 21,
+  "main_only_successes": [
+    12,
+    62,
+    68,
+    96,
+    97,
+    105,
+    121,
+    157,
+    159
+  ],
+  "no_flow_only_successes": [],
+  "mcnemar_exact_two_sided_p": 0.00390625,
+  "warning": "Single training-seed supplementary comparison; equal test starts and frozen controller, but not new independent scenarios or a preregistered primary test.",
+  "checkpoint_sha256": "bf6264074b05bb1f050e5507f97097dddfabef42d55322f9f926ebfaa1d38e7c",
+  "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2"
+}

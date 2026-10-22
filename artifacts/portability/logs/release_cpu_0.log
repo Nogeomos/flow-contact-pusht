@@ -1,0 +1,6 @@
+{"status": "passed", "loaded_checkpoints": 11, "paths": ["runs\\stages234_20261022\\contact_128\\best.pt", "runs\\stages234_20261022\\contact_32\\best.pt", "runs\\stages234_20261022\\contact_endpoint\\best.pt", "runs\\stages234_20261022\\contact_gru\\best.pt", "runs\\stages234_20261022\\contact_hard\\best.pt", "runs\\stages234_20261022\\contact_main\\best.pt", "runs\\stages234_20261022\\contact_no_flow\\best.pt", "runs\\stages234_20261022\\contact_seed1\\best.pt", "runs\\stages234_20261022\\contact_seed2\\best.pt", "runs\\stages234_20261022\\flow_action\\best.pt", "runs\\stages234_20261022\\visual_dp\\best.pt"]}
+
+
+
+STDERR:
+

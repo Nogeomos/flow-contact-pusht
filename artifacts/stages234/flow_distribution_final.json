@@ -1,0 +1,315 @@
+{
+  "status": "measured",
+  "source": "training demonstrations vs saved held-out online planning calls",
+  "train_windows_manifest_sha256": "9a312c926e1408b961b8a906722138b9dae7598b5b93800a3a530d320349f91b",
+  "training": {
+    "query_windows": 19130,
+    "endpoint_rms_under_one_world_unit_fraction": 0.39555671719811814,
+    "metrics": {
+      "endpoint_mean_point_displacement": {
+        "mean": 14.592797647754802,
+        "std": 17.865106532912506,
+        "min": 0.0,
+        "max": 115.64118194580078,
+        "quantiles_p01_p10_p50_p90_p99": [
+          0.0,
+          0.0,
+          6.602606773376465,
+          41.53548088073731,
+          66.63964942932128
+        ]
+      },
+      "endpoint_rms_point_displacement": {
+        "mean": 15.350690047918068,
+        "std": 18.764013698190595,
+        "min": 0.0,
+        "max": 115.64315795898438,
+        "quantiles_p01_p10_p50_p90_p99": [
+          0.0,
+          0.0,
+          6.94390082359314,
+          43.80856666564943,
+          69.95977203369122
+        ]
+      },
+      "rms_deviation_from_linear_point_path": {
+        "mean": 1.9111143777233224,
+        "std": 2.2157672525727885,
+        "min": 0.0,
+        "max": 15.953571880224944,
+        "quantiles_p01_p10_p50_p90_p99": [
+          0.0,
+          0.0,
+          1.3290336956296125,
+          5.006070859051434,
+          8.912832571211952
+        ]
+      }
+    }
+  },
+  "online": [
+    {
+      "method": "learned_contact",
+      "checkpoint": "runs\\stages234_20261022\\contact_no_flow\\best.pt",
+      "evaluation_kind": "supplementary_diagnostic",
+      "summary_path": ".\\runs\\stages234_20261022\\contact_no_flow_test\\summary.json",
+      "summary_sha256": "bfb2eeb8aec4634aaead46769ab6b6aaa85c0ece2b074342380eef32ea681610",
+      "query_windows": 282,
+      "endpoint_rms_under_one_world_unit_fraction": 0.0,
+      "metrics": {
+        "endpoint_mean_point_displacement": {
+          "mean": 20.704898930110858,
+          "std": 6.542477955614617,
+          "min": 2.427697376293902,
+          "max": 26.322754937738935,
+          "quantiles_p01_p10_p50_p90_p99": [
+            3.1734680040414607,
+            11.21347434186204,
+            25.153854859783692,
+            26.241025239104268,
+            26.32058738951389
+          ]
+        },
+        "endpoint_rms_point_displacement": {
+          "mean": 21.9672288938692,
+          "std": 6.759960705296002,
+          "min": 2.5269824677368873,
+          "max": 27.48722395282413,
+          "quantiles_p01_p10_p50_p90_p99": [
+            3.301503782685069,
+            12.344830656527435,
+            26.69704951297499,
+            27.321067521393076,
+            27.48572920223303
+          ]
+        },
+        "rms_deviation_from_linear_point_path": {
+          "mean": 0.24208437081317216,
+          "std": 0.07990703434999363,
+          "min": 5.213962974727037e-05,
+          "max": 0.27567183986807225,
+          "quantiles_p01_p10_p50_p90_p99": [
+            0.0010179926374512384,
+            0.08729371998751453,
+            0.2756717176087651,
+            0.2756717486371032,
+            0.27567179713632867
+          ]
+        }
+      },
+      "endpoint_rms_outside_train_p01_p99_fraction": 0.0
+    },
+    {
+      "method": "learned_contact",
+      "checkpoint": "runs\\stages234_20261022\\contact_seed1\\best.pt",
+      "evaluation_kind": "primary",
+      "summary_path": ".\\runs\\stages234_20261022\\contact_seed1_test\\summary.json",
+      "summary_sha256": "591b985a5b519691cd3d00100d3868a144b3a0891bd9cbf94a03d13464fe9e41",
+      "query_windows": 213,
+      "endpoint_rms_under_one_world_unit_fraction": 0.0,
+      "metrics": {
+        "endpoint_mean_point_displacement": {
+          "mean": 18.770437568277647,
+          "std": 7.430654356226722,
+          "min": 2.43269024135571,
+          "max": 26.319375763274238,
+          "quantiles_p01_p10_p50_p90_p99": [
+            3.1626965192151095,
+            6.287052870042637,
+            20.711263560975354,
+            26.090836926603455,
+            26.314659913956277
+          ]
+        },
+        "endpoint_rms_point_displacement": {
+          "mean": 19.947578969251907,
+          "std": 7.76239981760706,
+          "min": 2.500473376684126,
+          "max": 27.486686656704794,
+          "quantiles_p01_p10_p50_p90_p99": [
+            3.3796008923774443,
+            6.5463415181626505,
+            22.52336756933062,
+            27.238411644591633,
+            27.4774827910164
+          ]
+        },
+        "rms_deviation_from_linear_point_path": {
+          "mean": 0.2238157040301617,
+          "std": 0.10029862370858215,
+          "min": 1.6496109512538397e-05,
+          "max": 0.2756717959589384,
+          "quantiles_p01_p10_p50_p90_p99": [
+            8.400061009459788e-05,
+            0.013303342984710177,
+            0.2756717204751972,
+            0.27567174716201764,
+            0.275671777826676
+          ]
+        }
+      },
+      "endpoint_rms_outside_train_p01_p99_fraction": 0.0
+    },
+    {
+      "method": "learned_contact",
+      "checkpoint": "runs\\stages234_20261022\\contact_seed2\\best.pt",
+      "evaluation_kind": "primary",
+      "summary_path": ".\\runs\\stages234_20261022\\contact_seed2_test\\summary.json",
+      "summary_sha256": "4e0427340caed6695636c6d51baed20b85cf757055cd65a55716fada938517ab",
+      "query_windows": 219,
+      "endpoint_rms_under_one_world_unit_fraction": 0.0,
+      "metrics": {
+        "endpoint_mean_point_displacement": {
+          "mean": 18.347730618168406,
+          "std": 7.700659207158878,
+          "min": 2.466575384352473,
+          "max": 26.319375763274238,
+          "quantiles_p01_p10_p50_p90_p99": [
+            2.891234607629916,
+            6.140752635147985,
+            19.65903092218128,
+            26.043130770336838,
+            26.31395610924221
+          ]
+        },
+        "endpoint_rms_point_displacement": {
+          "mean": 19.51244089031865,
+          "std": 8.050053855412253,
+          "min": 2.757013571742948,
+          "max": 27.48722395282413,
+          "quantiles_p01_p10_p50_p90_p99": [
+            3.1393769100120803,
+            6.329321886510537,
+            20.908331707396325,
+            27.227948673599524,
+            27.481864288350028
+          ]
+        },
+        "rms_deviation_from_linear_point_path": {
+          "mean": 0.21725317744686268,
+          "std": 0.10483329551091604,
+          "min": 0.0002976680558043225,
+          "max": 0.27567179707091893,
+          "quantiles_p01_p10_p50_p90_p99": [
+            0.0013257058870326118,
+            0.0083121119379945,
+            0.2756717190304894,
+            0.27567174648188136,
+            0.2756717716435465
+          ]
+        }
+      },
+      "endpoint_rms_outside_train_p01_p99_fraction": 0.0
+    },
+    {
+      "method": "learned_contact",
+      "checkpoint": "runs\\stages234_20261022\\contact_main\\best.pt",
+      "evaluation_kind": "primary",
+      "summary_path": ".\\runs\\stages234_20261022\\contact_test\\summary.json",
+      "summary_sha256": "74322dec8ad689d8fe8608eedadbdbb8020b8daa86717d26d4cdc679b880bb34",
+      "query_windows": 215,
+      "endpoint_rms_under_one_world_unit_fraction": 0.0,
+      "metrics": {
+        "endpoint_mean_point_displacement": {
+          "mean": 18.512684952113734,
+          "std": 7.818682572946866,
+          "min": 2.1444468002262713,
+          "max": 26.322509049961724,
+          "quantiles_p01_p10_p50_p90_p99": [
+            2.6799172286972563,
+            5.186796955761099,
+            20.864412706522522,
+            26.08432604024598,
+            26.321407867849256
+          ]
+        },
+        "endpoint_rms_point_displacement": {
+          "mean": 19.68989805586266,
+          "std": 8.175297744389429,
+          "min": 2.3117749786998885,
+          "max": 27.48722395282413,
+          "quantiles_p01_p10_p50_p90_p99": [
+            2.711339736411421,
+            5.681363139075907,
+            22.534792160971126,
+            27.302114976949827,
+            27.479124198571387
+          ]
+        },
+        "rms_deviation_from_linear_point_path": {
+          "mean": 0.21440889268015698,
+          "std": 0.10620004205135132,
+          "min": 5.690559876156095e-06,
+          "max": 0.2756718359936347,
+          "quantiles_p01_p10_p50_p90_p99": [
+            6.809650754955758e-05,
+            0.009601104092996112,
+            0.2756717172053932,
+            0.27567174881097656,
+            0.2756717840092008
+          ]
+        }
+      },
+      "endpoint_rms_outside_train_p01_p99_fraction": 0.0
+    },
+    {
+      "method": "rule",
+      "checkpoint": null,
+      "evaluation_kind": "primary",
+      "summary_path": ".\\runs\\stages234_20261022\\rule_test\\summary.json",
+      "summary_sha256": "163efa5afbce8838fad298d6e8db5f7b50470c297e716959daf31c22e7e806e2",
+      "query_windows": 213,
+      "endpoint_rms_under_one_world_unit_fraction": 0.0,
+      "metrics": {
+        "endpoint_mean_point_displacement": {
+          "mean": 18.68318818072346,
+          "std": 7.238072535653634,
+          "min": 2.550880638148337,
+          "max": 26.322863111766743,
+          "quantiles_p01_p10_p50_p90_p99": [
+            2.7174054158841963,
+            7.556423852907054,
+            20.16173428114289,
+            26.12138776303967,
+            26.316772857220506
+          ]
+        },
+        "endpoint_rms_point_displacement": {
+          "mean": 19.89499016595213,
+          "std": 7.5137328720009515,
+          "min": 2.7193995842561414,
+          "max": 27.486686656704794,
+          "quantiles_p01_p10_p50_p90_p99": [
+            2.780258529251105,
+            7.991383755254821,
+            21.27401410020466,
+            27.236280870527242,
+            27.481302968173647
+          ]
+        },
+        "rms_deviation_from_linear_point_path": {
+          "mean": 0.22428904959815635,
+          "std": 0.09859723931722218,
+          "min": 1.2991450931040337e-05,
+          "max": 0.2756718430828966,
+          "quantiles_p01_p10_p50_p90_p99": [
+            0.00035433375366277913,
+            0.0218768523671326,
+            0.2756717180623453,
+            0.2756717470185734,
+            0.2756717844398364
+          ]
+        }
+      },
+      "endpoint_rms_outside_train_p01_p99_fraction": 0.0
+    }
+  ],
+  "units": "512-world simulator length units; horizon 8 at 10 Hz",
+  "interpretation": "Descriptive input-distribution diagnostic only; differences are not a causal explanation of failures and are not used for tuning.",
+  "limitations": [
+    "Online plans are correlated within episodes, so pooled queries are not independent samples.",
+    "Only plans with contact candidates are included; no-feasible holds do not query a usable contact trajectory.",
+    "Low-dimensional magnitude summaries cannot detect all differences in flow shape or state distribution."
+  ],
+  "script_sha256": "6a03df0868eaf1d17072ba94ae6d4daaee1969bdebe64d09c5b75540e10ad85d"
+}

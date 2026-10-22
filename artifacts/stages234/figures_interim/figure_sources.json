@@ -1,0 +1,20 @@
+{
+  "offline": [
+    "contact_main",
+    "contact_seed1",
+    "contact_seed2",
+    "contact_32",
+    "contact_128",
+    "contact_hard",
+    "contact_endpoint",
+    "contact_gru",
+    "contact_no_flow"
+  ],
+  "closed_loop": [
+    "rule_test",
+    "contact_test",
+    "flow_action_test"
+  ],
+  "display_episode": 12,
+  "selection": "first held-out episode, not selected for success"
+}

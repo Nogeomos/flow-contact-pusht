@@ -1,0 +1,835 @@
+{
+  "schema_version": 1,
+  "method": "learned_contact",
+  "split": "test",
+  "episodes": [
+    12,
+    41,
+    55,
+    62,
+    68,
+    71,
+    83,
+    89,
+    96,
+    97,
+    102,
+    105,
+    115,
+    121,
+    134,
+    145,
+    157,
+    159,
+    162,
+    170,
+    205
+  ],
+  "max_steps_per_episode": 300,
+  "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+  "successes": 15,
+  "count": 21,
+  "success_rate": 0.7142857142857143,
+  "success_rate_wilson_95": [
+    0.50043619283915,
+    0.861861370478776
+  ],
+  "mean_max_coverage": 0.9103827527041052,
+  "mean_final_coverage": 0.8934044433745324,
+  "mean_final_point_rmse": 5.466616626940204,
+  "mean_steps": 257.95238095238096,
+  "total_wall_time_seconds": 34.909587399990414,
+  "total_candidate_rollouts": 3470,
+  "total_candidate_physics_substeps": 877670,
+  "total_candidate_rollout_wall_time_seconds": 17.2515959000375,
+  "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+  "replanning_schedule": "Replan after completing the queued approach, push and hold; executed states are observed every action.",
+  "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+  "checkpoint": "runs\\stages234_20261022\\contact_seed2\\best.pt",
+  "checkpoint_sha256": "186d936ff91f6db5ca538d91933364eaea96b88df384bce4d5bda218d3a4a70c",
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+  "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+  "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+  "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+  "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+  "controller_note": "8 contact candidates x 2 push lengths, shared simulator-dynamics candidate model and visibility-graph paths; collision warm-start caches are rebuilt",
+  "results": [
+    {
+      "episode_index": 12,
+      "method": "learned_contact",
+      "steps": 290,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9617329749986047,
+      "max_coverage": 0.9617329749986047,
+      "wall_time_seconds": 2.1172719999995024,
+      "final_point_rmse": 1.9704942738503215,
+      "final_angle_error_deg": 0.20425492115335553,
+      "contact_intervals": 112,
+      "contact_events": 929,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        381.0,
+        205.0,
+        308.17327662439345,
+        389.9452340116717,
+        4.6246044103303765
+      ],
+      "final_state": [
+        302.6297018570271,
+        281.6428196977441,
+        257.5251501206147,
+        257.46573967535846,
+        0.7889630842849757
+      ],
+      "candidate_rollouts": 192,
+      "candidate_physics_substeps": 47452,
+      "candidate_rollout_wall_time_seconds": 0.8605191999886301
+    },
+    {
+      "episode_index": 41,
+      "method": "learned_contact",
+      "steps": 273,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9548783537782121,
+      "max_coverage": 0.9548783537782121,
+      "wall_time_seconds": 2.0247811999979604,
+      "final_point_rmse": 2.2996705311296237,
+      "final_angle_error_deg": 0.05021488671139758,
+      "contact_intervals": 106,
+      "contact_events": 870,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        446.0,
+        130.0,
+        298.00024746085217,
+        233.8507638935908,
+        4.715705344383935
+      ],
+      "final_state": [
+        199.70627535558498,
+        270.09465221600163,
+        257.7152907341834,
+        254.46626355367871,
+        0.7862745785040782
+      ],
+      "candidate_rollouts": 176,
+      "candidate_physics_substeps": 44956,
+      "candidate_rollout_wall_time_seconds": 0.8487624000008509
+    },
+    {
+      "episode_index": 55,
+      "method": "learned_contact",
+      "steps": 161,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.95234162112677,
+      "max_coverage": 0.95234162112677,
+      "wall_time_seconds": 1.1764798000003793,
+      "final_point_rmse": 2.630883493289823,
+      "final_angle_error_deg": 1.9947892489767043,
+      "contact_intervals": 60,
+      "contact_events": 508,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        204.0,
+        345.0,
+        172.75202115213216,
+        171.47571165810345,
+        1.3347369906512228
+      ],
+      "final_state": [
+        196.97492149734185,
+        270.83434586213014,
+        254.37406289822763,
+        253.14399166724058,
+        0.7505825231194199
+      ],
+      "candidate_rollouts": 112,
+      "candidate_physics_substeps": 27152,
+      "candidate_rollout_wall_time_seconds": 0.5184321999877284
+    },
+    {
+      "episode_index": 62,
+      "method": "learned_contact",
+      "steps": 192,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.3561684661908645,
+      "final_coverage": 0.9600378589383081,
+      "max_coverage": 0.9600378589383081,
+      "wall_time_seconds": 0.9428076000003784,
+      "final_point_rmse": 1.465468592921346,
+      "final_angle_error_deg": 0.3713632377283435,
+      "contact_intervals": 47,
+      "contact_events": 411,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        68.0,
+        74.0,
+        224.43825561922318,
+        271.7523592848001,
+        1.8350237061513823
+      ],
+      "final_state": [
+        227.30328027420197,
+        204.05270839489333,
+        256.3379842298684,
+        254.77980774353156,
+        0.7918796746166743
+      ],
+      "candidate_rollouts": 96,
+      "candidate_physics_substeps": 25156,
+      "candidate_rollout_wall_time_seconds": 0.4287279999953171
+    },
+    {
+      "episode_index": 68,
+      "method": "learned_contact",
+      "steps": 262,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9519775546172241,
+      "max_coverage": 0.9519775546172241,
+      "wall_time_seconds": 1.6143679000015254,
+      "final_point_rmse": 2.120431849136263,
+      "final_angle_error_deg": 0.5416497126385406,
+      "contact_intervals": 99,
+      "contact_events": 850,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        369.0,
+        252.0,
+        292.0539018244547,
+        375.318034541203,
+        4.929239307510844
+      ],
+      "final_state": [
+        185.50298396132223,
+        281.84619263911105,
+        253.7942270113537,
+        254.95240757003566,
+        0.7759445925194246
+      ],
+      "candidate_rollouts": 192,
+      "candidate_physics_substeps": 45412,
+      "candidate_rollout_wall_time_seconds": 0.8263889999834646
+    },
+    {
+      "episode_index": 71,
+      "method": "learned_contact",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.7764944377418176,
+      "max_coverage": 0.7977630383800036,
+      "wall_time_seconds": 1.638923699996667,
+      "final_point_rmse": 9.218473179695318,
+      "final_angle_error_deg": 6.420912779978977,
+      "contact_intervals": 113,
+      "contact_events": 945,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        157.0,
+        61.0,
+        114.83863625690799,
+        205.29938083526326,
+        4.244394462143367
+      ],
+      "final_state": [
+        193.1615837272253,
+        217.20565971481165,
+        259.2602875624008,
+        254.61454967009388,
+        0.6733320944034329
+      ],
+      "candidate_rollouts": 186,
+      "candidate_physics_substeps": 46346,
+      "candidate_rollout_wall_time_seconds": 0.7993525000201771
+    },
+    {
+      "episode_index": 83,
+      "method": "learned_contact",
+      "steps": 293,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.95758906543647,
+      "max_coverage": 0.95758906543647,
+      "wall_time_seconds": 1.611191100000724,
+      "final_point_rmse": 1.807526871908958,
+      "final_angle_error_deg": 1.0443048133013753,
+      "contact_intervals": 106,
+      "contact_events": 885,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        132.0,
+        73.0,
+        439.9153135046873,
+        398.2405412168949,
+        1.5094365242157677
+      ],
+      "final_state": [
+        225.47347822212546,
+        203.78732061770347,
+        256.7472429732067,
+        254.64827538682772,
+        0.7671716060109146
+      ],
+      "candidate_rollouts": 192,
+      "candidate_physics_substeps": 47932,
+      "candidate_rollout_wall_time_seconds": 0.8162250999776006
+    },
+    {
+      "episode_index": 89,
+      "method": "learned_contact",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.47310212624932957,
+      "max_coverage": 0.6053845673753029,
+      "wall_time_seconds": 1.95713760000217,
+      "final_point_rmse": 31.938367704618972,
+      "final_angle_error_deg": 33.34540652702968,
+      "contact_intervals": 131,
+      "contact_events": 1194,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        336.0,
+        182.0,
+        87.02425857540601,
+        472.3142633985053,
+        4.0318579458586825
+      ],
+      "final_state": [
+        246.7156133260665,
+        345.12376850408003,
+        278.29400993105276,
+        276.2465212310928,
+        1.3673852977101237
+      ],
+      "candidate_rollouts": 196,
+      "candidate_physics_substeps": 54676,
+      "candidate_rollout_wall_time_seconds": 1.066371499979141
+    },
+    {
+      "episode_index": 96,
+      "method": "learned_contact",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.23484037243335987,
+      "final_coverage": 0.9257893088207795,
+      "max_coverage": 0.9479714158525145,
+      "wall_time_seconds": 1.499632200000633,
+      "final_point_rmse": 3.012337068272858,
+      "final_angle_error_deg": 2.351402713435796,
+      "contact_intervals": 90,
+      "contact_events": 758,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        134.0,
+        414.0,
+        172.02078498324212,
+        232.46959358108072,
+        4.92579186139391
+      ],
+      "final_state": [
+        299.16345687296405,
+        282.3605680927944,
+        255.18358562912525,
+        256.757797592117,
+        0.8264378827872317
+      ],
+      "candidate_rollouts": 160,
+      "candidate_physics_substeps": 42580,
+      "candidate_rollout_wall_time_seconds": 0.6971251000395569
+    },
+    {
+      "episode_index": 97,
+      "method": "learned_contact",
+      "steps": 237,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.1713003824032141,
+      "final_coverage": 0.9518934532414534,
+      "max_coverage": 0.9518934532414534,
+      "wall_time_seconds": 1.3171541999981855,
+      "final_point_rmse": 1.9394486032960025,
+      "final_angle_error_deg": 0.05379326269552979,
+      "contact_intervals": 79,
+      "contact_events": 672,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        140.0,
+        155.0,
+        293.193056207209,
+        386.703128169948,
+        2.820713198215363
+      ],
+      "final_state": [
+        295.44501615623074,
+        323.5171180284225,
+        255.2282044261506,
+        257.76212619196264,
+        0.784459293848021
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 37624,
+      "candidate_rollout_wall_time_seconds": 0.678359300003649
+    },
+    {
+      "episode_index": 102,
+      "method": "learned_contact",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.09445562550891613,
+      "final_coverage": 0.8768801480160473,
+      "max_coverage": 0.8996837809006036,
+      "wall_time_seconds": 1.6811777999973856,
+      "final_point_rmse": 4.718125030972185,
+      "final_angle_error_deg": 0.06721389776544344,
+      "contact_intervals": 104,
+      "contact_events": 871,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        306.0,
+        293.0,
+        161.96231755249676,
+        429.0451274431776,
+        3.5059971351366457
+      ],
+      "final_state": [
+        252.33488149360392,
+        311.2426561005821,
+        255.80130932134324,
+        251.2493379836568,
+        0.7842250595783423
+      ],
+      "candidate_rollouts": 176,
+      "candidate_physics_substeps": 44756,
+      "candidate_rollout_wall_time_seconds": 0.7711102999965078
+    },
+    {
+      "episode_index": 105,
+      "method": "learned_contact",
+      "steps": 264,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9500273770250665,
+      "max_coverage": 0.9500273770250665,
+      "wall_time_seconds": 2.3760460000012245,
+      "final_point_rmse": 2.3624421578592325,
+      "final_angle_error_deg": 1.0366553166496797,
+      "contact_intervals": 107,
+      "contact_events": 888,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        242.0,
+        167.0,
+        333.47857369194907,
+        211.45457415466407,
+        4.858360724292763
+      ],
+      "final_state": [
+        195.12911465762136,
+        207.33790265587376,
+        254.88163937573626,
+        253.36414088303547,
+        0.767305114913607
+      ],
+      "candidate_rollouts": 192,
+      "candidate_physics_substeps": 48652,
+      "candidate_rollout_wall_time_seconds": 1.3700717000283475
+    },
+    {
+      "episode_index": 115,
+      "method": "learned_contact",
+      "steps": 270,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.030927228583136186,
+      "final_coverage": 0.9606785728088307,
+      "max_coverage": 0.9606785728088307,
+      "wall_time_seconds": 1.6948688000011316,
+      "final_point_rmse": 1.9460138728991965,
+      "final_angle_error_deg": 0.18998443278385266,
+      "contact_intervals": 98,
+      "contact_events": 862,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        324.0,
+        440.0,
+        244.4431564173225,
+        408.997817862534,
+        3.13174457402016
+      ],
+      "final_state": [
+        168.10985406190696,
+        301.90867547209194,
+        257.30541928004646,
+        254.56567573604946,
+        0.7820823095178362
+      ],
+      "candidate_rollouts": 192,
+      "candidate_physics_substeps": 45672,
+      "candidate_rollout_wall_time_seconds": 0.8895168000017293
+    },
+    {
+      "episode_index": 121,
+      "method": "learned_contact",
+      "steps": 280,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.038158048719560494,
+      "final_coverage": 0.9529570789464079,
+      "max_coverage": 0.9529570789464079,
+      "wall_time_seconds": 1.5831235999976343,
+      "final_point_rmse": 1.7900116639191985,
+      "final_angle_error_deg": 0.905227150312456,
+      "contact_intervals": 89,
+      "contact_events": 744,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        372.0,
+        314.0,
+        150.79041016308673,
+        201.60284771771435,
+        4.900092641036865
+      ],
+      "final_state": [
+        240.87131502629038,
+        315.38569977310885,
+        255.7070655848381,
+        257.0968237844231,
+        0.7695989691460502
+      ],
+      "candidate_rollouts": 160,
+      "candidate_physics_substeps": 41380,
+      "candidate_rollout_wall_time_seconds": 0.7837088000014774
+    },
+    {
+      "episode_index": 134,
+      "method": "learned_contact",
+      "steps": 226,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.32344788397983026,
+      "final_coverage": 0.953960049481392,
+      "max_coverage": 0.953960049481392,
+      "wall_time_seconds": 1.3961257999981171,
+      "final_point_rmse": 1.8469595012057953,
+      "final_angle_error_deg": 0.36699945352347874,
+      "contact_intervals": 71,
+      "contact_events": 591,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        88.0,
+        426.0,
+        176.03705257560418,
+        298.83774383770094,
+        5.279193506736577
+      ],
+      "final_state": [
+        230.11392176332558,
+        326.04538273240394,
+        256.39991755810627,
+        258.0004443111561,
+        0.7918035122144528
+      ],
+      "candidate_rollouts": 128,
+      "candidate_physics_substeps": 33768,
+      "candidate_rollout_wall_time_seconds": 0.7157598000048893
+    },
+    {
+      "episode_index": 145,
+      "method": "learned_contact",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.3690765227212371,
+      "final_coverage": 0.8992135317278064,
+      "max_coverage": 0.9081078414842617,
+      "wall_time_seconds": 1.9471690999998827,
+      "final_point_rmse": 4.814681077623744,
+      "final_angle_error_deg": 2.898532341128555,
+      "contact_intervals": 99,
+      "contact_events": 833,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        87.0,
+        156.0,
+        202.96635686084244,
+        248.15695854563808,
+        4.415677620297281
+      ],
+      "final_state": [
+        249.4996143206048,
+        224.87429953272922,
+        256.55800809136747,
+        251.09666839008298,
+        0.7348092305692155
+      ],
+      "candidate_rollouts": 182,
+      "candidate_physics_substeps": 48142,
+      "candidate_rollout_wall_time_seconds": 0.9785002999997232
+    },
+    {
+      "episode_index": 157,
+      "method": "learned_contact",
+      "steps": 257,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9510806462675818,
+      "max_coverage": 0.9510806462675818,
+      "wall_time_seconds": 1.7768555999973614,
+      "final_point_rmse": 2.240351619838079,
+      "final_angle_error_deg": 0.008768322456707648,
+      "contact_intervals": 95,
+      "contact_events": 792,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        218.0,
+        101.0,
+        400.72827333286943,
+        253.85480733007705,
+        2.8315778433164907
+      ],
+      "final_state": [
+        247.50789664686621,
+        223.27463967075906,
+        257.3058343232132,
+        254.18091465621973,
+        0.7855511994941944
+      ],
+      "candidate_rollouts": 176,
+      "candidate_physics_substeps": 41596,
+      "candidate_rollout_wall_time_seconds": 0.8851774000177102
+    },
+    {
+      "episode_index": 159,
+      "method": "learned_contact",
+      "steps": 261,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9596472763342606,
+      "max_coverage": 0.9596472763342606,
+      "wall_time_seconds": 1.9373076999982004,
+      "final_point_rmse": 1.840757259043013,
+      "final_angle_error_deg": 0.38975564506625804,
+      "contact_intervals": 91,
+      "contact_events": 782,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        61.0,
+        401.0,
+        364.1880283533662,
+        413.2902564709606,
+        2.5475279279463163
+      ],
+      "final_state": [
+        210.1759024859708,
+        346.1138487111192,
+        257.7927611354184,
+        257.0715680341891,
+        0.7922006826820889
+      ],
+      "candidate_rollouts": 176,
+      "candidate_physics_substeps": 43136,
+      "candidate_rollout_wall_time_seconds": 0.9694703000168374
+    },
+    {
+      "episode_index": 162,
+      "method": "learned_contact",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.10112719987354625,
+      "final_coverage": 0.4696665123046267,
+      "max_coverage": 0.6187799167887503,
+      "wall_time_seconds": 2.0933039000010467,
+      "final_point_rmse": 31.6635665609862,
+      "final_angle_error_deg": 25.72464761848375,
+      "contact_intervals": 105,
+      "contact_events": 886,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        381.0,
+        387.0,
+        135.45082103932964,
+        420.0437505449386,
+        3.7453742714123632
+      ],
+      "final_state": [
+        246.26779758531973,
+        232.84724304107016,
+        248.16038304866177,
+        283.7044199791102,
+        1.2343779632553078
+      ],
+      "candidate_rollouts": 170,
+      "candidate_physics_substeps": 44250,
+      "candidate_rollout_wall_time_seconds": 0.9823527999978978
+    },
+    {
+      "episode_index": 170,
+      "method": "learned_contact",
+      "steps": 195,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9619101005671187,
+      "max_coverage": 0.9619101005671187,
+      "wall_time_seconds": 1.370820600001025,
+      "final_point_rmse": 1.5128690825469164,
+      "final_angle_error_deg": 0.22346630783800162,
+      "contact_intervals": 69,
+      "contact_events": 615,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        89.0,
+        342.0,
+        87.46114201349957,
+        279.2793896030517,
+        5.706428851325743
+      ],
+      "final_state": [
+        187.89973197899286,
+        280.73637252413926,
+        256.1579299920981,
+        254.4081670722518,
+        0.7814979405583999
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 36704,
+      "candidate_rollout_wall_time_seconds": 0.7323958000015409
+    },
+    {
+      "episode_index": 205,
+      "method": "learned_contact",
+      "steps": 156,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9596352624370716,
+      "max_coverage": 0.9596352624370716,
+      "wall_time_seconds": 1.1530411999992793,
+      "final_point_rmse": 1.6600691707312527,
+      "final_angle_error_deg": 1.2686436774659082,
+      "contact_intervals": 71,
+      "contact_events": 596,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        372.0,
+        342.0,
+        368.7065784595472,
+        333.89538021223757,
+        2.390594976053494
+      ],
+      "final_state": [
+        258.15673057051987,
+        235.3805166497757,
+        256.7059489892754,
+        255.49735807765413,
+        0.8075401726038374
+      ],
+      "candidate_rollouts": 128,
+      "candidate_physics_substeps": 30328,
+      "candidate_rollout_wall_time_seconds": 0.6332675999947242
+    }
+  ]
+}

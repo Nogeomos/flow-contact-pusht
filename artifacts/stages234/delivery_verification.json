@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "pdf_pages": 9,
+  "all_pages_visually_reviewed": true,
+  "pdf_sha256": "04d1a1e6db9a89c0cf69f113ae0823ec059a4233c850bc3a0e5d681b1abf9949",
+  "pdf_bytes": 868576,
+  "zip_sha256": "d2772efa0bde62674e85c3f7090a9dcc5636d01c853c238d0c1cffbf586efb2e",
+  "zip_bytes": 4828345,
+  "zip_manifest_files_verified": 22,
+  "gif_frames": 101,
+  "gif_frame_duration_ms": 300,
+  "gif_dimensions": [
+    960,
+    1050
+  ],
+  "final_experiment_acceptance": "passed",
+  "renderer_exit_code": 0,
+  "renderer_warnings": [
+    "No display font for Symbol",
+    "No display font for ArialUnicode"
+  ],
+  "renderer_warning_assessment": "All nine pages rendered and visually inspected: embedded Chinese font text, formulas, tables and figures are visible without clipping or missing glyphs."
+}

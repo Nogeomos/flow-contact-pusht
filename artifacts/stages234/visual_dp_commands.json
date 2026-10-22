@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "working_directory": ".",
+  "completed": [
+    {
+      "command": ".venv/Scripts/python.exe research/visual_dp.py prepare",
+      "exit_code": 0,
+      "evidence": "data/derived/visual_dp_cache/cache_manifest.json"
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/visual_dp.py smoke --device cpu",
+      "exit_code": 0,
+      "observed_output": {
+        "status": "passed",
+        "device": "cpu",
+        "loss": 0.9541735053062439,
+        "parameters": 5796130,
+        "visual_encoder_nonzero_gradient": true,
+        "episode_window_boundaries_checked": true
+      }
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/visual_dp.py train --device cuda --epochs 1 --limit-steps 10 --max-val-samples 64 --output runs/stages234_20261022/visual_dp_probe",
+      "exit_code": 0,
+      "log": "runs/stages234_20261022/visual_dp_probe.log",
+      "evidence": "runs/stages234_20261022/visual_dp_probe/training_result.json"
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/visual_dp.py evaluate --device cpu --split validation --max-samples 21 --batch-size 7 --checkpoint runs/stages234_20261022/visual_dp_probe/best.pt --output runs/stages234_20261022/visual_dp_probe/loading_smoke.json",
+      "exit_code": 0,
+      "log": "runs/stages234_20261022/visual_dp_probe/loading_smoke.log",
+      "purpose": "Checkpoint load and DDIM execution check only; untrained probe is not a scientific baseline."
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/visual_dp.py train --device cuda --epochs 60 --batch-size 64 --max-val-samples 0 --output runs/stages234_20261022/visual_dp",
+      "log": "runs/stages234_20261022/visual_dp_train.log",
+      "exit_code": 0,
+      "evidence": "runs/stages234_20261022/visual_dp/training_result.json"
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/evaluate_closed_loop.py --method visual_dp --split validation --episodes 21 --max-steps 300 --output-dir runs/stages234_20261022/visual_dp_validation --factory research.visual_dp:load_policy --checkpoint runs/stages234_20261022/visual_dp/best.pt --device cuda --seed 0 --videos 3",
+      "exit_code": 0,
+      "log": "runs/stages234_20261022/visual_dp_validation.log",
+      "evidence": "runs/stages234_20261022/visual_dp_validation/summary.json",
+      "exit_confirmed_after_user_interrupt": true
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/evaluate_closed_loop.py --method visual_dp --split test --episodes 21 --max-steps 300 --output-dir runs/stages234_20261022/visual_dp_test --factory research.visual_dp:load_policy --checkpoint runs/stages234_20261022/visual_dp/best.pt --device cuda --seed 0 --videos 3",
+      "exit_code": 0,
+      "log": "runs/stages234_20261022/visual_dp_test.log",
+      "evidence": "runs/stages234_20261022/visual_dp_test/summary.json"
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/analyze_controller_failures.py --input runs/stages234_20261022/visual_dp_test --output runs/stages234_20261022/visual_dp_test_analysis",
+      "exit_code": 0,
+      "log": "runs/stages234_20261022/visual_dp_test_analysis.log",
+      "evidence": "runs/stages234_20261022/visual_dp_test_analysis/failure_analysis.json"
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/visual_dp.py evaluate --device cuda --split test --max-samples 0 --batch-size 32 --seed 20261022 --checkpoint runs/stages234_20261022/visual_dp/best.pt --output runs/stages234_20261022/visual_dp/test_metrics.json",
+      "log": "runs/stages234_20261022/visual_dp_offline_test.log",
+      "exit_code": 0,
+      "evidence": "runs/stages234_20261022/visual_dp/test_metrics.json"
+    },
+    {
+      "command": ".venv-train/Scripts/python.exe research/evaluate_closed_loop.py --method visual_dp --split test --episode-ids 12 --max-steps 300 --output-dir runs/stages234_20261022/fresh_verification/visual_dp_episode12 --factory research.visual_dp:load_policy --checkpoint runs/stages234_20261022/visual_dp/best.pt --device cuda --seed 0 --videos 0",
+      "log": "runs/stages234_20261022/visual_dp_reverification.log",
+      "statistical_note": "This is reproducibility verification, not a new independent test sample.",
+      "exit_code": 0,
+      "evidence": "runs/stages234_20261022/fresh_verification/visual_dp_episode12/summary.json"
+    },
+    {
+      "command": ".venv/Scripts/python.exe research/verify_visual_replay.py --original runs/stages234_20261022/visual_dp_test --repeated runs/stages234_20261022/fresh_verification/visual_dp_episode12 --output runs/stages234_20261022/fresh_verification/visual_dp_comparison.json --atol 1e-9",
+      "exit_code": 0,
+      "log": "runs/stages234_20261022/visual_dp_comparison.log",
+      "evidence": "runs/stages234_20261022/fresh_verification/visual_dp_comparison.json"
+    }
+  ],
+  "earlier_nonfatal_errors": [
+    "An initial smoke before the central torch installation completed failed with ModuleNotFoundError: torch. It passed after installation.",
+    "An exploratory request for research/evaluate_controller.py --help failed because the filename is research/evaluate_closed_loop.py; the corrected help invocation passed."
+  ],
+  "all_requested_runs_completed": true
+}

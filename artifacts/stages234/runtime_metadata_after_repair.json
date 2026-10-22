@@ -1,0 +1,19 @@
+{
+  "python": ".\\.venv-train\\Scripts\\python.exe",
+  "duplicate_metadata": {},
+  "active_package_record_checks": {
+    "filelock": {
+      "selected_version": "3.32.3",
+      "selected_metadata": ".\\.venv-train\\Lib\\site-packages\\filelock-3.32.3.dist-info",
+      "checked_source_files": 22,
+      "mismatches": []
+    },
+    "fsspec": {
+      "selected_version": "2026.7.0",
+      "selected_metadata": ".\\.venv-train\\Lib\\site-packages\\fsspec-2026.7.0.dist-info",
+      "checked_source_files": 57,
+      "mismatches": []
+    }
+  },
+  "all_selected_source_records_match": true
+}

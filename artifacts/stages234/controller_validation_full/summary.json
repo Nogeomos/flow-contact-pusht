@@ -1,0 +1,833 @@
+{
+  "schema_version": 1,
+  "method": "rule",
+  "split": "validation",
+  "episodes": [
+    11,
+    23,
+    50,
+    53,
+    61,
+    64,
+    76,
+    86,
+    91,
+    95,
+    108,
+    116,
+    138,
+    141,
+    148,
+    149,
+    174,
+    175,
+    180,
+    185,
+    195
+  ],
+  "max_steps_per_episode": 300,
+  "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+  "successes": 17,
+  "count": 21,
+  "success_rate": 0.8095238095238095,
+  "success_rate_wilson_95": [
+    0.5999943530979571,
+    0.9233243494723803
+  ],
+  "mean_max_coverage": 0.9034652800453313,
+  "mean_final_coverage": 0.9000188976314542,
+  "mean_final_point_rmse": 5.205151485518506,
+  "mean_steps": 229.47619047619048,
+  "total_wall_time_seconds": 58.994932000005065,
+  "total_candidate_rollouts": 3052,
+  "total_candidate_physics_substeps": 819412,
+  "total_candidate_rollout_wall_time_seconds": 33.44943839998086,
+  "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+  "checkpoint": null,
+  "checkpoint_sha256": null,
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+  "controller_sha256": "389d73b99c83b4b9c7dfb50f7374e147e870a3acff5fe80d49ad148fcc19c215",
+  "evaluator_sha256": "55e92786ebc5ceed7d30bf935bcca6d03e75687f610f4a63c9441c1bb903eaed",
+  "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+  "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+  "controller_note": "8 contact candidates x 2 push lengths, shared simulator-dynamics candidate model and visibility-graph paths; collision warm-start caches are rebuilt",
+  "results": [
+    {
+      "episode_index": 11,
+      "method": "rule",
+      "steps": 209,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.008558997813705067,
+      "final_coverage": 0.9561194273759256,
+      "max_coverage": 0.9561194273759256,
+      "wall_time_seconds": 1.1021440999975312,
+      "final_point_rmse": 2.088284853221703,
+      "final_angle_error_deg": 1.9065759045815085,
+      "contact_intervals": 81,
+      "contact_events": 682,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        241.0,
+        130.0,
+        149.69473294999196,
+        396.1429309816107,
+        5.120442870049975
+      ],
+      "final_state": [
+        200.1886362969973,
+        357.0858627343833,
+        254.03910844643244,
+        255.67257211380868,
+        0.7521221364233116
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 39004,
+      "candidate_rollout_wall_time_seconds": 0.5705763999903866
+    },
+    {
+      "episode_index": 23,
+      "method": "rule",
+      "steps": 243,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9561783839383715,
+      "max_coverage": 0.9561783839383715,
+      "wall_time_seconds": 1.1528197000006912,
+      "final_point_rmse": 2.373796741768845,
+      "final_angle_error_deg": 2.0956876241241544,
+      "contact_intervals": 78,
+      "contact_events": 660,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        133.0,
+        280.0,
+        114.08302805540387,
+        139.2126303573765,
+        5.669440683494992
+      ],
+      "final_state": [
+        200.7521165537777,
+        355.2323266274926,
+        254.26757655115847,
+        253.64184022545774,
+        0.7488215142631844
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 36084,
+      "candidate_rollout_wall_time_seconds": 0.546312599988596
+    },
+    {
+      "episode_index": 50,
+      "method": "rule",
+      "steps": 178,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9600279399348742,
+      "max_coverage": 0.9600279399348742,
+      "wall_time_seconds": 2.9814483000009204,
+      "final_point_rmse": 2.0986153823948883,
+      "final_angle_error_deg": 0.9837534570026509,
+      "contact_intervals": 68,
+      "contact_events": 601,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        226.0,
+        445.0,
+        253.86624039475612,
+        430.53294464423277,
+        1.4936742235723761
+      ],
+      "final_state": [
+        184.12576291982342,
+        218.76182485877527,
+        254.1244345540623,
+        254.14794910733147,
+        0.7682284265448756
+      ],
+      "candidate_rollouts": 128,
+      "candidate_physics_substeps": 31268,
+      "candidate_rollout_wall_time_seconds": 1.76652939998894
+    },
+    {
+      "episode_index": 53,
+      "method": "rule",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9213817483034441,
+      "max_coverage": 0.9315883568703456,
+      "wall_time_seconds": 4.819736800000101,
+      "final_point_rmse": 4.067382779671051,
+      "final_angle_error_deg": 1.409717404121267,
+      "contact_intervals": 113,
+      "contact_events": 944,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        75.0,
+        335.0,
+        339.6544828049772,
+        377.54628847074616,
+        3.3964657475986373
+      ],
+      "final_state": [
+        152.96292869824958,
+        319.4523671650721,
+        259.3082921235636,
+        259.63800232816044,
+        0.8100023736220318
+      ],
+      "candidate_rollouts": 190,
+      "candidate_physics_substeps": 50410,
+      "candidate_rollout_wall_time_seconds": 2.674054300001444
+    },
+    {
+      "episode_index": 61,
+      "method": "rule",
+      "steps": 249,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9649793966771762,
+      "max_coverage": 0.9649793966771762,
+      "wall_time_seconds": 3.465278400002717,
+      "final_point_rmse": 1.7270242122764072,
+      "final_angle_error_deg": 0.007678029583513161,
+      "contact_intervals": 74,
+      "contact_events": 640,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        149.0,
+        68.0,
+        85.92931704499995,
+        286.5223354067242,
+        5.551348301013057
+      ],
+      "final_state": [
+        202.5478958478816,
+        351.9116870743708,
+        254.86006263830868,
+        257.29683908696484,
+        0.7852641565011504
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 40524,
+      "candidate_rollout_wall_time_seconds": 1.9872676999839314
+    },
+    {
+      "episode_index": 64,
+      "method": "rule",
+      "steps": 228,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.01969298975402419,
+      "final_coverage": 0.9533767280586396,
+      "max_coverage": 0.9533767280586396,
+      "wall_time_seconds": 3.3480405999980576,
+      "final_point_rmse": 2.3128316665247546,
+      "final_angle_error_deg": 2.384042988468923,
+      "contact_intervals": 87,
+      "contact_events": 717,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        169.0,
+        216.0,
+        156.60906799029976,
+        274.92430037543147,
+        3.0835808318363336
+      ],
+      "final_state": [
+        193.6363478735744,
+        209.40701522857321,
+        254.37323247762393,
+        254.06959764915499,
+        0.7437887637395804
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 40204,
+      "candidate_rollout_wall_time_seconds": 1.9218163000005006
+    },
+    {
+      "episode_index": 76,
+      "method": "rule",
+      "steps": 280,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.956493148724508,
+      "max_coverage": 0.956493148724508,
+      "wall_time_seconds": 3.9314273000018147,
+      "final_point_rmse": 2.2110576455388324,
+      "final_angle_error_deg": 0.9582651667533533,
+      "contact_intervals": 94,
+      "contact_events": 792,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        211.0,
+        441.0,
+        417.903857090612,
+        214.1277173019941,
+        2.2178498783317933
+      ],
+      "final_state": [
+        183.40372224184893,
+        219.42931716952842,
+        253.73697998814626,
+        254.46442832697608,
+        0.7686732811304298
+      ],
+      "candidate_rollouts": 176,
+      "candidate_physics_substeps": 45876,
+      "candidate_rollout_wall_time_seconds": 2.305861900007585
+    },
+    {
+      "episode_index": 86,
+      "method": "rule",
+      "steps": 241,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9709487381570449,
+      "max_coverage": 0.9709487381570449,
+      "wall_time_seconds": 3.309447600000567,
+      "final_point_rmse": 1.3485061664153568,
+      "final_angle_error_deg": 0.16950386825701066,
+      "contact_intervals": 89,
+      "contact_events": 742,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        198.0,
+        402.0,
+        344.79266424075786,
+        221.91414881282466,
+        5.225392898051853
+      ],
+      "final_state": [
+        197.02589496556607,
+        262.23676746772514,
+        255.3503118220817,
+        257.2070919410477,
+        0.7883565639933996
+      ],
+      "candidate_rollouts": 160,
+      "candidate_physics_substeps": 39660,
+      "candidate_rollout_wall_time_seconds": 1.8676163999807613
+    },
+    {
+      "episode_index": 91,
+      "method": "rule",
+      "steps": 120,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.15083586541395005,
+      "final_coverage": 0.9591292599050786,
+      "max_coverage": 0.9591292599050786,
+      "wall_time_seconds": 2.26635879999958,
+      "final_point_rmse": 1.8263634985605475,
+      "final_angle_error_deg": 1.9316230410929827,
+      "contact_intervals": 38,
+      "contact_events": 325,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        228.0,
+        224.0,
+        354.550498974338,
+        254.65547155909022,
+        1.42933547816906
+      ],
+      "final_state": [
+        149.03749677436647,
+        316.92171869743805,
+        256.62808583784084,
+        257.29204225847855,
+        0.8191113453719066
+      ],
+      "candidate_rollouts": 80,
+      "candidate_physics_substeps": 20860,
+      "candidate_rollout_wall_time_seconds": 1.3234543999751622
+    },
+    {
+      "episode_index": 95,
+      "method": "rule",
+      "steps": 225,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.010110625271979508,
+      "final_coverage": 0.9599900076546959,
+      "max_coverage": 0.9599900076546959,
+      "wall_time_seconds": 4.014530000000377,
+      "final_point_rmse": 1.8126384208767217,
+      "final_angle_error_deg": 0.5775446034791812,
+      "contact_intervals": 84,
+      "contact_events": 697,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        347.0,
+        69.0,
+        173.31795492854033,
+        400.6600703907218,
+        4.831334357728209
+      ],
+      "final_state": [
+        185.212812153029,
+        219.60053266125936,
+        256.3120372776109,
+        254.07541839089845,
+        0.7753181084896115
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 39244,
+      "candidate_rollout_wall_time_seconds": 2.293536699973629
+    },
+    {
+      "episode_index": 108,
+      "method": "rule",
+      "steps": 195,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.1532972759542845,
+      "final_coverage": 0.9589730443797284,
+      "max_coverage": 0.9589730443797284,
+      "wall_time_seconds": 3.8417631999982405,
+      "final_point_rmse": 1.722828576513978,
+      "final_angle_error_deg": 1.494480429609646,
+      "contact_intervals": 59,
+      "contact_events": 508,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        149.0,
+        329.0,
+        218.19627482775547,
+        190.85362650429803,
+        5.645125202113215
+      ],
+      "final_state": [
+        301.3790575594915,
+        279.4794737596152,
+        255.17479400256423,
+        256.2615059558729,
+        0.7593145592941406
+      ],
+      "candidate_rollouts": 112,
+      "candidate_physics_substeps": 30492,
+      "candidate_rollout_wall_time_seconds": 2.211115800004336
+    },
+    {
+      "episode_index": 116,
+      "method": "rule",
+      "steps": 178,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9751578808168311,
+      "max_coverage": 0.9751578808168311,
+      "wall_time_seconds": 3.9540458000010403,
+      "final_point_rmse": 1.178103213795554,
+      "final_angle_error_deg": 0.22226392487899505,
+      "contact_intervals": 66,
+      "contact_events": 566,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        359.0,
+        430.0,
+        193.5850091537112,
+        197.09729110043855,
+        1.7067097406975265
+      ],
+      "final_state": [
+        186.9387121369124,
+        282.5266786837133,
+        255.2579973568477,
+        256.897488989287,
+        0.7892774006949921
+      ],
+      "candidate_rollouts": 128,
+      "candidate_physics_substeps": 33088,
+      "candidate_rollout_wall_time_seconds": 2.288211200022488
+    },
+    {
+      "episode_index": 138,
+      "method": "rule",
+      "steps": 219,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9610157003984191,
+      "max_coverage": 0.9610157003984191,
+      "wall_time_seconds": 3.4721578000026057,
+      "final_point_rmse": 1.7776473727142796,
+      "final_angle_error_deg": 1.2905737254973695,
+      "contact_intervals": 87,
+      "contact_events": 735,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        300.0,
+        423.0,
+        156.607429783029,
+        465.90892081008434,
+        2.615235027795469
+      ],
+      "final_state": [
+        185.3686879328034,
+        252.49571869344138,
+        254.40974415380407,
+        256.30130866152194,
+        0.7628734026477897
+      ],
+      "candidate_rollouts": 160,
+      "candidate_physics_substeps": 43160,
+      "candidate_rollout_wall_time_seconds": 2.1152282000002742
+    },
+    {
+      "episode_index": 141,
+      "method": "rule",
+      "steps": 201,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.952789497552868,
+      "max_coverage": 0.952789497552868,
+      "wall_time_seconds": 2.9301154000022507,
+      "final_point_rmse": 1.8720712642123774,
+      "final_angle_error_deg": 1.329425842798249,
+      "contact_intervals": 78,
+      "contact_events": 662,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        168.0,
+        99.0,
+        149.85204300849966,
+        285.5150097734718,
+        2.5565108004753228
+      ],
+      "final_state": [
+        286.4480727367557,
+        265.40240533271833,
+        256.2483056671814,
+        255.3668607019851,
+        0.8086010215153783
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 36544,
+      "candidate_rollout_wall_time_seconds": 1.7227730000122392
+    },
+    {
+      "episode_index": 148,
+      "method": "rule",
+      "steps": 174,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.10177476118679886,
+      "final_coverage": 0.9511125513464678,
+      "max_coverage": 0.9511125513464678,
+      "wall_time_seconds": 2.495842199998151,
+      "final_point_rmse": 2.324055693696812,
+      "final_angle_error_deg": 0.564377735838063,
+      "contact_intervals": 50,
+      "contact_events": 443,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        133.0,
+        69.0,
+        249.43188009863738,
+        340.02681182760415,
+        0.871278761258262
+      ],
+      "final_state": [
+        303.83897091001427,
+        278.9179746566258,
+        256.927557859316,
+        253.7977696369316,
+        0.7755479136821233
+      ],
+      "candidate_rollouts": 112,
+      "candidate_physics_substeps": 31732,
+      "candidate_rollout_wall_time_seconds": 1.4737234000167518
+    },
+    {
+      "episode_index": 149,
+      "method": "rule",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.5111245922100814,
+      "max_coverage": 0.5116102819186097,
+      "wall_time_seconds": 4.183859000000666,
+      "final_point_rmse": 30.171326212109328,
+      "final_angle_error_deg": 24.905940030958508,
+      "contact_intervals": 120,
+      "contact_events": 1000,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        355.0,
+        78.0,
+        318.1374813753755,
+        480.1027020199556,
+        3.7812802795339753
+      ],
+      "final_state": [
+        267.38645827410113,
+        342.6863552183896,
+        284.6668192294417,
+        264.6014156447783,
+        1.2200888202419327
+      ],
+      "candidate_rollouts": 184,
+      "candidate_physics_substeps": 50964,
+      "candidate_rollout_wall_time_seconds": 2.358939499990811
+    },
+    {
+      "episode_index": 174,
+      "method": "rule",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.522088326585704,
+      "max_coverage": 0.5333251317815104,
+      "wall_time_seconds": 2.657898199999181,
+      "final_point_rmse": 26.389138634826352,
+      "final_angle_error_deg": 27.232658609921703,
+      "contact_intervals": 102,
+      "contact_events": 840,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        351.0,
+        118.0,
+        253.49988967001315,
+        467.9710794710439,
+        3.665194260259188
+      ],
+      "final_state": [
+        180.53889691398672,
+        272.956501474457,
+        259.2875544755589,
+        279.08256799948396,
+        1.260697720212164
+      ],
+      "candidate_rollouts": 170,
+      "candidate_physics_substeps": 47650,
+      "candidate_rollout_wall_time_seconds": 1.460593699994206
+    },
+    {
+      "episode_index": 175,
+      "method": "rule",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.17496584661005374,
+      "final_coverage": 0.6275277502407107,
+      "max_coverage": 0.6779726774608965,
+      "wall_time_seconds": 1.3770689999983006,
+      "final_point_rmse": 16.138539869726475,
+      "final_angle_error_deg": 13.026339064488068,
+      "contact_intervals": 91,
+      "contact_events": 758,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        326.0,
+        134.0,
+        194.84563564449476,
+        378.58594836585604,
+        3.6820654201012424
+      ],
+      "final_state": [
+        144.65807565269066,
+        290.01033427977416,
+        260.603513104477,
+        252.861161127573,
+        1.012750669553923
+      ],
+      "candidate_rollouts": 156,
+      "candidate_physics_substeps": 44916,
+      "candidate_rollout_wall_time_seconds": 0.655662899982417
+    },
+    {
+      "episode_index": 180,
+      "method": "rule",
+      "steps": 278,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9554924685753136,
+      "max_coverage": 0.9554924685753136,
+      "wall_time_seconds": 1.596455300001253,
+      "final_point_rmse": 2.1694739415219835,
+      "final_angle_error_deg": 1.2321265756042006,
+      "contact_intervals": 96,
+      "contact_events": 806,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        291.0,
+        328.0,
+        127.25465221578904,
+        215.96172400347422,
+        2.7720226579900444
+      ],
+      "final_state": [
+        292.6712551280156,
+        268.22072351642504,
+        255.79251769262177,
+        253.5551251851029,
+        0.7638934978518321
+      ],
+      "candidate_rollouts": 176,
+      "candidate_physics_substeps": 47976,
+      "candidate_rollout_wall_time_seconds": 0.8438165000225126
+    },
+    {
+      "episode_index": 185,
+      "method": "rule",
+      "steps": 185,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.35023211042594365,
+      "final_coverage": 0.9590132285258149,
+      "max_coverage": 0.9590132285258149,
+      "wall_time_seconds": 0.9781953000019712,
+      "final_point_rmse": 2.231986886413056,
+      "final_angle_error_deg": 1.355358808365384,
+      "contact_intervals": 43,
+      "contact_events": 398,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        306.0,
+        371.0,
+        227.97970902671221,
+        236.4978072940337,
+        0.8558137209952896
+      ],
+      "final_state": [
+        181.3382798521178,
+        286.8931532273339,
+        254.34447827980827,
+        253.67960406887298,
+        0.7617426896455655
+      ],
+      "candidate_rollouts": 112,
+      "candidate_physics_substeps": 32952,
+      "candidate_rollout_wall_time_seconds": 0.4981509000281221
+    },
+    {
+      "episode_index": 195,
+      "method": "rule",
+      "steps": 216,
+      "success": true,
+      "native_success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9674770308988392,
+      "max_coverage": 0.9674770308988392,
+      "wall_time_seconds": 1.1162991999990481,
+      "final_point_rmse": 1.4665081631093422,
+      "final_angle_error_deg": 1.5860096132143755,
+      "contact_intervals": 75,
+      "contact_events": 640,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        341.0,
+        203.0,
+        282.79111491762336,
+        389.2819826935919,
+        0.8494444942907506
+      ],
+      "final_state": [
+        149.73110702548877,
+        317.0535103995477,
+        256.70761274115983,
+        257.0168240870668,
+        0.8130792531163209
+      ],
+      "candidate_rollouts": 144,
+      "candidate_physics_substeps": 36804,
+      "candidate_rollout_wall_time_seconds": 0.5641972000157693
+    }
+  ]
+}

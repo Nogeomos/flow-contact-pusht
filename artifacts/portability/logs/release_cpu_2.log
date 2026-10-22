@@ -1,0 +1,78 @@
+{"episode_index": 12, "method": "visual_dp", "steps": 16, "success": false, "native_success": false, "initial_coverage": 0.0, "final_coverage": 0.0, "max_coverage": 0.0, "wall_time_seconds": 0.6095207999969716, "final_point_rmse": 184.65603700849016, "final_angle_error_deg": 139.4107925541748, "contact_intervals": 3, "contact_events": 18, "goal_pose": [256.0, 256.0, 0.7853981633974483], "initial_state": [381.0, 205.0, 308.17327662439345, 389.9452340116717, 4.6246044103303765], "final_state": [431.62551409084443, 415.26300187109837, 302.61127160590826, 389.74530037219296, 4.635406127691889], "candidate_rollouts": 0, "candidate_physics_substeps": 0, "candidate_rollout_wall_time_seconds": 0.0}
+
+{
+
+  "schema_version": 1,
+
+  "method": "visual_dp",
+
+  "split": "test",
+
+  "episodes": [
+
+    12
+
+  ],
+
+  "max_steps_per_episode": 16,
+
+  "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+
+  "successes": 0,
+
+  "count": 1,
+
+  "success_rate": 0.0,
+
+  "success_rate_wilson_95": [
+
+    0.0,
+
+    0.7934506856227534
+
+  ],
+
+  "mean_max_coverage": 0.0,
+
+  "mean_final_coverage": 0.0,
+
+  "mean_final_point_rmse": 184.65603700849016,
+
+  "mean_steps": 16.0,
+
+  "total_wall_time_seconds": 0.6095207999969716,
+
+  "total_candidate_rollouts": 0,
+
+  "total_candidate_physics_substeps": 0,
+
+  "total_candidate_rollout_wall_time_seconds": 0.0,
+
+  "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+
+  "replanning_schedule": "Every 8 actions",
+
+  "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+
+  "checkpoint": "runs\\stages234_20261022\\visual_dp\\best.pt",
+
+  "checkpoint_sha256": "5859dfd61c867ad8b751e0a7fd5e4430aae5985da8694a6ba790d5299b620269",
+
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+
+  "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+
+  "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+
+  "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+
+  "observations": "two RGB images and pusher xy",
+
+  "controller_note": "direct learned action policy"
+
+}
+
+
+
+STDERR:
+

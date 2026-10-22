@@ -1,0 +1,24 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": ".\\.venv-train\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "torch": "2.7.1+cu126",
+    "numpy": "1.26.4",
+    "diffusers": "0.35.1",
+    "einops": "0.8.1",
+    "pymunk": "6.6.0",
+    "gymnasium": "0.29.1",
+    "av": "16.0.1",
+    "pyarrow": "17.0.0"
+  },
+  "torch_cuda_runtime": "12.6",
+  "cuda_available": true,
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_properties": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 4060 Laptop GPU', major=8, minor=9, total_memory=8187MB, multi_processor_count=24, uuid=0f44bc8c-2d7c-7787-43a7-432398f899a0, L2_cache_size=32MB)",
+  "loss": 1026.161865234375,
+  "gradient_finite": true,
+  "nvidia_smi": "Thu Oct 22 17:34:07 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 596.49                 Driver Version: 596.49         CUDA Version: 13.2     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0  On |                  N/A |\n| N/A   50C    P3             15W /  130W |    1727MiB /   8188MiB |      4%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A           29948      C   ...ependencies\\python\\python.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "environment_scope": "Independent .venv-train; stage1 .venv unchanged"
+}

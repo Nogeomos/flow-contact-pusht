@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "method": "rule",
+  "split": "validation",
+  "episodes": [
+    11,
+    23,
+    50
+  ],
+  "max_steps_per_episode": 300,
+  "success_criterion": "native coverage > 0.95 at any executed state",
+  "successes": 3,
+  "count": 3,
+  "success_rate": 1.0,
+  "success_rate_wilson_95": [
+    0.4385029682449681,
+    1.0
+  ],
+  "mean_max_coverage": 0.9574419170830571,
+  "mean_final_coverage": 0.9574419170830571,
+  "mean_final_point_rmse": 2.186898992461812,
+  "mean_steps": 210.0,
+  "total_wall_time_seconds": 9.589061800001218,
+  "checkpoint": null,
+  "checkpoint_sha256": null,
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+  "controller_sha256": "49414c6f51f177709abd7be4dd13c90729329d097f26b7a16d8596641cc99008",
+  "evaluator_sha256": "efa81938cb84fdafc2067ceec6338b0378d4adc84ca0414a5ea130d421248339",
+  "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+  "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+  "controller_note": "8 contact candidates x 2 push lengths, shared exact-physics candidate model and visibility-graph paths",
+  "results": [
+    {
+      "episode_index": 11,
+      "method": "rule",
+      "steps": 209,
+      "success": true,
+      "initial_coverage": 0.008558997813705067,
+      "final_coverage": 0.9561194273759256,
+      "max_coverage": 0.9561194273759256,
+      "wall_time_seconds": 2.083063199999742,
+      "final_point_rmse": 2.088284853221703,
+      "final_angle_error_deg": 1.9065759045815085,
+      "contact_intervals": 81,
+      "contact_events": 682,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        241.0,
+        130.0,
+        149.69473294999196,
+        396.1429309816107,
+        5.120442870049975
+      ],
+      "final_state": [
+        200.1886362969973,
+        357.0858627343833,
+        254.03910844643244,
+        255.67257211380868,
+        0.7521221364233116
+      ]
+    },
+    {
+      "episode_index": 23,
+      "method": "rule",
+      "steps": 243,
+      "success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9561783839383715,
+      "max_coverage": 0.9561783839383715,
+      "wall_time_seconds": 4.223221000000194,
+      "final_point_rmse": 2.373796741768845,
+      "final_angle_error_deg": 2.0956876241241544,
+      "contact_intervals": 78,
+      "contact_events": 660,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        133.0,
+        280.0,
+        114.08302805540387,
+        139.2126303573765,
+        5.669440683494992
+      ],
+      "final_state": [
+        200.7521165537777,
+        355.2323266274926,
+        254.26757655115847,
+        253.64184022545774,
+        0.7488215142631844
+      ]
+    },
+    {
+      "episode_index": 50,
+      "method": "rule",
+      "steps": 178,
+      "success": true,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.9600279399348743,
+      "max_coverage": 0.9600279399348743,
+      "wall_time_seconds": 3.282777600001282,
+      "final_point_rmse": 2.0986153823948883,
+      "final_angle_error_deg": 0.9837534570026509,
+      "contact_intervals": 68,
+      "contact_events": 601,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        226.0,
+        445.0,
+        253.86624039475612,
+        430.53294464423277,
+        1.4936742235723761
+      ],
+      "final_state": [
+        184.12576291982342,
+        218.76182485877527,
+        254.1244345540623,
+        254.14794910733147,
+        0.7682284265448756
+      ]
+    }
+  ]
+}

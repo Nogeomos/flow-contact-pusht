@@ -1,0 +1,32 @@
+{
+  "frozen_at_utc": "2026-10-22T09:31:19.025822+00:00",
+  "scope": "controller and evaluation code; no test episodes have been run",
+  "controller_sha256": "389d73b99c83b4b9c7dfb50f7374e147e870a3acff5fe80d49ad148fcc19c215",
+  "evaluator_sha256": "55e92786ebc5ceed7d30bf935bcca6d03e75687f610f4a63c9441c1bb903eaed",
+  "validation_summary_sha256": "aede76a0a03f99adea3ecd1d6bc82560d14cddba68ea58ee60bb40579ff549ab",
+  "validation_successes": 17,
+  "validation_count": 21,
+  "config": {
+    "real_action_budget": 300,
+    "contact_candidates": 8,
+    "push_distances": [
+      12,
+      40
+    ],
+    "push_control_intervals": 8,
+    "push_hold_intervals": 2,
+    "approach_speed": 120,
+    "precontact_distance": 19,
+    "obstacle_clearance": 18,
+    "minimum_contact_separation": 20,
+    "flow_translation_limit": 24,
+    "flow_rotation_limit": 0.24,
+    "flow_horizon": 8
+  },
+  "failures": [
+    53,
+    149,
+    174,
+    175
+  ]
+}

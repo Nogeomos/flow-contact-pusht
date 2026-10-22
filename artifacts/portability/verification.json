@@ -1,0 +1,2175 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "date": "2026-10-22",
+  "scope": "Independent Windows checkout bootstrap and CPU inference; not a new scientific performance experiment",
+  "clean_tree_initially_absent": [
+    "environment",
+    "external source tree",
+    "historical reports",
+    "historical runs",
+    "derived replay arrays",
+    "visual image cache"
+  ],
+  "initial_inputs": [
+    "project code",
+    "pinned requirements/resource manifest",
+    "frozen splits.json/windows.json",
+    "10 local copies of public resources, independently checked against pinned SHA256",
+    "3 original best checkpoints packed into a local test ZIP"
+  ],
+  "limitations": {
+    "fresh_pip_install_performed": false,
+    "torch_redownloaded": false,
+    "second_physical_computer_tested": false,
+    "cpu_only_wheel_installed": false,
+    "network_download_tested_this_run": false,
+    "source_vs_publication_models": "Both original checkpoints and the separately restored published model ZIP were tested. All 11 published policies loaded on CPU; 16-step contact and visual-DP trajectories exactly matched the corresponding original-checkpoint CPU runs.",
+    "runtime": "Existing Python dependency environment reused; all scientific commands launched in new processes."
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.7.1+cu126",
+    "numpy": "1.26.4",
+    "pymunk": "6.6.0",
+    "diffusers": "0.35.1",
+    "einops": "0.8.1"
+  },
+  "setup_check": {
+    "powershell_parse": "passed",
+    "cpu_forward_backward": "passed",
+    "cuda_forward_backward": "passed",
+    "locked_versions": "passed",
+    "top_level_duplicate_package_metadata": {},
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "scripts/setup_windows.ps1",
+      "-Mode",
+      "Cuda126",
+      "-EnvironmentPath",
+      ".venv-train",
+      "-CheckOnly"
+    ],
+    "exit_code": 0,
+    "existing_environment_read_only": true
+  },
+  "resource_restore": {
+    "status": "passed",
+    "manifest_sha256": "1bd653e8eebc34a8125c5689ac810486a2c7a638727ebb78451ca88ec1dc3623",
+    "dataset_revision": "7628202a2180972f291ba1bc6723834921e72c19",
+    "repositories": {
+      "gym-pusht": [
+        "huggingface/gym-pusht",
+        "e49cf07fd32ad6e69443af2921dd8343b0f9ad7d"
+      ],
+      "diffusion_policy": [
+        "real-stanford/diffusion_policy",
+        "5ba07ac6661db573af695b419a7947ecb704690f"
+      ]
+    },
+    "files": [
+      {
+        "path": "data\\raw\\lerobot_pusht\\.gitattributes",
+        "bytes": 2419,
+        "sha256": "a2bdf429c1bc3858213bb4b7a748fa36a71536a5a1ff98861281853c3c2be1f2",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "data\\raw\\lerobot_pusht\\README.md",
+        "bytes": 3538,
+        "sha256": "246e94b68f204bfcd05bb32e23631c3316b8de6152d7a85e693d4455540ef72f",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "data\\raw\\lerobot_pusht\\data\\chunk-000\\file-000.parquet",
+        "bytes": 674393,
+        "sha256": "9abc0431f12d10c33b5b37b1bf1e6e557c8ae1c8c29fb86658969e48fcbbbf01",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "data\\raw\\lerobot_pusht\\meta\\episodes\\chunk-000\\file-000.parquet",
+        "bytes": 106584,
+        "sha256": "bc1226f33d3d1635ec1954f9942073709be8e106fde5f4f16b9d52edc4e0ebc4",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "data\\raw\\lerobot_pusht\\meta\\info.json",
+        "bytes": 2261,
+        "sha256": "0b46becc21ad92b117da1e95daf44110bb21d0bde75638b4ad167c8ccd959d38",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "data\\raw\\lerobot_pusht\\meta\\stats.json",
+        "bytes": 4371,
+        "sha256": "2a58f97df48893274c587fdf09f5cecb31fe385b1e188a82197a8972ccfb9d6d",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "data\\raw\\lerobot_pusht\\meta\\tasks.parquet",
+        "bytes": 2265,
+        "sha256": "95535f5152771bc0a6ab0fd93d23d7c1fecd9b7a13dc117852dfdd94f5b2c711",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "data\\raw\\lerobot_pusht\\videos\\observation.image\\chunk-000\\file-000.mp4",
+        "bytes": 6890970,
+        "sha256": "f58d11857651dad5983c021b56a50a68a6ce19068834c1fb5cac099219fb3a78",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "downloads\\gym-pusht-e49cf07fd32ad6e69443af2921dd8343b0f9ad7d.zip",
+        "bytes": 50560,
+        "sha256": "b333f4c2016b316d71351e22732f90073c19617051137927e15f07495c6b4b78",
+        "origin": "verified_existing"
+      },
+      {
+        "path": "downloads\\diffusion_policy-5ba07ac6661db573af695b419a7947ecb704690f.zip",
+        "bytes": 13363127,
+        "sha256": "3c159ab850b842c47b94257c6d89ef7d2ae911e8c97a1d62da266ef328e50a73",
+        "origin": "verified_existing"
+      }
+    ],
+    "extracted_sources": [
+      {
+        "repository": "gym-pusht",
+        "revision": "e49cf07fd32ad6e69443af2921dd8343b0f9ad7d",
+        "verified_files": 15,
+        "created_missing_files": 15
+      },
+      {
+        "repository": "diffusion_policy",
+        "revision": "5ba07ac6661db573af695b419a7947ecb704690f",
+        "verified_files": 369,
+        "created_missing_files": 369
+      }
+    ],
+    "network_used": false
+  },
+  "model_restore": {
+    "status": "passed",
+    "zip_sha256": "eefb2571356bf16f79c0f4286911ca9993682e15695246e0503d45a38789c2e7",
+    "zip_name": "models_test.zip",
+    "files": 3,
+    "created": 3,
+    "identical_existing_skipped": 0,
+    "overwrite_existing": false,
+    "members": [
+      {
+        "path": "runs/stages234_20261022/contact_main/best.pt",
+        "sha256": "3a7dd6a7164dee9f3a30d62149cf8d50ab28632afa932636ea79aed943af3d11"
+      },
+      {
+        "path": "runs/stages234_20261022/flow_action/best.pt",
+        "sha256": "e2c26101e28712517e781cf2cebfb5667b711347b22fb5735501fa8804c0f72c"
+      },
+      {
+        "path": "runs/stages234_20261022/visual_dp/best.pt",
+        "sha256": "2acbde007df6913bbb4e1247e2d651fd7b2f33d3ffedaf0a3acc12ae7780a830"
+      }
+    ]
+  },
+  "restore_safety": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "identical_existing",
+        "arguments": [
+          "scripts/restore_artifact.py",
+          "--zip",
+          "$CLEAN_CHECKOUT\\release_input\\models_test.zip",
+          "--sha256",
+          "eefb2571356bf16f79c0f4286911ca9993682e15695246e0503d45a38789c2e7",
+          "--output",
+          "runs/restore_safety/identical_existing.json"
+        ],
+        "exit_code": 0,
+        "expected_success": true,
+        "stdout": "{\"status\": \"passed\", \"zip_sha256\": \"eefb2571356bf16f79c0f4286911ca9993682e15695246e0503d45a38789c2e7\", \"zip_name\": \"models_test.zip\", \"files\": 3, \"created\": 0, \"identical_existing_skipped\": 3, \"overwrite_existing\": false}\n",
+        "stderr": ""
+      },
+      {
+        "name": "wrong_sha",
+        "arguments": [
+          "scripts/restore_artifact.py",
+          "--zip",
+          "$CLEAN_CHECKOUT\\release_input\\models_test.zip",
+          "--sha256",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "--output",
+          "runs/restore_safety/wrong_sha.json"
+        ],
+        "exit_code": 1,
+        "expected_success": false,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"$CLEAN_CHECKOUT\\scripts\\restore_artifact.py\", line 93, in <module>\n    restore(args.zip.resolve(), args.sha256, args.output.resolve())\n  File \"$CLEAN_CHECKOUT\\scripts\\restore_artifact.py\", line 29, in restore\n    raise ValueError(f\"ZIP checksum mismatch: expected {expected}, got {actual}; nothing extracted\")\nValueError: ZIP checksum mismatch: expected 0000000000000000000000000000000000000000000000000000000000000000, got eefb2571356bf16f79c0f4286911ca9993682e15695246e0503d45a38789c2e7; nothing extracted\n"
+      },
+      {
+        "name": "traversal",
+        "arguments": [
+          "scripts/restore_artifact.py",
+          "--zip",
+          "$CLEAN_CHECKOUT\\release_input\\traversal.zip",
+          "--sha256",
+          "9aaf1e1642973118cac23de3dbd68acdbbe452613b2fda38510830d3b4ff8c65",
+          "--output",
+          "runs/restore_safety/traversal.json"
+        ],
+        "exit_code": 1,
+        "expected_success": false,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"$CLEAN_CHECKOUT\\scripts\\restore_artifact.py\", line 93, in <module>\n    restore(args.zip.resolve(), args.sha256, args.output.resolve())\n  File \"$CLEAN_CHECKOUT\\scripts\\restore_artifact.py\", line 39, in restore\n    raise ValueError(f\"Unsafe ZIP member: {raw}\")\nValueError: Unsafe ZIP member: ../escaped.txt\n"
+      },
+      {
+        "name": "conflict",
+        "arguments": [
+          "scripts/restore_artifact.py",
+          "--zip",
+          "$CLEAN_CHECKOUT\\release_input\\conflict.zip",
+          "--sha256",
+          "877c3f32c474ab6ec1e1e3ac63fb389d57d271d2c9945570630f5b0b60ad8a5b",
+          "--output",
+          "runs/restore_safety/conflict.json"
+        ],
+        "exit_code": 1,
+        "expected_success": false,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"$CLEAN_CHECKOUT\\scripts\\restore_artifact.py\", line 93, in <module>\n    restore(args.zip.resolve(), args.sha256, args.output.resolve())\n  File \"$CLEAN_CHECKOUT\\scripts\\restore_artifact.py\", line 61, in restore\n    raise FileExistsError(f\"Existing file differs; nothing extracted, preserved: {target}\")\nFileExistsError: Existing file differs; nothing extracted, preserved: $CLEAN_CHECKOUT\\data\\derived\\splits.json\n"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "arguments": [
+        "scripts/simple_push.py",
+        "--output-dir",
+        "runs/simple_push"
+      ],
+      "fresh_process": true,
+      "exit_code": 0,
+      "elapsed_seconds": 9.004307499999413,
+      "log": "command_0.log",
+      "program": "existing Python 3.12.14 environment; fresh process"
+    },
+    {
+      "arguments": [
+        "research/evaluate_closed_loop.py",
+        "--method",
+        "rule",
+        "--split",
+        "test",
+        "--episode-ids",
+        "12",
+        "--max-steps",
+        "16",
+        "--device",
+        "cpu",
+        "--videos",
+        "0",
+        "--output-dir",
+        "runs/smoke_rule"
+      ],
+      "fresh_process": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1.081909300002735,
+      "log": "command_1.log",
+      "program": "existing Python 3.12.14 environment; fresh process"
+    },
+    {
+      "arguments": [
+        "research/evaluate_closed_loop.py",
+        "--method",
+        "learned_contact",
+        "--split",
+        "test",
+        "--episode-ids",
+        "12",
+        "--max-steps",
+        "16",
+        "--device",
+        "cpu",
+        "--videos",
+        "0",
+        "--output-dir",
+        "runs/smoke_learned_contact",
+        "--factory",
+        "research.contact_learning:load_policy",
+        "--checkpoint",
+        "runs/stages234_20261022/contact_main/best.pt"
+      ],
+      "fresh_process": true,
+      "exit_code": 0,
+      "elapsed_seconds": 3.5158420000007027,
+      "log": "command_2.log",
+      "program": "existing Python 3.12.14 environment; fresh process"
+    },
+    {
+      "arguments": [
+        "research/evaluate_closed_loop.py",
+        "--method",
+        "flow_action",
+        "--split",
+        "test",
+        "--episode-ids",
+        "12",
+        "--max-steps",
+        "16",
+        "--device",
+        "cpu",
+        "--videos",
+        "0",
+        "--output-dir",
+        "runs/smoke_flow_action",
+        "--factory",
+        "research.contact_learning:load_policy",
+        "--checkpoint",
+        "runs/stages234_20261022/flow_action/best.pt"
+      ],
+      "fresh_process": true,
+      "exit_code": 0,
+      "elapsed_seconds": 3.1793662999989465,
+      "log": "command_3.log",
+      "program": "existing Python 3.12.14 environment; fresh process"
+    },
+    {
+      "arguments": [
+        "research/evaluate_closed_loop.py",
+        "--method",
+        "visual_dp",
+        "--split",
+        "test",
+        "--episode-ids",
+        "12",
+        "--max-steps",
+        "16",
+        "--device",
+        "cpu",
+        "--videos",
+        "0",
+        "--output-dir",
+        "runs/smoke_visual_dp",
+        "--factory",
+        "research.visual_dp:load_policy",
+        "--checkpoint",
+        "runs/stages234_20261022/visual_dp/best.pt"
+      ],
+      "fresh_process": true,
+      "exit_code": 0,
+      "elapsed_seconds": 6.7863570000045,
+      "log": "command_4.log",
+      "program": "existing Python 3.12.14 environment; fresh process"
+    }
+  ],
+  "rebuild_command": {
+    "arguments": [
+      "scripts/rebuild_derived.py",
+      "--output-dir",
+      "runs/fresh_rebuild",
+      "--install"
+    ],
+    "fresh_process": true,
+    "exit_code": 0
+  },
+  "fresh_replay": {
+    "status": "passed",
+    "episodes": 206,
+    "frames": 25650,
+    "eligible_windows": 24000,
+    "window_split_counts": {
+      "train": 19130,
+      "validation": 2589,
+      "test": 2281
+    },
+    "episode_split_counts": {
+      "train": 164,
+      "validation": 21,
+      "test": 21
+    },
+    "contact_point_events": 119158,
+    "internal_seam_events": 16,
+    "invalid_label_intervals": 2,
+    "max_rigid_point_error": 2.9908411534051993e-05,
+    "max_soft_label_error": 2.9800887535458287e-08,
+    "installed": true,
+    "frozen_manifest_comparison": {
+      "splits": {
+        "membership_and_parameters_equal": true,
+        "frozen_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+        "fresh_sha256": "162519db1c1433939497bec8ef3fe2cbeff7011d6d171bcba02293ea41e2be1b",
+        "fresh_provenance_not_substituted_for_historical_provenance": true
+      },
+      "windows": {
+        "membership_and_parameters_equal": true,
+        "frozen_sha256": "9a312c926e1408b961b8a906722138b9dae7598b5b93800a3a530d320349f91b",
+        "fresh_sha256": "0a67a6fb0d00f96891733a26a6d1ac8dd22627ecf1b37449ee477e453bf378ca",
+        "fresh_provenance_not_substituted_for_historical_provenance": true
+      }
+    }
+  },
+  "fresh_replay_byte_comparison": {
+    "count": 206,
+    "byte_identical_count": 206,
+    "episodes": [
+      {
+        "episode_file": "episode_000000.npz",
+        "fresh_sha256": "b77777e2adaad78bd43b251c993c3e866f54a7500a80b834c140c2d835dee5da",
+        "historical_sha256": "b77777e2adaad78bd43b251c993c3e866f54a7500a80b834c140c2d835dee5da",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000001.npz",
+        "fresh_sha256": "60e489a6ca001d667c50d200011dc0c5300b742628079d8e9c4adc628e5ad081",
+        "historical_sha256": "60e489a6ca001d667c50d200011dc0c5300b742628079d8e9c4adc628e5ad081",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000002.npz",
+        "fresh_sha256": "6cea4af7003358211ec63bdd1ac8c8e4db789425fab4c8e8c5833bb741560e49",
+        "historical_sha256": "6cea4af7003358211ec63bdd1ac8c8e4db789425fab4c8e8c5833bb741560e49",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000003.npz",
+        "fresh_sha256": "1cf15cf3cbcce65d8d94c86fa77c09ef218a4477827a5e6383dc3d85ddf8c1a5",
+        "historical_sha256": "1cf15cf3cbcce65d8d94c86fa77c09ef218a4477827a5e6383dc3d85ddf8c1a5",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000004.npz",
+        "fresh_sha256": "1d6728297c45dfc8bfede14d2ecf803430728f93c446ecc215e7afa34e0dcb4e",
+        "historical_sha256": "1d6728297c45dfc8bfede14d2ecf803430728f93c446ecc215e7afa34e0dcb4e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000005.npz",
+        "fresh_sha256": "c771987237967820cd16922be86c22d2d973527995167e910f2084e85bd72037",
+        "historical_sha256": "c771987237967820cd16922be86c22d2d973527995167e910f2084e85bd72037",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000006.npz",
+        "fresh_sha256": "7e822d518f0ac660c683bda2aee68bf6ffa18b67a67abad7c8b5bcb8084bd2f2",
+        "historical_sha256": "7e822d518f0ac660c683bda2aee68bf6ffa18b67a67abad7c8b5bcb8084bd2f2",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000007.npz",
+        "fresh_sha256": "fc110aac1a9f4a4186b73af387e05cda17801a2e3919eb69a095378d0fb665ee",
+        "historical_sha256": "fc110aac1a9f4a4186b73af387e05cda17801a2e3919eb69a095378d0fb665ee",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000008.npz",
+        "fresh_sha256": "85a921ec0cefd69161a505fbe535a2f82d0eeaf4224285f412d2d447813d8362",
+        "historical_sha256": "85a921ec0cefd69161a505fbe535a2f82d0eeaf4224285f412d2d447813d8362",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000009.npz",
+        "fresh_sha256": "4b46f6c16d043d054fc7929a18cec2d8381579b42c93e409a7fd79f5145dad42",
+        "historical_sha256": "4b46f6c16d043d054fc7929a18cec2d8381579b42c93e409a7fd79f5145dad42",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000010.npz",
+        "fresh_sha256": "8acac994aa9569fe5c43878a1b25c102bf8b55d1485a1f35f43025ec21d9da7f",
+        "historical_sha256": "8acac994aa9569fe5c43878a1b25c102bf8b55d1485a1f35f43025ec21d9da7f",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000011.npz",
+        "fresh_sha256": "4397f20f7094adee9a4736a3a8eb64137c8c0c902c2ed6a21bfb27ca8d42b4ed",
+        "historical_sha256": "4397f20f7094adee9a4736a3a8eb64137c8c0c902c2ed6a21bfb27ca8d42b4ed",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000012.npz",
+        "fresh_sha256": "b0d0cc1fe09b0ae4cb4f20ababe27654cb5531b1007c299be67a3b514dccb65f",
+        "historical_sha256": "b0d0cc1fe09b0ae4cb4f20ababe27654cb5531b1007c299be67a3b514dccb65f",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000013.npz",
+        "fresh_sha256": "6f15ed968155cc63b6c4ae2e39f12ebff05000b3a7757a890e1d80793ddc4bde",
+        "historical_sha256": "6f15ed968155cc63b6c4ae2e39f12ebff05000b3a7757a890e1d80793ddc4bde",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000014.npz",
+        "fresh_sha256": "ed7bbeed973ea98b03eb1ddd2e48eefd135d0abd7b1d9c72686fafd1f5ea52ee",
+        "historical_sha256": "ed7bbeed973ea98b03eb1ddd2e48eefd135d0abd7b1d9c72686fafd1f5ea52ee",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000015.npz",
+        "fresh_sha256": "87571c22465734b8a0db9f8db017fa3e7cc161262c578ee476f42fd91cde987b",
+        "historical_sha256": "87571c22465734b8a0db9f8db017fa3e7cc161262c578ee476f42fd91cde987b",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000016.npz",
+        "fresh_sha256": "d49b6f7305555ed82e646c132908ebb5a9173105ce2ae13d32b8c5f6ce159596",
+        "historical_sha256": "d49b6f7305555ed82e646c132908ebb5a9173105ce2ae13d32b8c5f6ce159596",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000017.npz",
+        "fresh_sha256": "7fe2b959cd91f26ac4ffea3ac7c636408e2700aae2ad7a5026d2b6088b528e7c",
+        "historical_sha256": "7fe2b959cd91f26ac4ffea3ac7c636408e2700aae2ad7a5026d2b6088b528e7c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000018.npz",
+        "fresh_sha256": "1c1245b1ed9ecece2f13f5f6cd789d497138b46ce46d5557d81bf8aa7cc22e98",
+        "historical_sha256": "1c1245b1ed9ecece2f13f5f6cd789d497138b46ce46d5557d81bf8aa7cc22e98",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000019.npz",
+        "fresh_sha256": "b78c77551495e52d32f6f1cd52c2e13bd48a6113af2bd9fd32a449311d778ec5",
+        "historical_sha256": "b78c77551495e52d32f6f1cd52c2e13bd48a6113af2bd9fd32a449311d778ec5",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000020.npz",
+        "fresh_sha256": "edcc5fc9eaba0090d82966862a27501c9abccf64374c7e70d0bccc5b9cdfd1bc",
+        "historical_sha256": "edcc5fc9eaba0090d82966862a27501c9abccf64374c7e70d0bccc5b9cdfd1bc",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000021.npz",
+        "fresh_sha256": "0dda48cb66b20fefb0f76c7d3945c86c5643d321930074b1a7c115a7e576a19d",
+        "historical_sha256": "0dda48cb66b20fefb0f76c7d3945c86c5643d321930074b1a7c115a7e576a19d",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000022.npz",
+        "fresh_sha256": "09889e406a02f8041ecbec2a0d4e187dfe4672e1c4eb8e6e8ba5e6d0602ffb02",
+        "historical_sha256": "09889e406a02f8041ecbec2a0d4e187dfe4672e1c4eb8e6e8ba5e6d0602ffb02",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000023.npz",
+        "fresh_sha256": "62fecd19e74b360d493f0da300f98446811ed2c9c2c6d95239e61d8e2861bfe4",
+        "historical_sha256": "62fecd19e74b360d493f0da300f98446811ed2c9c2c6d95239e61d8e2861bfe4",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000024.npz",
+        "fresh_sha256": "3e9f6395ec2ab9bdb55fff6a77e8b2434a2f72c003275a3397ff25af0cf316cd",
+        "historical_sha256": "3e9f6395ec2ab9bdb55fff6a77e8b2434a2f72c003275a3397ff25af0cf316cd",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000025.npz",
+        "fresh_sha256": "94ed09fd3f451b03dd4d736985bc29f2a66f7a1f669fd7174bd54979e45d8991",
+        "historical_sha256": "94ed09fd3f451b03dd4d736985bc29f2a66f7a1f669fd7174bd54979e45d8991",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000026.npz",
+        "fresh_sha256": "99e8f496f4137e4ac9696a5ffa57ddf7ad4470fcdfc9d2efccb829603cdf9466",
+        "historical_sha256": "99e8f496f4137e4ac9696a5ffa57ddf7ad4470fcdfc9d2efccb829603cdf9466",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000027.npz",
+        "fresh_sha256": "7bbba72b1abe819b65a6a09c08842d8b12d57bdddbf37c3fa1d5b05ea14f9ddc",
+        "historical_sha256": "7bbba72b1abe819b65a6a09c08842d8b12d57bdddbf37c3fa1d5b05ea14f9ddc",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000028.npz",
+        "fresh_sha256": "104ecd6f3d23689b8cfac146b43d1391ebc6c3e44fe21d5925d5b19ac5f6d251",
+        "historical_sha256": "104ecd6f3d23689b8cfac146b43d1391ebc6c3e44fe21d5925d5b19ac5f6d251",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000029.npz",
+        "fresh_sha256": "60b5f86fd1c56045ce50b3b783263da48894eaa852cb0ab0ef70c9cb5785cb50",
+        "historical_sha256": "60b5f86fd1c56045ce50b3b783263da48894eaa852cb0ab0ef70c9cb5785cb50",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000030.npz",
+        "fresh_sha256": "60905ad1b03a08cfd45f4bfc616eb6ee9b87409f0d24cf7e1f9c4c10ab50b33c",
+        "historical_sha256": "60905ad1b03a08cfd45f4bfc616eb6ee9b87409f0d24cf7e1f9c4c10ab50b33c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000031.npz",
+        "fresh_sha256": "35b1399ca6b42041b8ece47e6036c3591f914060966ed235f6e5a73fc87212c0",
+        "historical_sha256": "35b1399ca6b42041b8ece47e6036c3591f914060966ed235f6e5a73fc87212c0",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000032.npz",
+        "fresh_sha256": "9a024e78aff83eeec9fc4ce0f441e7a71fe87a27eac58695e2c2617709f935bd",
+        "historical_sha256": "9a024e78aff83eeec9fc4ce0f441e7a71fe87a27eac58695e2c2617709f935bd",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000033.npz",
+        "fresh_sha256": "047d247b762e82a88ef2ad051f6b0309bf88cb4da1a264a29eb7ee42b248652a",
+        "historical_sha256": "047d247b762e82a88ef2ad051f6b0309bf88cb4da1a264a29eb7ee42b248652a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000034.npz",
+        "fresh_sha256": "4b0409de52e1c5e6d48d2c2f02925f89ccbb75dd1a18a3f69ab51849736d535a",
+        "historical_sha256": "4b0409de52e1c5e6d48d2c2f02925f89ccbb75dd1a18a3f69ab51849736d535a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000035.npz",
+        "fresh_sha256": "3e0e66015fb9b0d587dd6c89eef335e00bf11ddbf410e5852ec66d150ab2c27a",
+        "historical_sha256": "3e0e66015fb9b0d587dd6c89eef335e00bf11ddbf410e5852ec66d150ab2c27a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000036.npz",
+        "fresh_sha256": "9b58e138d47287b558f5f0f769a2041d57584b26217afb01336f21680853441d",
+        "historical_sha256": "9b58e138d47287b558f5f0f769a2041d57584b26217afb01336f21680853441d",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000037.npz",
+        "fresh_sha256": "cdbb81b11f8c20437178925efe313ad31a3e0104c181a9b98ec28fd1b4d797e1",
+        "historical_sha256": "cdbb81b11f8c20437178925efe313ad31a3e0104c181a9b98ec28fd1b4d797e1",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000038.npz",
+        "fresh_sha256": "8725b20c97eea0efdd83571d6ba4d30070ffc173ce24824552f664addfd1fd0e",
+        "historical_sha256": "8725b20c97eea0efdd83571d6ba4d30070ffc173ce24824552f664addfd1fd0e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000039.npz",
+        "fresh_sha256": "372a86cbd83848a102bba8507de046c51d8595f4490e06a745d109110006d2cc",
+        "historical_sha256": "372a86cbd83848a102bba8507de046c51d8595f4490e06a745d109110006d2cc",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000040.npz",
+        "fresh_sha256": "087fea16bc81329854fb81dda656c61bbf05b7affbfb00f2a3400956787b757c",
+        "historical_sha256": "087fea16bc81329854fb81dda656c61bbf05b7affbfb00f2a3400956787b757c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000041.npz",
+        "fresh_sha256": "e9cad5476cb9fabb43baee7f7e686e8db6c5e31217b0cd402d82ab2a04d25509",
+        "historical_sha256": "e9cad5476cb9fabb43baee7f7e686e8db6c5e31217b0cd402d82ab2a04d25509",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000042.npz",
+        "fresh_sha256": "14056ae7f578f0a0b4c6f07d260c72c2aa9bcbf639f273ce095db93e82491f69",
+        "historical_sha256": "14056ae7f578f0a0b4c6f07d260c72c2aa9bcbf639f273ce095db93e82491f69",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000043.npz",
+        "fresh_sha256": "62945f09ef2a4d84a4a6f50dede526cf14fb4a71e49bc80ad8b3bb092c9e098c",
+        "historical_sha256": "62945f09ef2a4d84a4a6f50dede526cf14fb4a71e49bc80ad8b3bb092c9e098c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000044.npz",
+        "fresh_sha256": "0c51d05e979abb620d9457060e2e25c059dbc3ed421e7790aac4529c74e26125",
+        "historical_sha256": "0c51d05e979abb620d9457060e2e25c059dbc3ed421e7790aac4529c74e26125",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000045.npz",
+        "fresh_sha256": "873b6f2a80fc2db45cb05dbbee5d1f52cf1d74cf14f2780f63f3f18c01f68134",
+        "historical_sha256": "873b6f2a80fc2db45cb05dbbee5d1f52cf1d74cf14f2780f63f3f18c01f68134",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000046.npz",
+        "fresh_sha256": "4b7ae3b4c48968f4c95b2947560b8123444854fee214e27aced3979e3ebb3810",
+        "historical_sha256": "4b7ae3b4c48968f4c95b2947560b8123444854fee214e27aced3979e3ebb3810",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000047.npz",
+        "fresh_sha256": "a78b098081168d68d252567c2792d5383a1760763b451507b75770d87c4c930e",
+        "historical_sha256": "a78b098081168d68d252567c2792d5383a1760763b451507b75770d87c4c930e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000048.npz",
+        "fresh_sha256": "56ee3b0ed48625116e8275987bb9ad3b446bf94027634f9cf1f9dadb7147bf36",
+        "historical_sha256": "56ee3b0ed48625116e8275987bb9ad3b446bf94027634f9cf1f9dadb7147bf36",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000049.npz",
+        "fresh_sha256": "0dbae8c6e27de3e59084d411227d24f4bfb020a4008f8e880fd6d145e43eeff7",
+        "historical_sha256": "0dbae8c6e27de3e59084d411227d24f4bfb020a4008f8e880fd6d145e43eeff7",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000050.npz",
+        "fresh_sha256": "d67bb6821a890eac1c4f346fa8dd14eb8da8e30e58160092a9913b9179ee67c3",
+        "historical_sha256": "d67bb6821a890eac1c4f346fa8dd14eb8da8e30e58160092a9913b9179ee67c3",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000051.npz",
+        "fresh_sha256": "e6e4504b5e4c8b58968f202a9e6613c2d608376e0719a29ebac3a1a709be284d",
+        "historical_sha256": "e6e4504b5e4c8b58968f202a9e6613c2d608376e0719a29ebac3a1a709be284d",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000052.npz",
+        "fresh_sha256": "ee9d0f79bbdb5ffcaed2f2072ee62dcb50424e142f40ed5b87610f37bf84b986",
+        "historical_sha256": "ee9d0f79bbdb5ffcaed2f2072ee62dcb50424e142f40ed5b87610f37bf84b986",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000053.npz",
+        "fresh_sha256": "c41103b18024125f3dc7a09dd678130e2e13cbc70c1121823b9456ea31557156",
+        "historical_sha256": "c41103b18024125f3dc7a09dd678130e2e13cbc70c1121823b9456ea31557156",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000054.npz",
+        "fresh_sha256": "8e61b5c88d5f3c7827f1387a6af55f0b42daad09437f8a87152b9e3a509c9835",
+        "historical_sha256": "8e61b5c88d5f3c7827f1387a6af55f0b42daad09437f8a87152b9e3a509c9835",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000055.npz",
+        "fresh_sha256": "33e8e0d16b3d9e528ebec77ba6e3ad23d8b5669d39eed7f56852cf2cd0725834",
+        "historical_sha256": "33e8e0d16b3d9e528ebec77ba6e3ad23d8b5669d39eed7f56852cf2cd0725834",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000056.npz",
+        "fresh_sha256": "95a3b34fb230f763a5da89137ab3c190bb89de5fb83fd3557450dd3961d89a93",
+        "historical_sha256": "95a3b34fb230f763a5da89137ab3c190bb89de5fb83fd3557450dd3961d89a93",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000057.npz",
+        "fresh_sha256": "aed6f8463fec091f80c0fe8390fb418e208f8cfd070294b6db64fe48a5f01118",
+        "historical_sha256": "aed6f8463fec091f80c0fe8390fb418e208f8cfd070294b6db64fe48a5f01118",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000058.npz",
+        "fresh_sha256": "12f54ef02228bfd99034a03adbe3e09bc31cbc7f0e98164ba6cfa14ae0f864f9",
+        "historical_sha256": "12f54ef02228bfd99034a03adbe3e09bc31cbc7f0e98164ba6cfa14ae0f864f9",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000059.npz",
+        "fresh_sha256": "d185f22bde53ffa7c40bb09bccf667a083e12d980a5d92f60a4a867e84017734",
+        "historical_sha256": "d185f22bde53ffa7c40bb09bccf667a083e12d980a5d92f60a4a867e84017734",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000060.npz",
+        "fresh_sha256": "65e09b1bef55132e579049d21fc877ead438679249e64c165a4f6e7a788a08d8",
+        "historical_sha256": "65e09b1bef55132e579049d21fc877ead438679249e64c165a4f6e7a788a08d8",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000061.npz",
+        "fresh_sha256": "ba24243b81cc6462861a3f9038d0456a681a4013a8ff3e10b5cad1181381826b",
+        "historical_sha256": "ba24243b81cc6462861a3f9038d0456a681a4013a8ff3e10b5cad1181381826b",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000062.npz",
+        "fresh_sha256": "3c2c4ffdef06543bb3bf00c206379c77b28dd9601bc36bfa85d749053e3bc3cb",
+        "historical_sha256": "3c2c4ffdef06543bb3bf00c206379c77b28dd9601bc36bfa85d749053e3bc3cb",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000063.npz",
+        "fresh_sha256": "0c79fc20eeeeb7f64f15702fac2a7c5d2c8732ec1b6b04207f804c3caa9f9fa8",
+        "historical_sha256": "0c79fc20eeeeb7f64f15702fac2a7c5d2c8732ec1b6b04207f804c3caa9f9fa8",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000064.npz",
+        "fresh_sha256": "8167ad42eb61070907ddd8c24711907b059aae636b3db873c12913385e5082b0",
+        "historical_sha256": "8167ad42eb61070907ddd8c24711907b059aae636b3db873c12913385e5082b0",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000065.npz",
+        "fresh_sha256": "034768fb1e5834a562a2068f008d0094531a29473da29bc53aa28c9e2513d1cf",
+        "historical_sha256": "034768fb1e5834a562a2068f008d0094531a29473da29bc53aa28c9e2513d1cf",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000066.npz",
+        "fresh_sha256": "9597bc84bc6c8e097eb6ca87df78d16761b9493dbfa069dccc5e5999c58f9d57",
+        "historical_sha256": "9597bc84bc6c8e097eb6ca87df78d16761b9493dbfa069dccc5e5999c58f9d57",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000067.npz",
+        "fresh_sha256": "969a9c29f0cf28b78d5d7a0e8528a76128e928332c2fd864b8c2dc387da715e3",
+        "historical_sha256": "969a9c29f0cf28b78d5d7a0e8528a76128e928332c2fd864b8c2dc387da715e3",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000068.npz",
+        "fresh_sha256": "4730372f13f6e869116cc03a71911964222d4b4f30caf2674984c2e4ff2384f0",
+        "historical_sha256": "4730372f13f6e869116cc03a71911964222d4b4f30caf2674984c2e4ff2384f0",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000069.npz",
+        "fresh_sha256": "b45d2842382b3c7d564a18c284a889cf025eb9aa76dc353a5828526b095e4318",
+        "historical_sha256": "b45d2842382b3c7d564a18c284a889cf025eb9aa76dc353a5828526b095e4318",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000070.npz",
+        "fresh_sha256": "6afad17f555d076518ba9c55b0c93204658c0762a29fd29b287e126073e733ba",
+        "historical_sha256": "6afad17f555d076518ba9c55b0c93204658c0762a29fd29b287e126073e733ba",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000071.npz",
+        "fresh_sha256": "ff00cb639043619987f04057f6a0a3e141acf6890f30405c62e10a3501f03510",
+        "historical_sha256": "ff00cb639043619987f04057f6a0a3e141acf6890f30405c62e10a3501f03510",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000072.npz",
+        "fresh_sha256": "78d042cb07532793b472bbfdc19d0fb7d2c7e975d49eec157bb2141a2c4fcb8e",
+        "historical_sha256": "78d042cb07532793b472bbfdc19d0fb7d2c7e975d49eec157bb2141a2c4fcb8e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000073.npz",
+        "fresh_sha256": "2b703358e67b53c33ddcde28703819a675d8756c0d2d608fff279fb3ea221538",
+        "historical_sha256": "2b703358e67b53c33ddcde28703819a675d8756c0d2d608fff279fb3ea221538",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000074.npz",
+        "fresh_sha256": "f1ca8b9fd3c06c0a3327152b70d472e565103d09ff532b72e5f20e6a0f412335",
+        "historical_sha256": "f1ca8b9fd3c06c0a3327152b70d472e565103d09ff532b72e5f20e6a0f412335",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000075.npz",
+        "fresh_sha256": "3f21e2f704b7dcc2ba7448a98a9f66bba1b13e00da68bb7badd909d952585348",
+        "historical_sha256": "3f21e2f704b7dcc2ba7448a98a9f66bba1b13e00da68bb7badd909d952585348",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000076.npz",
+        "fresh_sha256": "cc9b531a3e7d4013a74c1c3ee3ef7fbc863a964cc63a00d83ad0005ceb711036",
+        "historical_sha256": "cc9b531a3e7d4013a74c1c3ee3ef7fbc863a964cc63a00d83ad0005ceb711036",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000077.npz",
+        "fresh_sha256": "807d301a451eed64e5834cd881274d261c2e1a1b7513c444dfb049a2ee9c3830",
+        "historical_sha256": "807d301a451eed64e5834cd881274d261c2e1a1b7513c444dfb049a2ee9c3830",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000078.npz",
+        "fresh_sha256": "9987ad83f611b1749b2ca367354c34eb604b8d07de92820f6053eaa747a9199f",
+        "historical_sha256": "9987ad83f611b1749b2ca367354c34eb604b8d07de92820f6053eaa747a9199f",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000079.npz",
+        "fresh_sha256": "c1fb37e208eb92df8165401eca5a34aca49b024f81dd01d961310772976df3a0",
+        "historical_sha256": "c1fb37e208eb92df8165401eca5a34aca49b024f81dd01d961310772976df3a0",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000080.npz",
+        "fresh_sha256": "860e09b8d69ed1ebc4a8ea908abc0a0d8936a863714e5386825b48cd8e7b0350",
+        "historical_sha256": "860e09b8d69ed1ebc4a8ea908abc0a0d8936a863714e5386825b48cd8e7b0350",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000081.npz",
+        "fresh_sha256": "21bd92a2c6e5b7901786fcd07ab95e7bbcece3815284ede1f462c73a6423a92c",
+        "historical_sha256": "21bd92a2c6e5b7901786fcd07ab95e7bbcece3815284ede1f462c73a6423a92c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000082.npz",
+        "fresh_sha256": "10c17b0036032b99f7c45a96a5f36e71b93657bd2c974981595f7596c46c131c",
+        "historical_sha256": "10c17b0036032b99f7c45a96a5f36e71b93657bd2c974981595f7596c46c131c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000083.npz",
+        "fresh_sha256": "28e4efc70709390089b12d55f795d5daf82598af3d4ce9b3b259236182596992",
+        "historical_sha256": "28e4efc70709390089b12d55f795d5daf82598af3d4ce9b3b259236182596992",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000084.npz",
+        "fresh_sha256": "09950bc03e954f04f08c8c58034322fb64af8a857c1b7e6246a96344a65e0fe4",
+        "historical_sha256": "09950bc03e954f04f08c8c58034322fb64af8a857c1b7e6246a96344a65e0fe4",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000085.npz",
+        "fresh_sha256": "736ab2caf23b2ae2c50c19c839dbe2222f3847b2c5f130c26e57b21910eaad4c",
+        "historical_sha256": "736ab2caf23b2ae2c50c19c839dbe2222f3847b2c5f130c26e57b21910eaad4c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000086.npz",
+        "fresh_sha256": "7d415b288b719834a21bd189c5774ac99f123b61f7a030448034a6d8de428e2e",
+        "historical_sha256": "7d415b288b719834a21bd189c5774ac99f123b61f7a030448034a6d8de428e2e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000087.npz",
+        "fresh_sha256": "58361bdc9437503b1e794b9b5848f698e08dcc2447a8687b87aa518db9238684",
+        "historical_sha256": "58361bdc9437503b1e794b9b5848f698e08dcc2447a8687b87aa518db9238684",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000088.npz",
+        "fresh_sha256": "21ed4d6891e25436b18c80813b7ac609aaaa3bcc49a2896f93f47d654c41fbb1",
+        "historical_sha256": "21ed4d6891e25436b18c80813b7ac609aaaa3bcc49a2896f93f47d654c41fbb1",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000089.npz",
+        "fresh_sha256": "a15a4608aaebf3364d046c3df4a1314ff121da9ac38e8c6d97d411172e18c224",
+        "historical_sha256": "a15a4608aaebf3364d046c3df4a1314ff121da9ac38e8c6d97d411172e18c224",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000090.npz",
+        "fresh_sha256": "4bef8697e8251d275c597372b6f706d2fe7577835c59b9fac36d5d6d87ad9a45",
+        "historical_sha256": "4bef8697e8251d275c597372b6f706d2fe7577835c59b9fac36d5d6d87ad9a45",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000091.npz",
+        "fresh_sha256": "c364f575891ea9a67382cfcd90de6c3629bbdc8d7604cb6ddb15eb2502c00b9b",
+        "historical_sha256": "c364f575891ea9a67382cfcd90de6c3629bbdc8d7604cb6ddb15eb2502c00b9b",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000092.npz",
+        "fresh_sha256": "dd0de587a3650952989c2b0d5f9bcb065bdb174ca8d1bc5badaba36c3a9b198e",
+        "historical_sha256": "dd0de587a3650952989c2b0d5f9bcb065bdb174ca8d1bc5badaba36c3a9b198e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000093.npz",
+        "fresh_sha256": "1ab916f8b758fde2615e9d069eb203a72187cda3cbb045381da2e018bb13ca07",
+        "historical_sha256": "1ab916f8b758fde2615e9d069eb203a72187cda3cbb045381da2e018bb13ca07",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000094.npz",
+        "fresh_sha256": "f16b21715fbbb8032c2bd6e35dfcad4a1a87ed9fcf9d0283b25b330b61ac5fe8",
+        "historical_sha256": "f16b21715fbbb8032c2bd6e35dfcad4a1a87ed9fcf9d0283b25b330b61ac5fe8",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000095.npz",
+        "fresh_sha256": "172f35cc05804e2cbf8b43c801a0c547b9fe7b369c714a0d46f7ab37add49265",
+        "historical_sha256": "172f35cc05804e2cbf8b43c801a0c547b9fe7b369c714a0d46f7ab37add49265",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000096.npz",
+        "fresh_sha256": "461b456fe021984605f0a2455e74ee38ebd231c8b199062cf983a0a548295371",
+        "historical_sha256": "461b456fe021984605f0a2455e74ee38ebd231c8b199062cf983a0a548295371",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000097.npz",
+        "fresh_sha256": "dc809c1835cc830e80ec1bd5e9be87220a56769327d1505cf7cfe7e254081eba",
+        "historical_sha256": "dc809c1835cc830e80ec1bd5e9be87220a56769327d1505cf7cfe7e254081eba",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000098.npz",
+        "fresh_sha256": "5925361fe9ec97249eb79135246ea1175f68f61598b90bec09e50e2d91513b13",
+        "historical_sha256": "5925361fe9ec97249eb79135246ea1175f68f61598b90bec09e50e2d91513b13",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000099.npz",
+        "fresh_sha256": "25b00e46c71d0d6eb713021a6d7a40b4b4b1b22dcbdd6de1aeb7c1c5bf6e5d86",
+        "historical_sha256": "25b00e46c71d0d6eb713021a6d7a40b4b4b1b22dcbdd6de1aeb7c1c5bf6e5d86",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000100.npz",
+        "fresh_sha256": "ee37a0a0661f5abf01ab98e6c2fc5ffb808a913c174f2b05ecf3d74c69ac4117",
+        "historical_sha256": "ee37a0a0661f5abf01ab98e6c2fc5ffb808a913c174f2b05ecf3d74c69ac4117",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000101.npz",
+        "fresh_sha256": "6caffe3ac82a37af00b8c993dac6001cf6f0d7770cfc397b98d48492346df8b2",
+        "historical_sha256": "6caffe3ac82a37af00b8c993dac6001cf6f0d7770cfc397b98d48492346df8b2",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000102.npz",
+        "fresh_sha256": "8557ac75b0845e771d96ce5e90a70aadf22a1b37dc81c0a0b903e622777fd888",
+        "historical_sha256": "8557ac75b0845e771d96ce5e90a70aadf22a1b37dc81c0a0b903e622777fd888",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000103.npz",
+        "fresh_sha256": "3c82a0ac787f92ef3c8dfd83de838df58c61715f567ce920b4acc20cd2c91c7e",
+        "historical_sha256": "3c82a0ac787f92ef3c8dfd83de838df58c61715f567ce920b4acc20cd2c91c7e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000104.npz",
+        "fresh_sha256": "e9c459713623fef86a02f150c8c23a21afd76f43a7bab1620d6971cf218fcece",
+        "historical_sha256": "e9c459713623fef86a02f150c8c23a21afd76f43a7bab1620d6971cf218fcece",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000105.npz",
+        "fresh_sha256": "7a667e3fc0fafdc2c476776245dc51dfe2373df68a1a2257e20ef1060595cbe2",
+        "historical_sha256": "7a667e3fc0fafdc2c476776245dc51dfe2373df68a1a2257e20ef1060595cbe2",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000106.npz",
+        "fresh_sha256": "6e116310bd5564a4933ad5ba38b7396cb2c893b66627b60d692a9e8fe06014ef",
+        "historical_sha256": "6e116310bd5564a4933ad5ba38b7396cb2c893b66627b60d692a9e8fe06014ef",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000107.npz",
+        "fresh_sha256": "4c76ffe755721bf5191b7c8478a8ba70400902015cd67ff956671431907010bc",
+        "historical_sha256": "4c76ffe755721bf5191b7c8478a8ba70400902015cd67ff956671431907010bc",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000108.npz",
+        "fresh_sha256": "48d7197567a62f5323557647282f67eafb259e2d0d9a270db7a95ef6e515b6b1",
+        "historical_sha256": "48d7197567a62f5323557647282f67eafb259e2d0d9a270db7a95ef6e515b6b1",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000109.npz",
+        "fresh_sha256": "5cc0db9d8a0a4c449649a6bf2792272dad3dd708e3dfa1946adac4898a708ea8",
+        "historical_sha256": "5cc0db9d8a0a4c449649a6bf2792272dad3dd708e3dfa1946adac4898a708ea8",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000110.npz",
+        "fresh_sha256": "5dac0b78a47d5932f1f86a54067b8c8c377a244d4e27a585a821a587a7f642fe",
+        "historical_sha256": "5dac0b78a47d5932f1f86a54067b8c8c377a244d4e27a585a821a587a7f642fe",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000111.npz",
+        "fresh_sha256": "da9c4d6a649c72efde311d1c7d0bd3cbb88acff623ddb2bc634891eab6b91372",
+        "historical_sha256": "da9c4d6a649c72efde311d1c7d0bd3cbb88acff623ddb2bc634891eab6b91372",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000112.npz",
+        "fresh_sha256": "d75f3b64eb8cb857808aeb528ff369bb06d46498b0780a7807101158274f235e",
+        "historical_sha256": "d75f3b64eb8cb857808aeb528ff369bb06d46498b0780a7807101158274f235e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000113.npz",
+        "fresh_sha256": "4ee00af1912291129dbc9b90beeb528a975e11610c7bf4c7a1e28d5773c7dd43",
+        "historical_sha256": "4ee00af1912291129dbc9b90beeb528a975e11610c7bf4c7a1e28d5773c7dd43",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000114.npz",
+        "fresh_sha256": "8a0c4f64097a03f01109be9e0d1370baed2836e838f76dad2dad969909969115",
+        "historical_sha256": "8a0c4f64097a03f01109be9e0d1370baed2836e838f76dad2dad969909969115",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000115.npz",
+        "fresh_sha256": "1813d621f57b7c205de2cf9cbb5d8d213cdc4f6ef9bfaaef95ebd8e1089007c5",
+        "historical_sha256": "1813d621f57b7c205de2cf9cbb5d8d213cdc4f6ef9bfaaef95ebd8e1089007c5",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000116.npz",
+        "fresh_sha256": "5ad497135f2876205eec95c4e34b7a0ebd28616b062f9ccdfbfe02159e7b45c6",
+        "historical_sha256": "5ad497135f2876205eec95c4e34b7a0ebd28616b062f9ccdfbfe02159e7b45c6",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000117.npz",
+        "fresh_sha256": "662db372f24a4578645d6db8b30df8dec7ff3ea771ea85c483ca13a5639a523d",
+        "historical_sha256": "662db372f24a4578645d6db8b30df8dec7ff3ea771ea85c483ca13a5639a523d",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000118.npz",
+        "fresh_sha256": "fdc9198cf8653fcbfb60ba7c2d53caeb31c48de6239df5768006bdae0d3045a4",
+        "historical_sha256": "fdc9198cf8653fcbfb60ba7c2d53caeb31c48de6239df5768006bdae0d3045a4",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000119.npz",
+        "fresh_sha256": "32128cf02fd8d01275eb004ba68fcaa5de783f9372b2d18d30840fea2624c03c",
+        "historical_sha256": "32128cf02fd8d01275eb004ba68fcaa5de783f9372b2d18d30840fea2624c03c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000120.npz",
+        "fresh_sha256": "1c824a9a63949bf4a6bcdeb58fd9751fb50bdfb062d3511e8c33199937d72d14",
+        "historical_sha256": "1c824a9a63949bf4a6bcdeb58fd9751fb50bdfb062d3511e8c33199937d72d14",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000121.npz",
+        "fresh_sha256": "c0f37b4d8c05f2afd8cdf822486eed1d88542df91e53b88a20ed3bdb3996ceea",
+        "historical_sha256": "c0f37b4d8c05f2afd8cdf822486eed1d88542df91e53b88a20ed3bdb3996ceea",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000122.npz",
+        "fresh_sha256": "8fb8b39f22886e7e30a4a2eabda588e98fd2a156bcd6aea0913c2e1299db98bd",
+        "historical_sha256": "8fb8b39f22886e7e30a4a2eabda588e98fd2a156bcd6aea0913c2e1299db98bd",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000123.npz",
+        "fresh_sha256": "c7b7f550d48e681e8a875fa6eae1750e3ba0056af9a7fa851b5e3a80e5c04ad1",
+        "historical_sha256": "c7b7f550d48e681e8a875fa6eae1750e3ba0056af9a7fa851b5e3a80e5c04ad1",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000124.npz",
+        "fresh_sha256": "649716d27845172b398ec71a6b02a57f7da3f25e0c41a96d3ca0ad78eed06282",
+        "historical_sha256": "649716d27845172b398ec71a6b02a57f7da3f25e0c41a96d3ca0ad78eed06282",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000125.npz",
+        "fresh_sha256": "c28a96dc7463091c8e13c4e539dc21a00fdea9a1fde015db57573c2b233d809d",
+        "historical_sha256": "c28a96dc7463091c8e13c4e539dc21a00fdea9a1fde015db57573c2b233d809d",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000126.npz",
+        "fresh_sha256": "c2cb4f61c949b9eb3fffda65d90713d80e8c64f1670e6bdb4631dd22c4e2d57b",
+        "historical_sha256": "c2cb4f61c949b9eb3fffda65d90713d80e8c64f1670e6bdb4631dd22c4e2d57b",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000127.npz",
+        "fresh_sha256": "e12160a58b634fc84931dbbf8fe57264be02d4c2d486046e22021e69b69794c8",
+        "historical_sha256": "e12160a58b634fc84931dbbf8fe57264be02d4c2d486046e22021e69b69794c8",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000128.npz",
+        "fresh_sha256": "9c98338f8666484c1d260be138ec1e7ebbd72b2672c3d20a9fd3d01cb59d168f",
+        "historical_sha256": "9c98338f8666484c1d260be138ec1e7ebbd72b2672c3d20a9fd3d01cb59d168f",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000129.npz",
+        "fresh_sha256": "92a51700c3514ec340a49d53dd9e306128afbcc3a3b6512a64e197cd4cc276f9",
+        "historical_sha256": "92a51700c3514ec340a49d53dd9e306128afbcc3a3b6512a64e197cd4cc276f9",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000130.npz",
+        "fresh_sha256": "35658ebf66342c71dc0a2f26dbb8d7bac472360682fe8af474584e853605c095",
+        "historical_sha256": "35658ebf66342c71dc0a2f26dbb8d7bac472360682fe8af474584e853605c095",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000131.npz",
+        "fresh_sha256": "c44cc7a930997b8ee6d02d8d749fd3b249e50c44620a86b713e00e49b36a5f42",
+        "historical_sha256": "c44cc7a930997b8ee6d02d8d749fd3b249e50c44620a86b713e00e49b36a5f42",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000132.npz",
+        "fresh_sha256": "48549533d962468be60fe5d9d6289bc0b1f68085c3957a43af7d55cf96de163c",
+        "historical_sha256": "48549533d962468be60fe5d9d6289bc0b1f68085c3957a43af7d55cf96de163c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000133.npz",
+        "fresh_sha256": "a339043b2e25a6eb31c3ae54d720d6d91c4615e708498732abe2534b64238bf8",
+        "historical_sha256": "a339043b2e25a6eb31c3ae54d720d6d91c4615e708498732abe2534b64238bf8",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000134.npz",
+        "fresh_sha256": "684cc2cea3ff0a470994d00fd7fae674194f9fa80986c29f64460c8daa31f04e",
+        "historical_sha256": "684cc2cea3ff0a470994d00fd7fae674194f9fa80986c29f64460c8daa31f04e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000135.npz",
+        "fresh_sha256": "43aa463f8a33da0d32e3d9ac99b829c493bde4677e328708873180ff45987f75",
+        "historical_sha256": "43aa463f8a33da0d32e3d9ac99b829c493bde4677e328708873180ff45987f75",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000136.npz",
+        "fresh_sha256": "1a47069bc5c7ecc1ca4ed0f4f5f618031d5eb7a37ff808b5ca900524959576de",
+        "historical_sha256": "1a47069bc5c7ecc1ca4ed0f4f5f618031d5eb7a37ff808b5ca900524959576de",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000137.npz",
+        "fresh_sha256": "1f990f5a1253af1d67624e92fecc2b4a7c8d66143ecd6225dbb15851b6a5fd0b",
+        "historical_sha256": "1f990f5a1253af1d67624e92fecc2b4a7c8d66143ecd6225dbb15851b6a5fd0b",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000138.npz",
+        "fresh_sha256": "c635070ea989ef6f78d8d0a60aa09317b98069f5d98470123e9c24e81d6addcd",
+        "historical_sha256": "c635070ea989ef6f78d8d0a60aa09317b98069f5d98470123e9c24e81d6addcd",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000139.npz",
+        "fresh_sha256": "6339cfd92dd51533fe129895d0b5e3010a35a3770933b0da424ad71142948286",
+        "historical_sha256": "6339cfd92dd51533fe129895d0b5e3010a35a3770933b0da424ad71142948286",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000140.npz",
+        "fresh_sha256": "aaeea48c1bd2c3da213dce97eda689b0a064a58744a81b278d498f8c3866a482",
+        "historical_sha256": "aaeea48c1bd2c3da213dce97eda689b0a064a58744a81b278d498f8c3866a482",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000141.npz",
+        "fresh_sha256": "19b2e0ee8536e9598811ef5d63a557e393d237fe08c2fce50c25ec4d33db9957",
+        "historical_sha256": "19b2e0ee8536e9598811ef5d63a557e393d237fe08c2fce50c25ec4d33db9957",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000142.npz",
+        "fresh_sha256": "1186061ff8c4eb1bec237bee892516a249edb0610e52712a32f8d1da0ee71247",
+        "historical_sha256": "1186061ff8c4eb1bec237bee892516a249edb0610e52712a32f8d1da0ee71247",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000143.npz",
+        "fresh_sha256": "afe2500f504c66beef2414bfd24a2d75943a6b2450bb2f4e102b557f59bb9826",
+        "historical_sha256": "afe2500f504c66beef2414bfd24a2d75943a6b2450bb2f4e102b557f59bb9826",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000144.npz",
+        "fresh_sha256": "8a21916a3892c29def77e9efce8043800dabdc74674b622fe9efcd42723e0e4f",
+        "historical_sha256": "8a21916a3892c29def77e9efce8043800dabdc74674b622fe9efcd42723e0e4f",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000145.npz",
+        "fresh_sha256": "7c94932c2ec81b55356cd786f7a9860538dd3aefc020b46c671b9684f7889050",
+        "historical_sha256": "7c94932c2ec81b55356cd786f7a9860538dd3aefc020b46c671b9684f7889050",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000146.npz",
+        "fresh_sha256": "3a0ed2f85d2d10e78bb6a5a48a0eae6593b1d50e454a45ddf47d14d058a7c8e9",
+        "historical_sha256": "3a0ed2f85d2d10e78bb6a5a48a0eae6593b1d50e454a45ddf47d14d058a7c8e9",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000147.npz",
+        "fresh_sha256": "6e5db47196921049be55c240409441a8a1c30d907536249c4820e73d05897c4a",
+        "historical_sha256": "6e5db47196921049be55c240409441a8a1c30d907536249c4820e73d05897c4a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000148.npz",
+        "fresh_sha256": "c6732a72e885a19582c077446da3f9dd6ae93335d8d2193a03d03aa3f66e5469",
+        "historical_sha256": "c6732a72e885a19582c077446da3f9dd6ae93335d8d2193a03d03aa3f66e5469",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000149.npz",
+        "fresh_sha256": "023a588deba8b4b95027fffe07f394f5ccb6efbc33d017506201dabe727257a7",
+        "historical_sha256": "023a588deba8b4b95027fffe07f394f5ccb6efbc33d017506201dabe727257a7",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000150.npz",
+        "fresh_sha256": "8220068102baf6fa71899e24e4b92d024a20e488890082e471caf61914f8f907",
+        "historical_sha256": "8220068102baf6fa71899e24e4b92d024a20e488890082e471caf61914f8f907",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000151.npz",
+        "fresh_sha256": "da1500408273d44b05ca838bee3dc5f324993ef50648259938092a16a29b4dd5",
+        "historical_sha256": "da1500408273d44b05ca838bee3dc5f324993ef50648259938092a16a29b4dd5",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000152.npz",
+        "fresh_sha256": "654d6ebf9e7bed2779516f3952ddd7875de3654e983732eb842d9bf2b2b68011",
+        "historical_sha256": "654d6ebf9e7bed2779516f3952ddd7875de3654e983732eb842d9bf2b2b68011",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000153.npz",
+        "fresh_sha256": "95142222a14bb04779237dc09f9dcaf9e6443314d8a17bdf8e7c1cd4553b68ed",
+        "historical_sha256": "95142222a14bb04779237dc09f9dcaf9e6443314d8a17bdf8e7c1cd4553b68ed",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000154.npz",
+        "fresh_sha256": "077912d4c5f27c211536b10fba15b1f6e4f07e9070a469ebf3b5d70b41f6cc1c",
+        "historical_sha256": "077912d4c5f27c211536b10fba15b1f6e4f07e9070a469ebf3b5d70b41f6cc1c",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000155.npz",
+        "fresh_sha256": "8b5d80678306277526f7e29b77fd6ee26a605de9f084916c7747368a6dc22640",
+        "historical_sha256": "8b5d80678306277526f7e29b77fd6ee26a605de9f084916c7747368a6dc22640",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000156.npz",
+        "fresh_sha256": "e624767ea496c88c0fa60bd97960542ea38057a8c2880b5141887857cc8ff8c4",
+        "historical_sha256": "e624767ea496c88c0fa60bd97960542ea38057a8c2880b5141887857cc8ff8c4",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000157.npz",
+        "fresh_sha256": "bfd9d5bac2c33e2911c078fe709efba10143c194d5778aa86924f84300cd7838",
+        "historical_sha256": "bfd9d5bac2c33e2911c078fe709efba10143c194d5778aa86924f84300cd7838",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000158.npz",
+        "fresh_sha256": "b1c49d1ec257d5b8e60e54894b76328f4ece0130573ba03951408d73ab11f0c5",
+        "historical_sha256": "b1c49d1ec257d5b8e60e54894b76328f4ece0130573ba03951408d73ab11f0c5",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000159.npz",
+        "fresh_sha256": "3d6523d3a3683b1a5a5c070c64b26541af05c40c990611ec7793ffb4f1bd18f4",
+        "historical_sha256": "3d6523d3a3683b1a5a5c070c64b26541af05c40c990611ec7793ffb4f1bd18f4",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000160.npz",
+        "fresh_sha256": "e371c6acec04e0d9dddcdfc977a0195bc1c58bf7940548e2f6b7ec1c832a9056",
+        "historical_sha256": "e371c6acec04e0d9dddcdfc977a0195bc1c58bf7940548e2f6b7ec1c832a9056",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000161.npz",
+        "fresh_sha256": "e007229fad517f432f1ecf8ce4b92d83697e23fff7d221345daa6af33b58d699",
+        "historical_sha256": "e007229fad517f432f1ecf8ce4b92d83697e23fff7d221345daa6af33b58d699",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000162.npz",
+        "fresh_sha256": "53a101d76d147ad81465cc1d16d0cc94db15da45feda02a9b9ff8b4246bf813a",
+        "historical_sha256": "53a101d76d147ad81465cc1d16d0cc94db15da45feda02a9b9ff8b4246bf813a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000163.npz",
+        "fresh_sha256": "e53f8f9ab5ca5540b6d91c88a43de793c89f0a344b4ab1edb9243eca223e2090",
+        "historical_sha256": "e53f8f9ab5ca5540b6d91c88a43de793c89f0a344b4ab1edb9243eca223e2090",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000164.npz",
+        "fresh_sha256": "f40019123c41dc11f50a94174e3a43781cf8162a55f6f000830ec707a99e17fe",
+        "historical_sha256": "f40019123c41dc11f50a94174e3a43781cf8162a55f6f000830ec707a99e17fe",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000165.npz",
+        "fresh_sha256": "f1ec38bf9cd63fa0e61d397ea9f3d78ded09a57c5a91c0120de596bb907f007a",
+        "historical_sha256": "f1ec38bf9cd63fa0e61d397ea9f3d78ded09a57c5a91c0120de596bb907f007a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000166.npz",
+        "fresh_sha256": "571521ba581e2db8273bc9dee413df310b613d1be9624635e56b9cf46f8deb15",
+        "historical_sha256": "571521ba581e2db8273bc9dee413df310b613d1be9624635e56b9cf46f8deb15",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000167.npz",
+        "fresh_sha256": "b694a41df1241b4f0e07e0195b6ff55627a187d2245ec21b106812250f9fc46e",
+        "historical_sha256": "b694a41df1241b4f0e07e0195b6ff55627a187d2245ec21b106812250f9fc46e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000168.npz",
+        "fresh_sha256": "b04e82d6edd7f82b46afc70ee588fbde152d6bd785abc9da7b534fa977d55839",
+        "historical_sha256": "b04e82d6edd7f82b46afc70ee588fbde152d6bd785abc9da7b534fa977d55839",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000169.npz",
+        "fresh_sha256": "0b5bd7cbe534d82bcf65af187eda0e6f137eab2cc69895a7b9c53e0d73d70b58",
+        "historical_sha256": "0b5bd7cbe534d82bcf65af187eda0e6f137eab2cc69895a7b9c53e0d73d70b58",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000170.npz",
+        "fresh_sha256": "c1a51cda75726cc1836af2623f381300f9a79671dcbcae8dc61f5f30c1a3f0af",
+        "historical_sha256": "c1a51cda75726cc1836af2623f381300f9a79671dcbcae8dc61f5f30c1a3f0af",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000171.npz",
+        "fresh_sha256": "8ff169250dc2a435b8201edb35a307c8977b219f87c9bf423380c7542bef0cfc",
+        "historical_sha256": "8ff169250dc2a435b8201edb35a307c8977b219f87c9bf423380c7542bef0cfc",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000172.npz",
+        "fresh_sha256": "014554f72088dd7248e5e8efecf24b532d073ed8206b30ade14a37b2c0a7ee72",
+        "historical_sha256": "014554f72088dd7248e5e8efecf24b532d073ed8206b30ade14a37b2c0a7ee72",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000173.npz",
+        "fresh_sha256": "9f9f3999ac5e045ced25de2ee6c7df5796ecd487e9d133a9de41295343806ca8",
+        "historical_sha256": "9f9f3999ac5e045ced25de2ee6c7df5796ecd487e9d133a9de41295343806ca8",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000174.npz",
+        "fresh_sha256": "f47ac7c2c6316e3b5c62f4f941aeae85b0ece6fc775bcd68f611f068ec165a1d",
+        "historical_sha256": "f47ac7c2c6316e3b5c62f4f941aeae85b0ece6fc775bcd68f611f068ec165a1d",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000175.npz",
+        "fresh_sha256": "f8127c35acd6fb0994c75ff0d846af3feb13e0ed1dd68d7a576fc810e7050e00",
+        "historical_sha256": "f8127c35acd6fb0994c75ff0d846af3feb13e0ed1dd68d7a576fc810e7050e00",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000176.npz",
+        "fresh_sha256": "a616972198f12ceb26954685e32613ef713e52327cab2d19b2e4d27eb352579e",
+        "historical_sha256": "a616972198f12ceb26954685e32613ef713e52327cab2d19b2e4d27eb352579e",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000177.npz",
+        "fresh_sha256": "b09f5c49d8d90bfdc886af7613ec5beaa742eef64aab5b8a3735cc11e1b0c29a",
+        "historical_sha256": "b09f5c49d8d90bfdc886af7613ec5beaa742eef64aab5b8a3735cc11e1b0c29a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000178.npz",
+        "fresh_sha256": "104fa0b720f3740de461300221547e85ff17a8018ba0ef0cf5fed12c4b38bad5",
+        "historical_sha256": "104fa0b720f3740de461300221547e85ff17a8018ba0ef0cf5fed12c4b38bad5",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000179.npz",
+        "fresh_sha256": "4f8f340bbfa72ef20400b316db2b693bded7a778008404fdf30895adfeb34f19",
+        "historical_sha256": "4f8f340bbfa72ef20400b316db2b693bded7a778008404fdf30895adfeb34f19",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000180.npz",
+        "fresh_sha256": "f7be6eebc49cfd1a426cf68a4dcefe7de6e1bb14b2b870801d06b00d6a254a98",
+        "historical_sha256": "f7be6eebc49cfd1a426cf68a4dcefe7de6e1bb14b2b870801d06b00d6a254a98",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000181.npz",
+        "fresh_sha256": "7a3ab65c84f31616d8b58ae88f83d49a788b7ab372108a0fa742ca222c3179bf",
+        "historical_sha256": "7a3ab65c84f31616d8b58ae88f83d49a788b7ab372108a0fa742ca222c3179bf",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000182.npz",
+        "fresh_sha256": "d06a18f9dbf9aa8e607f1fd78377941feab00ad82cbe9bfae67f55b9b7722e90",
+        "historical_sha256": "d06a18f9dbf9aa8e607f1fd78377941feab00ad82cbe9bfae67f55b9b7722e90",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000183.npz",
+        "fresh_sha256": "bad44d606e83625f73a17ebe2b7473585016da54a88dcc7f559dd6ad6389731f",
+        "historical_sha256": "bad44d606e83625f73a17ebe2b7473585016da54a88dcc7f559dd6ad6389731f",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000184.npz",
+        "fresh_sha256": "057628c0f47dc2b52333b2c0f3bde27864a5594bf6861b6b1aab7ecc30108074",
+        "historical_sha256": "057628c0f47dc2b52333b2c0f3bde27864a5594bf6861b6b1aab7ecc30108074",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000185.npz",
+        "fresh_sha256": "af62112f9c914dfbf156f2c0bedc86f80b717fac1815f4c905a1b9469ce2386d",
+        "historical_sha256": "af62112f9c914dfbf156f2c0bedc86f80b717fac1815f4c905a1b9469ce2386d",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000186.npz",
+        "fresh_sha256": "fc4cbe1e6c525abfd9e26d2654d89071a828fcf0eef61a4aa6715f819f06eda9",
+        "historical_sha256": "fc4cbe1e6c525abfd9e26d2654d89071a828fcf0eef61a4aa6715f819f06eda9",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000187.npz",
+        "fresh_sha256": "7a97f1356e9c17dbd64792a760c23cce7a78f433716b2c8ebe771cd5151df62a",
+        "historical_sha256": "7a97f1356e9c17dbd64792a760c23cce7a78f433716b2c8ebe771cd5151df62a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000188.npz",
+        "fresh_sha256": "a01462b5d7a9e4cd32ee166977db1269cd4404a3c8faa681bdb26eba6a9d6df2",
+        "historical_sha256": "a01462b5d7a9e4cd32ee166977db1269cd4404a3c8faa681bdb26eba6a9d6df2",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000189.npz",
+        "fresh_sha256": "5a605a383deed9b3ecc6b7bf06c810984001876bddc3575942ba07aac11d46b7",
+        "historical_sha256": "5a605a383deed9b3ecc6b7bf06c810984001876bddc3575942ba07aac11d46b7",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000190.npz",
+        "fresh_sha256": "09ddfc3624561bbcd35542448a2866819749f8e334dd4183f676ca49e24b9496",
+        "historical_sha256": "09ddfc3624561bbcd35542448a2866819749f8e334dd4183f676ca49e24b9496",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000191.npz",
+        "fresh_sha256": "1e0d83195bade6364b07b60d15f20b4f84e04797a4c265b7ab0376ac23426a7a",
+        "historical_sha256": "1e0d83195bade6364b07b60d15f20b4f84e04797a4c265b7ab0376ac23426a7a",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000192.npz",
+        "fresh_sha256": "822bc4fefcdde7c9b6e88a8d173ab2058ff3292e154d598a15ff309ea38fab41",
+        "historical_sha256": "822bc4fefcdde7c9b6e88a8d173ab2058ff3292e154d598a15ff309ea38fab41",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000193.npz",
+        "fresh_sha256": "fcaaa5fdb9280897b2157ea2cd87da658f72c8c1300290556fb0c4d03834344b",
+        "historical_sha256": "fcaaa5fdb9280897b2157ea2cd87da658f72c8c1300290556fb0c4d03834344b",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000194.npz",
+        "fresh_sha256": "49d3b67c9c97849358b683bb9e79930f9d48484a591278dc46aa8ab05ad44007",
+        "historical_sha256": "49d3b67c9c97849358b683bb9e79930f9d48484a591278dc46aa8ab05ad44007",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000195.npz",
+        "fresh_sha256": "9a49f2839cb8d1d6002b6e7a891f220587bb0c875c16b665c0f91eff20dfff58",
+        "historical_sha256": "9a49f2839cb8d1d6002b6e7a891f220587bb0c875c16b665c0f91eff20dfff58",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000196.npz",
+        "fresh_sha256": "c4309964e244898b508b3596d6e4614ba1ca8505e99678a6761722dabb0a8bc4",
+        "historical_sha256": "c4309964e244898b508b3596d6e4614ba1ca8505e99678a6761722dabb0a8bc4",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000197.npz",
+        "fresh_sha256": "ec0aafbd3d349cb5926ad3651045daf01a31cb6029168ad1406803fd88f80999",
+        "historical_sha256": "ec0aafbd3d349cb5926ad3651045daf01a31cb6029168ad1406803fd88f80999",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000198.npz",
+        "fresh_sha256": "0b10b796c5566905fd7dbf99efe311374d798eca8dfc9f4812e1ccb385874a12",
+        "historical_sha256": "0b10b796c5566905fd7dbf99efe311374d798eca8dfc9f4812e1ccb385874a12",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000199.npz",
+        "fresh_sha256": "fbbfc84523213c01cc5d1bc52e7822883237ff1d2dcb4e850450a1669b8aa598",
+        "historical_sha256": "fbbfc84523213c01cc5d1bc52e7822883237ff1d2dcb4e850450a1669b8aa598",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000200.npz",
+        "fresh_sha256": "c6461f7bbf5b8f4f474022dd8cb4d19119967b120477a86e117606fc792082a9",
+        "historical_sha256": "c6461f7bbf5b8f4f474022dd8cb4d19119967b120477a86e117606fc792082a9",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000201.npz",
+        "fresh_sha256": "eb02545ae3346b9a704e09c869b0ff8aedec8e74d71f21eb9a31ce76d7f61f14",
+        "historical_sha256": "eb02545ae3346b9a704e09c869b0ff8aedec8e74d71f21eb9a31ce76d7f61f14",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000202.npz",
+        "fresh_sha256": "d31505cfa78ef50321c37fd063d8a8e96dbfa0aeaaa0249069817222f2c5cb43",
+        "historical_sha256": "d31505cfa78ef50321c37fd063d8a8e96dbfa0aeaaa0249069817222f2c5cb43",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000203.npz",
+        "fresh_sha256": "3c44c3019466e75a6a7714b8215eb6d6df287a074df58dc70a82ea0782c36803",
+        "historical_sha256": "3c44c3019466e75a6a7714b8215eb6d6df287a074df58dc70a82ea0782c36803",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000204.npz",
+        "fresh_sha256": "3f21f2d40a6f3ddd0c71bc6cf55334946669d71cddc0b0edcb0fd30d9a697ad1",
+        "historical_sha256": "3f21f2d40a6f3ddd0c71bc6cf55334946669d71cddc0b0edcb0fd30d9a697ad1",
+        "byte_identical": true
+      },
+      {
+        "episode_file": "episode_000205.npz",
+        "fresh_sha256": "9a66a58c61d8bffde6cb8c9f1d692c51e295f79b646ef40bb14156a4a836f6ad",
+        "historical_sha256": "9a66a58c61d8bffde6cb8c9f1d692c51e295f79b646ef40bb14156a4a836f6ad",
+        "byte_identical": true
+      }
+    ]
+  },
+  "simple_push": {
+    "block_origin_displacement_world": [
+      61.38251056638137,
+      10.828776999743354
+    ],
+    "block_cog_displacement_world": [
+      47.1377729441495,
+      8.514693296266415
+    ],
+    "block_cog_displacement_norm": 47.90062254359203,
+    "block_angle_change_rad": 0.32208994810297836,
+    "block_angle_change_degrees": 18.454394649888375,
+    "pusher_displacement_world": [
+      111.09777520943007,
+      0.0
+    ],
+    "contact_point_events": 316,
+    "contact_control_intervals": 32,
+    "first_contact_action_index": 28,
+    "last_contact_action_index": 59,
+    "internal_contact_events": 0,
+    "max_rigid_point_transform_abs_error": 0.0,
+    "no_contact_labels_are_zero": true
+  },
+  "controller_smokes": {
+    "rule": {
+      "schema_version": 1,
+      "method": "rule",
+      "split": "test",
+      "episodes": [
+        12
+      ],
+      "max_steps_per_episode": 16,
+      "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+      "successes": 0,
+      "count": 1,
+      "success_rate": 0.0,
+      "success_rate_wilson_95": [
+        0.0,
+        0.7934506856227534
+      ],
+      "mean_max_coverage": 0.0,
+      "mean_final_coverage": 0.0,
+      "mean_final_point_rmse": 188.25744899119397,
+      "mean_steps": 16.0,
+      "total_wall_time_seconds": 0.21341669999674195,
+      "total_candidate_rollouts": 0,
+      "total_candidate_physics_substeps": 0,
+      "total_candidate_rollout_wall_time_seconds": 0.0,
+      "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+      "replanning_schedule": "Replan after completing the queued approach, push and hold; executed states are observed every action.",
+      "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+      "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+      "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+      "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+      "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+      "controller_note": "8 contact candidates x 2 push lengths, shared simulator-dynamics candidate model and visibility-graph paths; collision warm-start caches are rebuilt",
+      "results": [
+        {
+          "episode_index": 12,
+          "method": "rule",
+          "steps": 16,
+          "success": false,
+          "native_success": false,
+          "initial_coverage": 0.0,
+          "final_coverage": 0.0,
+          "max_coverage": 0.0,
+          "wall_time_seconds": 0.21341669999674195,
+          "final_point_rmse": 188.25744899119397,
+          "final_angle_error_deg": 140.02968537048267,
+          "contact_intervals": 0,
+          "contact_events": 0,
+          "goal_pose": [
+            256.0,
+            256.0,
+            0.7853981633974483
+          ],
+          "initial_state": [
+            381.0,
+            205.0,
+            308.17327662439345,
+            389.9452340116717,
+            4.6246044103303765
+          ],
+          "final_state": [
+            381.0,
+            205.0,
+            308.17327662439345,
+            389.9452340116717,
+            4.6246044103303765
+          ],
+          "candidate_rollouts": 0,
+          "candidate_physics_substeps": 0,
+          "candidate_rollout_wall_time_seconds": 0.0
+        }
+      ]
+    },
+    "learned_contact": {
+      "schema_version": 1,
+      "method": "learned_contact",
+      "split": "test",
+      "episodes": [
+        12
+      ],
+      "max_steps_per_episode": 16,
+      "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+      "successes": 0,
+      "count": 1,
+      "success_rate": 0.0,
+      "success_rate_wilson_95": [
+        0.0,
+        0.7934506856227534
+      ],
+      "mean_max_coverage": 0.0,
+      "mean_final_coverage": 0.0,
+      "mean_final_point_rmse": 188.25744899119397,
+      "mean_steps": 16.0,
+      "total_wall_time_seconds": 0.2411091000030865,
+      "total_candidate_rollouts": 0,
+      "total_candidate_physics_substeps": 0,
+      "total_candidate_rollout_wall_time_seconds": 0.0,
+      "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+      "replanning_schedule": "Replan after completing the queued approach, push and hold; executed states are observed every action.",
+      "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+      "checkpoint": "runs\\stages234_20261022\\contact_main\\best.pt",
+      "checkpoint_sha256": "3a7dd6a7164dee9f3a30d62149cf8d50ab28632afa932636ea79aed943af3d11",
+      "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+      "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+      "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+      "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+      "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+      "controller_note": "8 contact candidates x 2 push lengths, shared simulator-dynamics candidate model and visibility-graph paths; collision warm-start caches are rebuilt",
+      "results": [
+        {
+          "episode_index": 12,
+          "method": "learned_contact",
+          "steps": 16,
+          "success": false,
+          "native_success": false,
+          "initial_coverage": 0.0,
+          "final_coverage": 0.0,
+          "max_coverage": 0.0,
+          "wall_time_seconds": 0.2411091000030865,
+          "final_point_rmse": 188.25744899119397,
+          "final_angle_error_deg": 140.02968537048267,
+          "contact_intervals": 0,
+          "contact_events": 0,
+          "goal_pose": [
+            256.0,
+            256.0,
+            0.7853981633974483
+          ],
+          "initial_state": [
+            381.0,
+            205.0,
+            308.17327662439345,
+            389.9452340116717,
+            4.6246044103303765
+          ],
+          "final_state": [
+            381.0,
+            205.0,
+            308.17327662439345,
+            389.9452340116717,
+            4.6246044103303765
+          ],
+          "candidate_rollouts": 0,
+          "candidate_physics_substeps": 0,
+          "candidate_rollout_wall_time_seconds": 0.0
+        }
+      ]
+    },
+    "flow_action": {
+      "schema_version": 1,
+      "method": "flow_action",
+      "split": "test",
+      "episodes": [
+        12
+      ],
+      "max_steps_per_episode": 16,
+      "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+      "successes": 0,
+      "count": 1,
+      "success_rate": 0.0,
+      "success_rate_wilson_95": [
+        0.0,
+        0.7934506856227534
+      ],
+      "mean_max_coverage": 0.0,
+      "mean_final_coverage": 0.0,
+      "mean_final_point_rmse": 188.59834821658262,
+      "mean_steps": 16.0,
+      "total_wall_time_seconds": 0.04221109999343753,
+      "total_candidate_rollouts": 0,
+      "total_candidate_physics_substeps": 0,
+      "total_candidate_rollout_wall_time_seconds": 0.0,
+      "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+      "replanning_schedule": "Every action",
+      "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+      "checkpoint": "runs\\stages234_20261022\\flow_action\\best.pt",
+      "checkpoint_sha256": "e2c26101e28712517e781cf2cebfb5667b711347b22fb5735501fa8804c0f72c",
+      "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+      "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+      "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+      "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+      "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+      "controller_note": "direct learned action policy",
+      "results": [
+        {
+          "episode_index": 12,
+          "method": "flow_action",
+          "steps": 16,
+          "success": false,
+          "native_success": false,
+          "initial_coverage": 0.0,
+          "final_coverage": 0.0,
+          "max_coverage": 0.0,
+          "wall_time_seconds": 0.04221109999343753,
+          "final_point_rmse": 188.59834821658262,
+          "final_angle_error_deg": 134.47614721004118,
+          "contact_intervals": 3,
+          "contact_events": 26,
+          "goal_pose": [
+            256.0,
+            256.0,
+            0.7853981633974483
+          ],
+          "initial_state": [
+            381.0,
+            205.0,
+            308.17327662439345,
+            389.9452340116717,
+            4.6246044103303765
+          ],
+          "final_state": [
+            432.70020468511524,
+            362.20885862903486,
+            306.6775963088696,
+            389.8179602498799,
+            4.7215319363652295
+          ],
+          "candidate_rollouts": 0,
+          "candidate_physics_substeps": 0,
+          "candidate_rollout_wall_time_seconds": 0.0
+        }
+      ]
+    },
+    "visual_dp": {
+      "schema_version": 1,
+      "method": "visual_dp",
+      "split": "test",
+      "episodes": [
+        12
+      ],
+      "max_steps_per_episode": 16,
+      "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+      "successes": 0,
+      "count": 1,
+      "success_rate": 0.0,
+      "success_rate_wilson_95": [
+        0.0,
+        0.7934506856227534
+      ],
+      "mean_max_coverage": 0.0,
+      "mean_final_coverage": 0.0,
+      "mean_final_point_rmse": 184.65603700849016,
+      "mean_steps": 16.0,
+      "total_wall_time_seconds": 0.7403186999945319,
+      "total_candidate_rollouts": 0,
+      "total_candidate_physics_substeps": 0,
+      "total_candidate_rollout_wall_time_seconds": 0.0,
+      "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+      "replanning_schedule": "Every 8 actions",
+      "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+      "checkpoint": "runs\\stages234_20261022\\visual_dp\\best.pt",
+      "checkpoint_sha256": "2acbde007df6913bbb4e1247e2d651fd7b2f33d3ffedaf0a3acc12ae7780a830",
+      "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+      "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+      "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+      "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+      "observations": "two RGB images and pusher xy",
+      "controller_note": "direct learned action policy",
+      "results": [
+        {
+          "episode_index": 12,
+          "method": "visual_dp",
+          "steps": 16,
+          "success": false,
+          "native_success": false,
+          "initial_coverage": 0.0,
+          "final_coverage": 0.0,
+          "max_coverage": 0.0,
+          "wall_time_seconds": 0.7403186999945319,
+          "final_point_rmse": 184.65603700849016,
+          "final_angle_error_deg": 139.4107925541748,
+          "contact_intervals": 3,
+          "contact_events": 18,
+          "goal_pose": [
+            256.0,
+            256.0,
+            0.7853981633974483
+          ],
+          "initial_state": [
+            381.0,
+            205.0,
+            308.17327662439345,
+            389.9452340116717,
+            4.6246044103303765
+          ],
+          "final_state": [
+            431.62551409084443,
+            415.26300187109837,
+            302.61127160590826,
+            389.74530037219296,
+            4.635406127691889
+          ],
+          "candidate_rollouts": 0,
+          "candidate_physics_substeps": 0,
+          "candidate_rollout_wall_time_seconds": 0.0
+        }
+      ]
+    }
+  },
+  "visual_cache": {
+    "schema_version": 1,
+    "parquet_sha256": "9abc0431f12d10c33b5b37b1bf1e6e557c8ae1c8c29fb86658969e48fcbbbf01",
+    "video_sha256": "f58d11857651dad5983c021b56a50a68a6ce19068834c1fb5cac099219fb3a78",
+    "image_shape": [
+      25650,
+      96,
+      96,
+      3
+    ],
+    "frames": 25650,
+    "episode_count": 206,
+    "alignment": "row t/image t is before absolute pusher-target action t; 10 Hz",
+    "cache_sha256": {
+      "images.npy": "32b0bc1e9c68f7b1026bb45468090eb04cf3089c7474053bf4b84dff119902a8",
+      "metadata.npz": "4826c27601f41a0e662d2f1cb518168812b65e363251c67b954aafeb9c09a993"
+    }
+  },
+  "visual_prepare_command": {
+    "arguments": [
+      "research/visual_dp.py",
+      "prepare"
+    ],
+    "fresh_process": true,
+    "exit_code": 0
+  },
+  "visual_cpu_smoke": {
+    "arguments": [
+      "research/visual_dp.py",
+      "smoke",
+      "--device",
+      "cpu"
+    ],
+    "fresh_process": true,
+    "exit_code": 0,
+    "loss": 0.9541735053062439,
+    "parameters": 5796130,
+    "visual_encoder_nonzero_gradient": true,
+    "episode_window_boundaries_checked": true
+  },
+  "code_sha256": {
+    "scripts/setup_windows.ps1": "bffea5ae83e67d2c157b41cc4ac938993ed9b13fb15a5082050d27c4d5bbc8c2",
+    "scripts/restore_resources.ps1": "8ef2a251bfce5a92c2d3621d8616a950f0c63cbc329a4af64febad0092eb5009",
+    "scripts/restore_artifact.py": "b3670fc5d6ef149fe51a231bcfb131fceb1885cc9d1110603cdbb671e44dd218",
+    "scripts/rebuild_derived.py": "30d84f3a3a25dc93aa719a806d577bf81a9b8daaaae05b43f75bb39d73f727e9",
+    "scripts/simple_push.py": "ac797090862b0b216c145a11963549cd0ecc0fa03afb643b1ef262d9d49aa314",
+    "scripts/reconstruct_contacts.py": "9fc334b407d6905cd035a665ae9c334c6a8e28ebf5f8658ffaedec99a7f11fc5",
+    "scripts/audit_dataset.py": "5820d29481be144d532e11f1eb41d826754b57cfe1453a2930114722ed9d16ee",
+    "research/controller.py": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+    "research/evaluate_closed_loop.py": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+    "research/contact_learning.py": "010148dae7a26a5ed724e0fcaf181a242bf6536b18c8e903cea7e3ccbe77d289",
+    "research/visual_dp.py": "ac9fb1fb11b1a7047b40880c1aeb9d8a09a94acd2b1e90e79096ef40455c305a"
+  },
+  "path_normalization": "Private absolute paths replaced by $CLEAN_CHECKOUT, $SOURCE_WORKSPACE or $PYTHON_RUNTIME; command arguments otherwise retain actual values.",
+  "published_assets_check": {
+    "status": "passed",
+    "model_zip_sha256": "d4d2c96ac7da59f9cab13e6b84f9324118e2ba3d6d3389f65a647c9862bf212e",
+    "evidence_zip_sha256": "8b45c921cd6ea14f68f301cf69122b4e4004f9c3e388406f429153dbc5c72f2f",
+    "restore_exit_code": 0,
+    "loaded_checkpoints": 11,
+    "cpu_comparisons": {
+      "learned_contact": {
+        "all_arrays_exactly_equal_to_original_checkpoint_cpu_run": true,
+        "array_checks": {
+          "episode_index": true,
+          "states": true,
+          "actions": true,
+          "coverage": true,
+          "contact_event_counts": true,
+          "selected_contact_indices": true,
+          "desired_flow_world": true,
+          "observations_rgb": true,
+          "goal_pose": true
+        },
+        "published_run_npz_sha256": "005da8e36307265acab85a71d44f28248f9af87661acc1f177e01200a4824da3",
+        "original_run_npz_sha256": "005da8e36307265acab85a71d44f28248f9af87661acc1f177e01200a4824da3",
+        "steps": 16
+      },
+      "visual_dp": {
+        "all_arrays_exactly_equal_to_original_checkpoint_cpu_run": true,
+        "array_checks": {
+          "episode_index": true,
+          "states": true,
+          "actions": true,
+          "coverage": true,
+          "contact_event_counts": true,
+          "selected_contact_indices": true,
+          "desired_flow_world": true,
+          "observations_rgb": true,
+          "goal_pose": true
+        },
+        "published_run_npz_sha256": "90c296cc053ae2869c9623f7006c827cb65e45063d6ba9050bdce788a21e2364",
+        "original_run_npz_sha256": "90c296cc053ae2869c9623f7006c827cb65e45063d6ba9050bdce788a21e2364",
+        "steps": 16
+      }
+    },
+    "commands": [
+      {
+        "arguments": [
+          "-c",
+          "from pathlib import Path; import json; from research.contact_learning import load_policy; from research.visual_dp import load_policy as load_dp; paths=sorted(Path('runs/stages234_20261022').glob('*/best.pt')); policies=[(str(p), (load_dp if p.parent.name=='visual_dp' else load_policy)(p,device='cpu')) for p in paths]; print(json.dumps({'status':'passed','loaded_checkpoints':len(policies),'paths':[p for p,_ in policies]}))"
+        ],
+        "exit_code": 0,
+        "fresh_process": true,
+        "elapsed_seconds": 9.01655369999935,
+        "log": "release_cpu_0.log"
+      },
+      {
+        "arguments": [
+          "research/evaluate_closed_loop.py",
+          "--method",
+          "learned_contact",
+          "--split",
+          "test",
+          "--episode-ids",
+          "12",
+          "--max-steps",
+          "16",
+          "--device",
+          "cpu",
+          "--videos",
+          "0",
+          "--output-dir",
+          "runs/release_smoke_learned_contact",
+          "--factory",
+          "research.contact_learning:load_policy",
+          "--checkpoint",
+          "runs/stages234_20261022/contact_main/best.pt"
+        ],
+        "exit_code": 0,
+        "fresh_process": true,
+        "elapsed_seconds": 3.5833678000053624,
+        "log": "release_cpu_1.log"
+      },
+      {
+        "arguments": [
+          "research/evaluate_closed_loop.py",
+          "--method",
+          "visual_dp",
+          "--split",
+          "test",
+          "--episode-ids",
+          "12",
+          "--max-steps",
+          "16",
+          "--device",
+          "cpu",
+          "--videos",
+          "0",
+          "--output-dir",
+          "runs/release_smoke_visual_dp",
+          "--factory",
+          "research.visual_dp:load_policy",
+          "--checkpoint",
+          "runs/stages234_20261022/visual_dp/best.pt"
+        ],
+        "exit_code": 0,
+        "fresh_process": true,
+        "elapsed_seconds": 6.392489800004114,
+        "log": "release_cpu_2.log"
+      }
+    ],
+    "package_stage": "preview release candidate; final asset must independently match its own release manifest"
+  },
+  "setup_data_only_check": {
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "scripts/setup_windows.ps1",
+      "-Mode",
+      "DataOnly",
+      "-CheckOnly"
+    ],
+    "exit_code": 0,
+    "default_environment": ".venv",
+    "locked_versions": "passed",
+    "no_installation": true
+  },
+  "log_files_sha256": {
+    "logs/command_0.log": "0606b8b1ca364b784e48ca227622bb3e9bd0de0f2baaf4772a76c8b80f7c3fee",
+    "logs/command_1.log": "c842441145f1a16a0be2ae782b61918b87fddf222f5a83b47ffa0159b24ca28d",
+    "logs/command_2.log": "2458279103ddd0700e694f15f94a597e76825272c5943d0200b96aaade77f742",
+    "logs/command_3.log": "772178acfe31aa28a5f1028db31ccf47b57909074f0131313cbb86e07fbfad3c",
+    "logs/command_4.log": "1ac357a0837bb1b2c27604f72d1ecf0c556c1b9dcd6da80efc5f58e87c09f571",
+    "logs/rebuild.log": "5e207f4e3558fb643ec4fdc10c79330b8a9b3a881d15623fecd40d927a681a3f",
+    "logs/release_cpu_0.log": "1f8fb92271ca6b12ee0a9a86f7cf439d58e550c6533042f2efa0e670cf1a013b",
+    "logs/release_cpu_1.log": "279961ed83a58a28378944d70224ba714dee171871b6c11b1cc9a35059d2cce3",
+    "logs/release_cpu_2.log": "0426937642d00af4743695aacf41fe2c84ce8b39e1f585a735b7cd3bbd96c7d4",
+    "logs/release_restore.log": "ddfe1d4373e9e6b2f4e665cd6cd7b80ee20a71f8b6d5c505939e15c0bc5329e6",
+    "logs/visual_cpu_smoke.log": "60903f90b800fade87c4a1fb0d3c857c89a06761d04ca43ec7081e5c3763cd8a",
+    "logs/visual_prepare.log": "f7a00856663bef3a0eaaefab4f0126c26a8b20f1605e7b7b98efbd9f17745f6d"
+  }
+}

@@ -1,0 +1,78 @@
+{"episode_index": 12, "method": "learned_contact", "steps": 16, "success": false, "native_success": false, "initial_coverage": 0.0, "final_coverage": 0.0, "max_coverage": 0.0, "wall_time_seconds": 0.28619070000422653, "final_point_rmse": 188.25744899119397, "final_angle_error_deg": 140.02968537048267, "contact_intervals": 0, "contact_events": 0, "goal_pose": [256.0, 256.0, 0.7853981633974483], "initial_state": [381.0, 205.0, 308.17327662439345, 389.9452340116717, 4.6246044103303765], "final_state": [381.0, 205.0, 308.17327662439345, 389.9452340116717, 4.6246044103303765], "candidate_rollouts": 0, "candidate_physics_substeps": 0, "candidate_rollout_wall_time_seconds": 0.0}
+
+{
+
+  "schema_version": 1,
+
+  "method": "learned_contact",
+
+  "split": "test",
+
+  "episodes": [
+
+    12
+
+  ],
+
+  "max_steps_per_episode": 16,
+
+  "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+
+  "successes": 0,
+
+  "count": 1,
+
+  "success_rate": 0.0,
+
+  "success_rate_wilson_95": [
+
+    0.0,
+
+    0.7934506856227534
+
+  ],
+
+  "mean_max_coverage": 0.0,
+
+  "mean_final_coverage": 0.0,
+
+  "mean_final_point_rmse": 188.25744899119397,
+
+  "mean_steps": 16.0,
+
+  "total_wall_time_seconds": 0.28619070000422653,
+
+  "total_candidate_rollouts": 0,
+
+  "total_candidate_physics_substeps": 0,
+
+  "total_candidate_rollout_wall_time_seconds": 0.0,
+
+  "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+
+  "replanning_schedule": "Replan after completing the queued approach, push and hold; executed states are observed every action.",
+
+  "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+
+  "checkpoint": "runs\\stages234_20261022\\contact_main\\best.pt",
+
+  "checkpoint_sha256": "3a7dd6a7164dee9f3a30d62149cf8d50ab28632afa932636ea79aed943af3d11",
+
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+
+  "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+
+  "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+
+  "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+
+  "observations": "privileged simulator pose, fixed geometry, actual pusher xy; target-generated flow",
+
+  "controller_note": "8 contact candidates x 2 push lengths, shared simulator-dynamics candidate model and visibility-graph paths; collision warm-start caches are rebuilt"
+
+}
+
+
+
+STDERR:
+

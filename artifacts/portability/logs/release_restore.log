@@ -1,0 +1,12 @@
+{"status": "passed", "network_used": false, "extracted_sources": [{"repository": "gym-pusht", "revision": "e49cf07fd32ad6e69443af2921dd8343b0f9ad7d", "verified_files": 15, "created_missing_files": 15}, {"repository": "diffusion_policy", "revision": "5ba07ac6661db573af695b419a7947ecb704690f", "verified_files": 369, "created_missing_files": 369}]}
+
+{"status": "passed", "zip_sha256": "d4d2c96ac7da59f9cab13e6b84f9324118e2ba3d6d3389f65a647c9862bf212e", "zip_name": "models.zip", "files": 11, "created": 11, "identical_existing_skipped": 0, "overwrite_existing": false}
+
+{"status": "passed", "zip_sha256": "8b45c921cd6ea14f68f301cf69122b4e4004f9c3e388406f429153dbc5c72f2f", "zip_name": "evidence.zip", "files": 1214, "created": 1211, "identical_existing_skipped": 3, "overwrite_existing": false}
+
+Restoration completed; report directory: $PUBLISHED_CHECKOUT\runs\release_restore_check
+
+
+
+STDERR:
+

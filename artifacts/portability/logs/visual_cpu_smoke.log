@@ -1,0 +1,2 @@
+{"status": "passed", "device": "cpu", "loss": 0.9541735053062439, "parameters": 5796130, "visual_encoder_nonzero_gradient": true, "episode_window_boundaries_checked": true}
+

@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "non_contact_clone_max_state_error": 0.0,
+  "contact_clone_comparisons": [
+    {
+      "step": 0,
+      "contact_events": 5,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 1,
+      "contact_events": 10,
+      "max_xy_error": 0.02864845932907656,
+      "angle_error_rad": 0.00015062738344701065
+    },
+    {
+      "step": 2,
+      "contact_events": 9,
+      "max_xy_error": 0.0020738051291573356,
+      "angle_error_rad": 9.983189235701628e-06
+    },
+    {
+      "step": 3,
+      "contact_events": 10,
+      "max_xy_error": 0.011943434889758464,
+      "angle_error_rad": 5.6142335131903476e-05
+    },
+    {
+      "step": 4,
+      "contact_events": 9,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 5,
+      "contact_events": 10,
+      "max_xy_error": 2.186837548379117e-05,
+      "angle_error_rad": 1.0292763799601978e-07
+    },
+    {
+      "step": 6,
+      "contact_events": 9,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 7,
+      "contact_events": 10,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 8,
+      "contact_events": 10,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 9,
+      "contact_events": 10,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 10,
+      "contact_events": 10,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 11,
+      "contact_events": 9,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 12,
+      "contact_events": 10,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 13,
+      "contact_events": 10,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    },
+    {
+      "step": 14,
+      "contact_events": 10,
+      "max_xy_error": 0.0,
+      "angle_error_rad": 0.0
+    }
+  ],
+  "contact_clone_max_xy_error": 0.02864845932907656,
+  "contact_clone_max_angle_error_rad": 0.00015062738344701065,
+  "clone_limitation": "Body state/velocities are copied; persistent collision arbiter warm-start caches are rebuilt. Candidate predictions are approximate.",
+  "real_environment_unchanged_during_private_rollouts": true,
+  "same_current_pose_as_goal_gives_zero_flow": true,
+  "contact_scores_change_selected_candidates": [
+    {
+      "highest_score_index": 8,
+      "selected_index": 8,
+      "candidate_contacts": [
+        8
+      ]
+    },
+    {
+      "highest_score_index": 16,
+      "selected_index": 16,
+      "candidate_contacts": [
+        16
+      ]
+    }
+  ],
+  "npz_and_parquet_readers_blocked_during_planning": true
+}

@@ -1,0 +1,103 @@
+{
+  "audit_type": "Post-hoc read-only clearance audit of previously saved original closed-loop test trajectories",
+  "record_date_local": "2026-10-22",
+  "provenance": "This JSON records the previously completed read-only inspection and exact aggregate results from this task's tool output. Saving this record did not rerun the simulations, alter the original experiment files, or recompute the full audit.",
+  "source_root_relative_to_project": "runs/stages234_20261022",
+  "source_file_pattern": "{method_directory}/episode_*.npz",
+  "source_array": "states[:, :2] (actual pusher center x, y; includes initial state and states after each executed control action)",
+  "sample_rate_hz": 10,
+  "units": "PushT world-coordinate length units",
+  "geometry": {
+    "wall_segment_center_coordinates": [
+      5,
+      506
+    ],
+    "wall_segment_radius": 2,
+    "wall_interior_faces": [
+      7,
+      504
+    ],
+    "pusher_circle_radius": 15,
+    "nonpenetrating_center_interval_each_axis": [
+      22,
+      489
+    ],
+    "additional_safety_margin": 0
+  },
+  "calculation": {
+    "state_clearance": "min(x - 22, y - 22, 489 - x, 489 - y)",
+    "negative_value_meaning": "Pusher circle geometrically overlaps at least one wall interior face by -clearance length units.",
+    "violating_state_condition": "state_clearance < -1e-6",
+    "violating_episode_condition": "At least one saved state in the episode satisfies the violating_state_condition.",
+    "min_wall_clearance": "Minimum state_clearance over all saved states in the method's 21 original test episodes."
+  },
+  "shared_test_episode_indices": [
+    12,
+    41,
+    55,
+    62,
+    68,
+    71,
+    83,
+    89,
+    96,
+    97,
+    102,
+    105,
+    115,
+    121,
+    134,
+    145,
+    157,
+    159,
+    162,
+    170,
+    205
+  ],
+  "results": [
+    {
+      "method": "rule",
+      "directory": "rule_test",
+      "episode_count": 21,
+      "saved_state_count": 5414,
+      "violating_episode_count": 0,
+      "violating_state_count": 0,
+      "min_wall_clearance": 0.805617386659776,
+      "violating_episodes": []
+    },
+    {
+      "method": "learned_contact_main_seed0",
+      "directory": "contact_test",
+      "episode_count": 21,
+      "saved_state_count": 5342,
+      "violating_episode_count": 0,
+      "violating_state_count": 0,
+      "min_wall_clearance": 2.8374446581545953,
+      "violating_episodes": []
+    },
+    {
+      "method": "flow_action",
+      "directory": "flow_action_test",
+      "episode_count": 21,
+      "saved_state_count": 6321,
+      "violating_episode_count": 1,
+      "violating_state_count": 37,
+      "min_wall_clearance": -9.945830683842985,
+      "violating_episodes": [
+        {
+          "episode_index": 102,
+          "violating_state_count": 37,
+          "min_wall_clearance": -9.945830683842985
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Only saved 10 Hz control states were inspected. Physics substeps between saved states were not checked; nonnegative sampled clearance is not a substep collision-safety guarantee.",
+    "This audit measures actual pusher-circle clearance against the four original fixed walls. It does not assess T-object clearance, mechanical-arm geometry, force limits, or arbitrary obstacles.",
+    "Only the three listed original methods were inspected; this record does not claim results for visual diffusion policy, other contact seeds, or supplemental no-flow experiments.",
+    "No new independent test episodes are added. This is a diagnostic of the existing 21-scenario test set.",
+    "The kinematic pusher is not physically blocked by static walls; this geometric diagnostic must not be interpreted as a wall-reaction guarantee.",
+    "The controller's nominal action limits 21..491 do not strictly contain the radius-15 pusher within wall interior faces 7..504. Safe nominal centers without an additional tracking margin would be 22..489."
+  ]
+}

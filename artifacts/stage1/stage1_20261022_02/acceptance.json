@@ -1,0 +1,264 @@
+{
+  "started_at_utc": "2026-10-22T08:14:20.981280+00:00",
+  "status": "passed",
+  "run_directory": ".\\runs\\stage1_20261022_02",
+  "fresh_process_per_command": true,
+  "model_training_started": false,
+  "commands": [
+    {
+      "name": "pip_check",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/pip_check.stdout.txt",
+      "stderr_log": "logs/pip_check.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' '-m' 'pip' 'check'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 0.7474197000010463
+    },
+    {
+      "name": "resources",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/prepare_resources.py",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\resources",
+        "--offline"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/resources.stdout.txt",
+      "stderr_log": "logs/resources.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/prepare_resources.py' '--output-dir' '.\\runs\\stage1_20261022_02\\resources' '--offline'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 0.4279999999998836
+    },
+    {
+      "name": "environment",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/check_environment.py",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\inspection"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/environment.stdout.txt",
+      "stderr_log": "logs/environment.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/check_environment.py' '--output-dir' '.\\runs\\stage1_20261022_02\\inspection'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 1.9532426000005216
+    },
+    {
+      "name": "data_inspection",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/inspect_data.py",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\inspection"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/data_inspection.stdout.txt",
+      "stderr_log": "logs/data_inspection.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/inspect_data.py' '--output-dir' '.\\runs\\stage1_20261022_02\\inspection'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 0.9862609000010707
+    },
+    {
+      "name": "replay_3_episodes",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/replay_stage1.py",
+        "--episodes",
+        "3",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\replay"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/replay_3_episodes.stdout.txt",
+      "stderr_log": "logs/replay_3_episodes.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/replay_stage1.py' '--episodes' '3' '--output-dir' '.\\runs\\stage1_20261022_02\\replay'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 4.692022999999608
+    },
+    {
+      "name": "contact_visualization",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/visualize_contacts.py",
+        "--input",
+        ".\\runs\\stage1_20261022_02\\replay\\data\\derived\\probe_3_episodes\\episode_000000.npz",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\visualization"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/contact_visualization.stdout.txt",
+      "stderr_log": "logs/contact_visualization.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/visualize_contacts.py' '--input' '.\\runs\\stage1_20261022_02\\replay\\data\\derived\\probe_3_episodes\\episode_000000.npz' '--output-dir' '.\\runs\\stage1_20261022_02\\visualization'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 3.3570614000018395
+    },
+    {
+      "name": "simple_push_a",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/simple_push.py",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\simple_push_a"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/simple_push_a.stdout.txt",
+      "stderr_log": "logs/simple_push_a.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/simple_push.py' '--output-dir' '.\\runs\\stage1_20261022_02\\simple_push_a'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 7.865801399999327
+    },
+    {
+      "name": "simple_push_b",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/simple_push.py",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\simple_push_b"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 0,
+      "stdout_log": "logs/simple_push_b.stdout.txt",
+      "stderr_log": "logs/simple_push_b.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/simple_push.py' '--output-dir' '.\\runs\\stage1_20261022_02\\simple_push_b'",
+      "exit_code": 0,
+      "passed": true,
+      "duration_s": 8.102389499999845
+    },
+    {
+      "name": "refuse_existing_demo_output",
+      "arguments": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/simple_push.py",
+        "--output-dir",
+        ".\\runs\\stage1_20261022_02\\simple_push_a"
+      ],
+      "cwd": ".",
+      "expected_exit_code": 1,
+      "stdout_log": "logs/refuse_existing_demo_output.stdout.txt",
+      "stderr_log": "logs/refuse_existing_demo_output.stderr.txt",
+      "powershell_command": "& '.\\.venv\\Scripts\\python.exe' 'scripts/simple_push.py' '--output-dir' '.\\runs\\stage1_20261022_02\\simple_push_a'",
+      "exit_code": 1,
+      "passed": true,
+      "duration_s": 0.5784074000002875
+    }
+  ],
+  "checks": {
+    "installed_distributions_match_lock": {
+      "passed": true,
+      "result": {
+        "av": "16.0.1",
+        "cffi": "2.1.1",
+        "cloudpickle": "3.1.2",
+        "Farama-Notifications": "0.0.6",
+        "gymnasium": "0.29.1",
+        "numpy": "1.26.4",
+        "opencv-python": "4.10.0.84",
+        "pillow": "11.3.0",
+        "pyarrow": "17.0.0",
+        "pycparser": "3.11",
+        "pygame": "2.5.2",
+        "pymunk": "6.6.0",
+        "shapely": "2.0.6",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    "independent_environment_and_imports": {
+      "passed": true,
+      "result": true
+    },
+    "raw_data_time_and_geometry": {
+      "passed": true,
+      "result": true
+    },
+    "fresh_replay_audited": {
+      "passed": true,
+      "result": true
+    },
+    "video_alignment_regression": {
+      "passed": true,
+      "result": {
+        "mean_iou": 0.9577513281922773,
+        "minimum_iou": 0.8107142857142857,
+        "minimum_mean_threshold": 0.9,
+        "minimum_frame_threshold": 0.7,
+        "purpose": "Coarse regression check, not exact pose/contact ground truth; no data filtering."
+      }
+    },
+    "demo_reproducibility": {
+      "passed": true,
+      "result": {
+        "identical_fields": 16,
+        "comparison": "exact array equality in two fresh processes"
+      }
+    },
+    "real_contact_and_object_motion": {
+      "passed": true,
+      "result": true
+    },
+    "existing_demo_output_preserved": {
+      "passed": true,
+      "result": true
+    },
+    "existing_output_error_is_explicit": {
+      "passed": true,
+      "result": true
+    },
+    "official_sources_verified": {
+      "passed": true,
+      "result": {
+        "required_sources": 4,
+        "pinned_versions_and_local_hashes_match": true
+      }
+    },
+    "existing_project_files_preserved": {
+      "passed": true,
+      "result": {
+        "existing_files_verified_unchanged": 242
+      }
+    }
+  },
+  "failures": [],
+  "official_check": {
+    "path": ".\\reports\\stage1_sources_20261022\\official_sources.json",
+    "sha256": "013de12848ea811e47323123ef667ead3a9b61fd75bd72b3f2b137fe3f8d1cfa",
+    "scope": "Separate earlier network process; not re-fetched by offline acceptance."
+  },
+  "source_files": {
+    "scripts\\acquire_resources.py": "43b07469d9870993ec9cedbc0129e5804201a639b1237e8565d6f600cf5ceea6",
+    "scripts\\audit_dataset.py": "5820d29481be144d532e11f1eb41d826754b57cfe1453a2930114722ed9d16ee",
+    "scripts\\build_progress_pdf.py": "6fdfde31a3ba7ee5701927bda3a817eb36d3b816014b851b2d6e01d39418390d",
+    "scripts\\check_environment.py": "5a9ec64bb0ff0cc586136dbdd3f6200421d9308634b4d2e6a276abcbe3e012a4",
+    "scripts\\check_official_sources.py": "ac7a5c42765fe1b667c1dd1aaeb22c4ec1013866c059d02c39a3dfdc070f2d73",
+    "scripts\\inspect_data.py": "e11a468fff0e88b89de9419a5a4aaaf99246b6fac85b67536123797b2ea5f7f4",
+    "scripts\\prepare_resources.py": "ec4dfc3d48397516d9d0d95a58328e91631aee29deb4b81e09d83a42999e147c",
+    "scripts\\reconstruct_contacts.py": "9fc334b407d6905cd035a665ae9c334c6a8e28ebf5f8658ffaedec99a7f11fc5",
+    "scripts\\replay_stage1.py": "0110f072503540562d2dfe94dc90e929eb848a5f8dc7374703d704dcf3fe0f05",
+    "scripts\\run_stage1.py": "0bbb2e74c808ea0cf73652c06c36fd5ca79b7cede748b8374f3acadafa4ce9a1",
+    "scripts\\simple_push.py": "ac797090862b0b216c145a11963549cd0ecc0fa03afb643b1ef262d9d49aa314",
+    "scripts\\visualize_contacts.py": "c609cd4160d45269d763b6cd5289283d3f898b7a185bd5c9fc9eb92a88680aca"
+  },
+  "requirements_sha256": "b2fa6174bc85569c8d07fac34abd12e271ff872731c539eeced707062eca38ba",
+  "finished_at_utc": "2026-10-22T08:14:49.867465+00:00"
+}

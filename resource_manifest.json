@@ -1,0 +1,77 @@
+{
+  "dataset": "lerobot/pusht",
+  "dataset_revision": "7628202a2180972f291ba1bc6723834921e72c19",
+  "repositories": {
+    "gym-pusht": [
+      "huggingface/gym-pusht",
+      "e49cf07fd32ad6e69443af2921dd8343b0f9ad7d"
+    ],
+    "diffusion_policy": [
+      "real-stanford/diffusion_policy",
+      "5ba07ac6661db573af695b419a7947ecb704690f"
+    ]
+  },
+  "files": [
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/.gitattributes",
+      "path": "data\\raw\\lerobot_pusht\\.gitattributes",
+      "bytes": 2419,
+      "sha256": "a2bdf429c1bc3858213bb4b7a748fa36a71536a5a1ff98861281853c3c2be1f2"
+    },
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/README.md",
+      "path": "data\\raw\\lerobot_pusht\\README.md",
+      "bytes": 3538,
+      "sha256": "246e94b68f204bfcd05bb32e23631c3316b8de6152d7a85e693d4455540ef72f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/data/chunk-000/file-000.parquet",
+      "path": "data\\raw\\lerobot_pusht\\data\\chunk-000\\file-000.parquet",
+      "bytes": 674393,
+      "sha256": "9abc0431f12d10c33b5b37b1bf1e6e557c8ae1c8c29fb86658969e48fcbbbf01"
+    },
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/meta/episodes/chunk-000/file-000.parquet",
+      "path": "data\\raw\\lerobot_pusht\\meta\\episodes\\chunk-000\\file-000.parquet",
+      "bytes": 106584,
+      "sha256": "bc1226f33d3d1635ec1954f9942073709be8e106fde5f4f16b9d52edc4e0ebc4"
+    },
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/meta/info.json",
+      "path": "data\\raw\\lerobot_pusht\\meta\\info.json",
+      "bytes": 2261,
+      "sha256": "0b46becc21ad92b117da1e95daf44110bb21d0bde75638b4ad167c8ccd959d38"
+    },
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/meta/stats.json",
+      "path": "data\\raw\\lerobot_pusht\\meta\\stats.json",
+      "bytes": 4371,
+      "sha256": "2a58f97df48893274c587fdf09f5cecb31fe385b1e188a82197a8972ccfb9d6d"
+    },
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/meta/tasks.parquet",
+      "path": "data\\raw\\lerobot_pusht\\meta\\tasks.parquet",
+      "bytes": 2265,
+      "sha256": "95535f5152771bc0a6ab0fd93d23d7c1fecd9b7a13dc117852dfdd94f5b2c711"
+    },
+    {
+      "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/videos/observation.image/chunk-000/file-000.mp4",
+      "path": "data\\raw\\lerobot_pusht\\videos\\observation.image\\chunk-000\\file-000.mp4",
+      "bytes": 6890970,
+      "sha256": "f58d11857651dad5983c021b56a50a68a6ce19068834c1fb5cac099219fb3a78"
+    },
+    {
+      "url": "https://codeload.github.com/huggingface/gym-pusht/zip/e49cf07fd32ad6e69443af2921dd8343b0f9ad7d",
+      "path": "downloads\\gym-pusht-e49cf07fd32ad6e69443af2921dd8343b0f9ad7d.zip",
+      "bytes": 50560,
+      "sha256": "b333f4c2016b316d71351e22732f90073c19617051137927e15f07495c6b4b78"
+    },
+    {
+      "url": "https://codeload.github.com/real-stanford/diffusion_policy/zip/5ba07ac6661db573af695b419a7947ecb704690f",
+      "path": "downloads\\diffusion_policy-5ba07ac6661db573af695b419a7947ecb704690f.zip",
+      "bytes": 13363127,
+      "sha256": "3c159ab850b842c47b94257c6d89ef7d2ae911e8c97a1d62da266ef328e50a73"
+    }
+  ],
+  "note": "Public upstream data; contact labels must be reconstructed and validated."
+}

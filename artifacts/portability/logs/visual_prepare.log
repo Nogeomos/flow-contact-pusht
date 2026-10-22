@@ -1,0 +1,36 @@
+{
+
+  "schema_version": 1,
+
+  "parquet_sha256": "9abc0431f12d10c33b5b37b1bf1e6e557c8ae1c8c29fb86658969e48fcbbbf01",
+
+  "video_sha256": "f58d11857651dad5983c021b56a50a68a6ce19068834c1fb5cac099219fb3a78",
+
+  "image_shape": [
+
+    25650,
+
+    96,
+
+    96,
+
+    3
+
+  ],
+
+  "frames": 25650,
+
+  "episode_count": 206,
+
+  "alignment": "row t/image t is before absolute pusher-target action t; 10 Hz",
+
+  "cache_sha256": {
+
+    "images.npy": "32b0bc1e9c68f7b1026bb45468090eb04cf3089c7474053bf4b84dff119902a8",
+
+    "metadata.npz": "4826c27601f41a0e662d2f1cb518168812b65e363251c67b954aafeb9c09a993"
+
+  }
+
+}
+

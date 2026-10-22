@@ -1,0 +1,215 @@
+{
+  "status": "passed",
+  "samples": 9,
+  "selection": "first, middle, last frozen window from each split; display only",
+  "source_windows_sha256": "9a312c926e1408b961b8a906722138b9dae7598b5b93800a3a530d320349f91b",
+  "source_splits_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+  "feature_implementation_sha256": "010148dae7a26a5ed724e0fcaf181a242bf6536b18c8e903cea7e3ccbe77d289",
+  "script_sha256": "86b9728c4c9224b3015a9b1642751772ad8ea6ed4961954c2917f155d5c5a29d",
+  "output_sha256": "519fa6d8ad8e926364bad1772634ab9819f1c15336a374ec2e4f1c9fd72ae92e",
+  "rows": [
+    {
+      "sample_index": 0,
+      "split": "train",
+      "episode_index": 0,
+      "start_action_index": 0,
+      "contact_events": 0,
+      "source_npz_sha256": "b77777e2adaad78bd43b251c993c3e866f54a7500a80b834c140c2d835dee5da"
+    },
+    {
+      "sample_index": 1,
+      "split": "train",
+      "episode_index": 107,
+      "start_action_index": 131,
+      "contact_events": 137,
+      "source_npz_sha256": "4c76ffe755721bf5191b7c8478a8ba70400902015cd67ff956671431907010bc"
+    },
+    {
+      "sample_index": 2,
+      "split": "train",
+      "episode_index": 204,
+      "start_action_index": 124,
+      "contact_events": 68,
+      "source_npz_sha256": "3f21f2d40a6f3ddd0c71bc6cf55334946669d71cddc0b0edcb0fd30d9a697ad1"
+    },
+    {
+      "sample_index": 3,
+      "split": "validation",
+      "episode_index": 11,
+      "start_action_index": 0,
+      "contact_events": 0,
+      "source_npz_sha256": "4397f20f7094adee9a4736a3a8eb64137c8c0c902c2ed6a21bfb27ca8d42b4ed"
+    },
+    {
+      "sample_index": 4,
+      "split": "validation",
+      "episode_index": 116,
+      "start_action_index": 116,
+      "contact_events": 67,
+      "source_npz_sha256": "5ad497135f2876205eec95c4e34b7a0ebd28616b062f9ccdfbfe02159e7b45c6"
+    },
+    {
+      "sample_index": 5,
+      "split": "validation",
+      "episode_index": 195,
+      "start_action_index": 91,
+      "contact_events": 79,
+      "source_npz_sha256": "9a49f2839cb8d1d6002b6e7a891f220587bb0c875c16b665c0f91eff20dfff58"
+    },
+    {
+      "sample_index": 6,
+      "split": "test",
+      "episode_index": 12,
+      "start_action_index": 0,
+      "contact_events": 0,
+      "source_npz_sha256": "b0d0cc1fe09b0ae4cb4f20ababe27654cb5531b1007c299be67a3b514dccb65f"
+    },
+    {
+      "sample_index": 7,
+      "split": "test",
+      "episode_index": 102,
+      "start_action_index": 32,
+      "contact_events": 80,
+      "source_npz_sha256": "8557ac75b0845e771d96ce5e90a70aadf22a1b37dc81c0a0b903e622777fd888"
+    },
+    {
+      "sample_index": 8,
+      "split": "test",
+      "episode_index": 205,
+      "start_action_index": 40,
+      "contact_events": 2,
+      "source_npz_sha256": "9a66a58c61d8bffde6cb8c9f1d692c51e295f79b646ef40bb14156a4a836f6ad"
+    }
+  ],
+  "arrays": {
+    "ids": {
+      "shape": [
+        9,
+        2
+      ],
+      "dtype": "int32"
+    },
+    "split_name": {
+      "shape": [
+        9
+      ],
+      "dtype": "<U10"
+    },
+    "geometry": {
+      "shape": [
+        9,
+        64,
+        13
+      ],
+      "dtype": "float32"
+    },
+    "flow": {
+      "shape": [
+        9,
+        64,
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "contact_soft_target": {
+      "shape": [
+        9,
+        64
+      ],
+      "dtype": "float32"
+    },
+    "contact_presence": {
+      "shape": [
+        9
+      ],
+      "dtype": "bool"
+    },
+    "distance_to_future_contact": {
+      "shape": [
+        9,
+        64
+      ],
+      "dtype": "float32"
+    },
+    "action_target": {
+      "shape": [
+        9,
+        8,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "anchor_state": {
+      "shape": [
+        9,
+        5
+      ],
+      "dtype": "float64"
+    },
+    "states_world": {
+      "shape": [
+        9,
+        9,
+        5
+      ],
+      "dtype": "float64"
+    },
+    "points_world": {
+      "shape": [
+        9,
+        9,
+        64,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "future_flow_world": {
+      "shape": [
+        9,
+        8,
+        64,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "actions_world": {
+      "shape": [
+        9,
+        8,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "per_interval_soft_labels": {
+      "shape": [
+        9,
+        8,
+        64
+      ],
+      "dtype": "float32"
+    },
+    "contact_label_valid": {
+      "shape": [
+        9,
+        8
+      ],
+      "dtype": "bool"
+    },
+    "transition_has_video_endpoint": {
+      "shape": [
+        9,
+        8
+      ],
+      "dtype": "bool"
+    },
+    "contact_events": {
+      "shape": [
+        433
+      ],
+      "dtype": "[('sample_index', '<i4'), ('action_index', '<i4'), ('substep', '<i2'), ('manifold_index', '<i2'), ('point_world', '<f8', (2,)), ('point_local', '<f8', (2,)), ('normal_into_block', '<f8', (2,)), ('arbiter_total_impulse', '<f8', (2,)), ('impulse_on_block', '<f8', (2,)), ('block_is_shape_a', '?'), ('signed_separation', '<f8'), ('distance_to_exterior', '<f8'), ('on_exterior', '?')]"
+    }
+  },
+  "schema_document": "docs/STAGES234_DATA_SCHEMA.md",
+  "future_data_warning": "These are OFFLINE supervised samples. Future demonstration motion and actions must not be passed to a closed-loop policy."
+}

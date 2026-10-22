@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "completed_at_utc": "2026-10-22T09:46:24.515673+00:00",
+  "passed": true,
+  "defect": "Offline evaluation and closed-loop evaluation reused log prefixes. Some command/stdout/stderr evidence was overwritten; trajectories, summaries and checkpoints were not.",
+  "repair": "New fresh processes ran all 21 test episodes for each of four learned checkpoints. Log prefixes closed_loop_verify_* are unique; runner now refuses existing log files. Original records are not rewritten.",
+  "old_command_records_at_recovery": [
+    {
+      "original_prefix": "contact_test",
+      "command_record_at_recovery": {
+        "command": [
+          ".\\.venv-train\\Scripts\\python.exe",
+          "research/evaluate_closed_loop.py",
+          "--method",
+          "learned_contact",
+          "--split",
+          "test",
+          "--episodes",
+          "21",
+          "--max-steps",
+          "300",
+          "--factory",
+          "research.contact_learning:load_policy",
+          "--checkpoint",
+          "runs\\stages234_20261022\\contact_main\\best.pt",
+          "--device",
+          "cpu",
+          "--output-dir",
+          "runs\\stages234_20261022\\contact_test",
+          "--videos",
+          "3"
+        ],
+        "cwd": ".",
+        "started": "2026-10-22T17:38:18.914600",
+        "seconds": 38.97240233421326,
+        "returncode": 0,
+        "stdout": "runs\\stages234_20261022\\logs\\contact_test.stdout.txt",
+        "stderr": "runs\\stages234_20261022\\logs\\contact_test.stderr.txt"
+      },
+      "original_log_is_closed_loop": true,
+      "separately_copied_record": {
+        "command": [
+          ".\\.venv-train\\Scripts\\python.exe",
+          "research/evaluate_closed_loop.py",
+          "--method",
+          "learned_contact",
+          "--split",
+          "test",
+          "--episodes",
+          "21",
+          "--max-steps",
+          "300",
+          "--factory",
+          "research.contact_learning:load_policy",
+          "--checkpoint",
+          "runs\\stages234_20261022\\contact_main\\best.pt",
+          "--device",
+          "cpu",
+          "--output-dir",
+          "runs\\stages234_20261022\\contact_test",
+          "--videos",
+          "3"
+        ],
+        "cwd": ".",
+        "started": "2026-10-22T17:38:18.914600",
+        "seconds": 38.97240233421326,
+        "returncode": 0,
+        "stdout": "runs\\stages234_20261022\\logs\\contact_test.stdout.txt",
+        "stderr": "runs\\stages234_20261022\\logs\\contact_test.stderr.txt"
+      },
+      "copied_record_is_closed_loop": true
+    },
+    {
+      "original_prefix": "flow_action_test",
+      "command_record_at_recovery": {
+        "command": [
+          ".\\.venv-train\\Scripts\\python.exe",
+          "research/contact_learning.py",
+          "evaluate",
+          "--checkpoint",
+          "runs\\stages234_20261022\\flow_action\\best.pt"
+        ],
+        "cwd": ".",
+        "started": "2026-10-22T17:41:27.588631",
+        "seconds": 8.72060489654541,
+        "returncode": 0,
+        "stdout": "runs\\stages234_20261022\\logs\\flow_action_test.stdout.txt",
+        "stderr": "runs\\stages234_20261022\\logs\\flow_action_test.stderr.txt"
+      },
+      "original_log_is_closed_loop": false,
+      "separately_copied_record": null,
+      "copied_record_is_closed_loop": false
+    },
+    {
+      "original_prefix": "contact_seed1_test",
+      "command_record_at_recovery": {
+        "command": [
+          ".\\.venv-train\\Scripts\\python.exe",
+          "research/contact_learning.py",
+          "evaluate",
+          "--checkpoint",
+          "runs\\stages234_20261022\\contact_seed1\\best.pt"
+        ],
+        "cwd": ".",
+        "started": "2026-10-22T17:41:36.310739",
+        "seconds": 8.956501960754395,
+        "returncode": 0,
+        "stdout": "runs\\stages234_20261022\\logs\\contact_seed1_test.stdout.txt",
+        "stderr": "runs\\stages234_20261022\\logs\\contact_seed1_test.stderr.txt"
+      },
+      "original_log_is_closed_loop": false,
+      "separately_copied_record": {
+        "command": [
+          ".\\.venv-train\\Scripts\\python.exe",
+          "research/contact_learning.py",
+          "evaluate",
+          "--checkpoint",
+          "runs\\stages234_20261022\\contact_seed1\\best.pt"
+        ],
+        "cwd": ".",
+        "started": "2026-10-22T17:41:36.310739",
+        "seconds": 8.956501960754395,
+        "returncode": 0,
+        "stdout": "runs\\stages234_20261022\\logs\\contact_seed1_test.stdout.txt",
+        "stderr": "runs\\stages234_20261022\\logs\\contact_seed1_test.stderr.txt"
+      },
+      "copied_record_is_closed_loop": false
+    },
+    {
+      "original_prefix": "contact_seed2_test",
+      "command_record_at_recovery": {
+        "command": [
+          ".\\.venv-train\\Scripts\\python.exe",
+          "research/contact_learning.py",
+          "evaluate",
+          "--checkpoint",
+          "runs\\stages234_20261022\\contact_seed2\\best.pt"
+        ],
+        "cwd": ".",
+        "started": "2026-10-22T17:41:45.268245",
+        "seconds": 8.609167337417603,
+        "returncode": 0,
+        "stdout": "runs\\stages234_20261022\\logs\\contact_seed2_test.stdout.txt",
+        "stderr": "runs\\stages234_20261022\\logs\\contact_seed2_test.stderr.txt"
+      },
+      "original_log_is_closed_loop": false,
+      "separately_copied_record": {
+        "command": [
+          ".\\.venv-train\\Scripts\\python.exe",
+          "research/contact_learning.py",
+          "evaluate",
+          "--checkpoint",
+          "runs\\stages234_20261022\\contact_seed2\\best.pt"
+        ],
+        "cwd": ".",
+        "started": "2026-10-22T17:41:45.268245",
+        "seconds": 8.609167337417603,
+        "returncode": 0,
+        "stdout": "runs\\stages234_20261022\\logs\\contact_seed2_test.stdout.txt",
+        "stderr": "runs\\stages234_20261022\\logs\\contact_seed2_test.stderr.txt"
+      },
+      "copied_record_is_closed_loop": false
+    }
+  ],
+  "protected_original_file_count": 200,
+  "all_original_trajectory_summary_checkpoint_files_unchanged": true,
+  "frozen_controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+  "frozen_evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+  "comparison_policy": "Every NPZ array compared. Exact equality required except coverage permits absolute error <= 1e-12 for GEOS summation order. New wall-clock times are independent measurements, not substituted for historical timing.",
+  "runs": [
+    {
+      "run": "contact",
+      "successes_original": 15,
+      "successes_fresh": 15,
+      "all_21_episode_arrays_accepted": true,
+      "comparison_file": ".\\runs\\stages234_20261022\\fresh_verification\\contact_array_comparison.json",
+      "command_record": ".\\runs\\stages234_20261022\\logs\\closed_loop_verify_contact.command.json",
+      "returncode": 0
+    },
+    {
+      "run": "flowaction",
+      "successes_original": 0,
+      "successes_fresh": 0,
+      "all_21_episode_arrays_accepted": true,
+      "comparison_file": ".\\runs\\stages234_20261022\\fresh_verification\\flowaction_array_comparison.json",
+      "command_record": ".\\runs\\stages234_20261022\\logs\\closed_loop_verify_flowaction.command.json",
+      "returncode": 0
+    },
+    {
+      "run": "seed1",
+      "successes_original": 12,
+      "successes_fresh": 12,
+      "all_21_episode_arrays_accepted": true,
+      "comparison_file": ".\\runs\\stages234_20261022\\fresh_verification\\seed1_array_comparison.json",
+      "command_record": ".\\runs\\stages234_20261022\\logs\\closed_loop_verify_seed1.command.json",
+      "returncode": 0
+    },
+    {
+      "run": "seed2",
+      "successes_original": 15,
+      "successes_fresh": 15,
+      "all_21_episode_arrays_accepted": true,
+      "comparison_file": ".\\runs\\stages234_20261022\\fresh_verification\\seed2_array_comparison.json",
+      "command_record": ".\\runs\\stages234_20261022\\logs\\closed_loop_verify_seed2.command.json",
+      "returncode": 0
+    }
+  ],
+  "protected_before_manifest": ".\\runs\\stages234_20261022\\fresh_verification\\protected_before.json",
+  "historical_tool_receipts": ".\\runs\\stages234_20261022\\fresh_verification\\historical_tool_command_receipts.json",
+  "array_fields_compared": 756,
+  "non_bitwise_equal_fields": [
+    {
+      "run": "contact",
+      "episode_index": 12,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 41,
+      "field": "coverage",
+      "max_absolute_difference": 5.551115123125783e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 55,
+      "field": "coverage",
+      "max_absolute_difference": 3.885780586188048e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 62,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 68,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 71,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 83,
+      "field": "coverage",
+      "max_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 102,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 105,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 134,
+      "field": "coverage",
+      "max_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 145,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 157,
+      "field": "coverage",
+      "max_absolute_difference": 3.885780586188048e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 159,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 162,
+      "field": "coverage",
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "run": "contact",
+      "episode_index": 170,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "flowaction",
+      "episode_index": 62,
+      "field": "coverage",
+      "max_absolute_difference": 1.6653345369377348e-16
+    },
+    {
+      "run": "flowaction",
+      "episode_index": 145,
+      "field": "coverage",
+      "max_absolute_difference": 1.3877787807814457e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 55,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 62,
+      "field": "coverage",
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 68,
+      "field": "coverage",
+      "max_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 83,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 89,
+      "field": "coverage",
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 97,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 145,
+      "field": "coverage",
+      "max_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 162,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "seed1",
+      "episode_index": 170,
+      "field": "coverage",
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 89,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 96,
+      "field": "coverage",
+      "max_absolute_difference": 5.551115123125783e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 97,
+      "field": "coverage",
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 105,
+      "field": "coverage",
+      "max_absolute_difference": 5.551115123125783e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 115,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 134,
+      "field": "coverage",
+      "max_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 170,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    },
+    {
+      "run": "seed2",
+      "episode_index": 205,
+      "field": "coverage",
+      "max_absolute_difference": 3.3306690738754696e-16
+    }
+  ],
+  "all_recovery_commands_returned_zero": true,
+  "reverification_not_additional_test_samples": true
+}

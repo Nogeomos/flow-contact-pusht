@@ -1,0 +1,37 @@
+{
+  "phase": "Training around epochs 30-35, 2026-10-22 local afternoon",
+  "epoch_30_seconds": 36.19352929999877,
+  "epoch_32_seconds": 38.218609800002014,
+  "gpu_snapshot": {
+    "used_MiB": 2492,
+    "free_MiB": 5465,
+    "utilization_percent": 62,
+    "temperature_C": 56,
+    "instantaneous_power_W": 17.02,
+    "SM_clock_MHz": 1035,
+    "memory_clock_MHz": 6001
+  },
+  "subsequent_gpu_snapshot": {
+    "thermal_slowdown_active": false,
+    "hardware_slowdown_active": false,
+    "software_power_cap_active": false,
+    "instantaneous_power_W": 23.33,
+    "SM_clock_MHz": 1245,
+    "power_limit_W": 125.76
+  },
+  "system_snapshot": {
+    "RAM_total_GiB": 15.627452850341797,
+    "RAM_available_GiB": 3.0136070251464844,
+    "AC_connected": true,
+    "battery_percent": 79,
+    "training_python_working_set_GiB": 1.97,
+    "CPU_total_percent": 10,
+    "available_RAM_MiB_later_sample": 2969,
+    "pages_per_second": 61,
+    "disk_bytes_per_second": 1153413,
+    "disk_busy_percent": 1,
+    "other_graphical_applications_running": true
+  },
+  "interpretation": "No evidence of RAM exhaustion, saturated disk, CPU saturation or active thermal throttling in these snapshots. GPU clocks/utilization vary while other graphical applications are active; shared GPU scheduling or dynamic frequency may contribute, but the cause is not proven by these snapshots.",
+  "changes_to_system": "None. No user process stopped and no power/GPU/system setting changed."
+}

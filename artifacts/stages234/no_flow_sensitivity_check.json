@@ -1,0 +1,37 @@
+{
+  "state_source": "validation episode 11 initial state only",
+  "fixed_current_state": [
+    241.0,
+    130.0,
+    149.69473294999196,
+    396.1429309816107,
+    5.120442870049975
+  ],
+  "goals": [
+    [
+      256.0,
+      256.0,
+      0.7853981633974483
+    ],
+    [
+      300.0,
+      300.0,
+      -0.7853981633974483
+    ]
+  ],
+  "models": {
+    "contact_main": {
+      "max_score_difference": 0.6470034718513489,
+      "top1_first": 63,
+      "top1_second": 15,
+      "parameter_count": 40226
+    },
+    "contact_no_flow": {
+      "max_score_difference": 0.0,
+      "top1_first": 15,
+      "top1_second": 15,
+      "parameter_count": 38690
+    }
+  },
+  "note": "Software-level sensitivity check on one validation state; does not prove flow improves test task success. No-flow retains global object/pusher geometry, and the benchmark goal is fixed."
+}

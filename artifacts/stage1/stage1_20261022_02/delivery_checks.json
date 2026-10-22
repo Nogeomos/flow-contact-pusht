@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "visual_review": "Four images inspected from run 01; run 02 image SHA256s are identical. Replay comparison from run 02 inspected separately.",
+  "identical_reviewed_images": {
+    "visualization/contact_sample.png": true,
+    "visualization/no_contact_sample.png": true,
+    "simple_push_a/during_contact.png": true,
+    "simple_push_a/final.png": true
+  },
+  "documentation_links_checked": 34,
+  "accepted_script_hashes_checked": true,
+  "gif_decode_check": "Last frames of all three generated GIFs decode successfully."
+}

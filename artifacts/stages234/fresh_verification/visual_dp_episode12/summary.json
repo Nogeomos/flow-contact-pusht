@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "method": "visual_dp",
+  "split": "test",
+  "episodes": [
+    12
+  ],
+  "max_steps_per_episode": 300,
+  "success_criterion": "coverage >= 0.95 at any executed state; native_success separately uses > 0.95",
+  "successes": 0,
+  "count": 1,
+  "success_rate": 0.0,
+  "success_rate_wilson_95": [
+    0.0,
+    0.7934506856227534
+  ],
+  "mean_max_coverage": 0.01111356075875735,
+  "mean_final_coverage": 0.0,
+  "mean_final_point_rmse": 226.97757128112016,
+  "mean_steps": 300.0,
+  "total_wall_time_seconds": 12.47190000000046,
+  "total_candidate_rollouts": 0,
+  "total_candidate_physics_substeps": 0,
+  "total_candidate_rollout_wall_time_seconds": 0.0,
+  "compute_budget_note": "Equal real action budget, not equal computation: contact controllers simulate candidates; direct policies do not.",
+  "replanning_schedule": "Every 8 actions",
+  "flow_record_note": "NPZ desired_flow_world is recomputed from each observed state for diagnostics. Contact-score inputs are the frozen-at-replan flows stored in each JSON plan.",
+  "checkpoint": "runs\\stages234_20261022\\visual_dp\\best.pt",
+  "checkpoint_sha256": "2acbde007df6913bbb4e1247e2d651fd7b2f33d3ffedaf0a3acc12ae7780a830",
+  "split_sha256": "f9e13e2afba5f8847d7bede18f1b431698314936c7aa336bfa227c661c72bfcd",
+  "controller_sha256": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+  "evaluator_sha256": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+  "future_leakage_guard": "No trajectory data loaded. Planner uses current state and fixed goal only.",
+  "observations": "two RGB images and pusher xy",
+  "controller_note": "direct learned action policy",
+  "results": [
+    {
+      "episode_index": 12,
+      "method": "visual_dp",
+      "steps": 300,
+      "success": false,
+      "native_success": false,
+      "initial_coverage": 0.0,
+      "final_coverage": 0.0,
+      "max_coverage": 0.01111356075875735,
+      "wall_time_seconds": 12.47190000000046,
+      "final_point_rmse": 226.97757128112016,
+      "final_angle_error_deg": 35.33251438812531,
+      "contact_intervals": 133,
+      "contact_events": 1308,
+      "goal_pose": [
+        256.0,
+        256.0,
+        0.7853981633974483
+      ],
+      "initial_state": [
+        381.0,
+        205.0,
+        308.17327662439345,
+        389.9452340116717,
+        4.6246044103303765
+      ],
+      "final_state": [
+        135.4901681711869,
+        200.36041302887656,
+        71.10754291623617,
+        87.8496445341681,
+        0.16872945431639194
+      ],
+      "candidate_rollouts": 0,
+      "candidate_physics_substeps": 0,
+      "candidate_rollout_wall_time_seconds": 0.0
+    }
+  ]
+}

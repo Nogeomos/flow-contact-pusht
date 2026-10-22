@@ -1,0 +1,316 @@
+{
+  "passed": true,
+  "scope": "CPU-only read-only audit of visual policy interfaces, cache and timing; no test demonstrations loaded and no parameters changed",
+  "protected_files_sha256": {
+    "research\\visual_dp.py": "ac9fb1fb11b1a7047b40880c1aeb9d8a09a94acd2b1e90e79096ef40455c305a",
+    "research\\evaluate_closed_loop.py": "d4cc085b67d25f7b1cd7b05affe97557689ee5aa49ae321587924e8a02e0d016",
+    "research\\controller.py": "a04fc5e361ded70ed4d0757a0bcd1dd46ccd5d4d32d4b92b539fae4336a60aa2",
+    "runs\\stages234_20261022\\visual_dp\\best.pt": "2acbde007df6913bbb4e1247e2d651fd7b2f33d3ffedaf0a3acc12ae7780a830",
+    "runs\\stages234_20261022\\visual_dp\\last.pt": "869aba04a5eb601a5b76882b91c91b45911bbe62dbd778c25b072e992fc835c7"
+  },
+  "protected_files_unchanged": true,
+  "raw_actions_minmax": [
+    12.0,
+    511.0
+  ],
+  "action_normalization_roundtrip_max_error": 0.0,
+  "window_boundary_checks": [
+    {
+      "split": "train",
+      "episode": 0,
+      "anchor": 0,
+      "frame": 0
+    },
+    {
+      "split": "train",
+      "episode": 0,
+      "anchor": 1,
+      "frame": 1
+    },
+    {
+      "split": "train",
+      "episode": 0,
+      "anchor": 80,
+      "frame": 80
+    },
+    {
+      "split": "train",
+      "episode": 0,
+      "anchor": 160,
+      "frame": 160
+    },
+    {
+      "split": "train",
+      "episode": 1,
+      "anchor": 161,
+      "frame": 0
+    },
+    {
+      "split": "train",
+      "episode": 1,
+      "anchor": 162,
+      "frame": 1
+    },
+    {
+      "split": "train",
+      "episode": 1,
+      "anchor": 220,
+      "frame": 59
+    },
+    {
+      "split": "train",
+      "episode": 1,
+      "anchor": 278,
+      "frame": 117
+    },
+    {
+      "split": "train",
+      "episode": 2,
+      "anchor": 279,
+      "frame": 0
+    },
+    {
+      "split": "train",
+      "episode": 2,
+      "anchor": 280,
+      "frame": 1
+    },
+    {
+      "split": "train",
+      "episode": 2,
+      "anchor": 349,
+      "frame": 70
+    },
+    {
+      "split": "train",
+      "episode": 2,
+      "anchor": 419,
+      "frame": 140
+    },
+    {
+      "split": "validation",
+      "episode": 11,
+      "anchor": 1535,
+      "frame": 0
+    },
+    {
+      "split": "validation",
+      "episode": 11,
+      "anchor": 1536,
+      "frame": 1
+    },
+    {
+      "split": "validation",
+      "episode": 11,
+      "anchor": 1609,
+      "frame": 74
+    },
+    {
+      "split": "validation",
+      "episode": 11,
+      "anchor": 1683,
+      "frame": 148
+    },
+    {
+      "split": "validation",
+      "episode": 23,
+      "anchor": 2964,
+      "frame": 0
+    },
+    {
+      "split": "validation",
+      "episode": 23,
+      "anchor": 2965,
+      "frame": 1
+    },
+    {
+      "split": "validation",
+      "episode": 23,
+      "anchor": 3019,
+      "frame": 55
+    },
+    {
+      "split": "validation",
+      "episode": 23,
+      "anchor": 3073,
+      "frame": 109
+    },
+    {
+      "split": "validation",
+      "episode": 50,
+      "anchor": 6235,
+      "frame": 0
+    },
+    {
+      "split": "validation",
+      "episode": 50,
+      "anchor": 6236,
+      "frame": 1
+    },
+    {
+      "split": "validation",
+      "episode": 50,
+      "anchor": 6269,
+      "frame": 34
+    },
+    {
+      "split": "validation",
+      "episode": 50,
+      "anchor": 6303,
+      "frame": 68
+    }
+  ],
+  "exact_rgb_video_cache_frames_checked": [
+    0,
+    1,
+    1535,
+    1544
+  ],
+  "validation_episode11_replay_checks": [
+    {
+      "frame": 0,
+      "pusher_xy_error": 0.0,
+      "visible_mask_iou": 0.9811320754716981
+    },
+    {
+      "frame": 1,
+      "pusher_xy_error": 6.040535215808663e-06,
+      "visible_mask_iou": 0.9736842105263158
+    },
+    {
+      "frame": 2,
+      "pusher_xy_error": 9.538274974978326e-06,
+      "visible_mask_iou": 0.9811320754716981
+    },
+    {
+      "frame": 3,
+      "pusher_xy_error": 5.527323025674453e-06,
+      "visible_mask_iou": 0.9810606060606061
+    },
+    {
+      "frame": 4,
+      "pusher_xy_error": 6.974392556045351e-06,
+      "visible_mask_iou": 0.9811320754716981
+    },
+    {
+      "frame": 5,
+      "pusher_xy_error": 7.039366177718167e-06,
+      "visible_mask_iou": 0.9736842105263158
+    },
+    {
+      "frame": 6,
+      "pusher_xy_error": 3.2602454475460008e-06,
+      "visible_mask_iou": 0.9736842105263158
+    },
+    {
+      "frame": 7,
+      "pusher_xy_error": 2.1389617977384806e-06,
+      "visible_mask_iou": 0.9848484848484849
+    },
+    {
+      "frame": 8,
+      "pusher_xy_error": 7.770216721116566e-06,
+      "visible_mask_iou": 0.9847908745247148
+    },
+    {
+      "frame": 9,
+      "pusher_xy_error": 6.849934710515655e-06,
+      "visible_mask_iou": 0.9592592592592593
+    }
+  ],
+  "online_history_spy": {
+    "calls": 3,
+    "at_steps": [
+      0,
+      8,
+      16
+    ],
+    "frames": "[0,0], [7,8], [15,16]",
+    "matched": true
+  },
+  "batch_vs_online_packing_max_action_error": 0.0,
+  "output_shape": [
+    8,
+    2
+  ],
+  "output_minmax": [
+    182.69964599609375,
+    324.86785888671875
+  ],
+  "validation_anchor": 1545,
+  "online_actions": [
+    [
+      293.9148254394531,
+      182.69964599609375
+    ],
+    [
+      302.6063232421875,
+      194.1561279296875
+    ],
+    [
+      307.8960266113281,
+      201.15419006347656
+    ],
+    [
+      316.90777587890625,
+      214.07546997070312
+    ],
+    [
+      320.5941162109375,
+      230.97015380859375
+    ],
+    [
+      322.49603271484375,
+      254.10194396972656
+    ],
+    [
+      324.86785888671875,
+      268.090576171875
+    ],
+    [
+      323.300537109375,
+      281.99468994140625
+    ]
+  ],
+  "reference_actions": [
+    [
+      303.0,
+      241.0
+    ],
+    [
+      306.0,
+      251.0
+    ],
+    [
+      311.0,
+      262.0
+    ],
+    [
+      318.0,
+      280.0
+    ],
+    [
+      323.0,
+      298.0
+    ],
+    [
+      326.0,
+      321.0
+    ],
+    [
+      325.0,
+      339.0
+    ],
+    [
+      325.0,
+      352.0
+    ]
+  ],
+  "read_only_assessment": "No scaling, RGB/BGR, x/y, observation-action index or action-chunk alignment defect found. This does not establish adequate visual policy accuracy.",
+  "limitations": [
+    "Compressed training RGB differs slightly from clean online render.",
+    "60 epochs with small CNN/U-Net and DDIM20 is an adapted limited-budget baseline, not official full reproduction.",
+    "Checkpoint chosen by validation denoising loss; this is not guaranteed to rank closed-loop success.",
+    "One 8-action chunk is executed open-loop before using fresh image observations."
+  ]
+}

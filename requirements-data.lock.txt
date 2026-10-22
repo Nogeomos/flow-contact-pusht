@@ -1,0 +1,14 @@
+av==16.0.1
+cffi==2.1.1
+cloudpickle==3.1.2
+Farama-Notifications==0.0.6
+gymnasium==0.29.1
+numpy==1.26.4
+opencv-python==4.10.0.84
+pillow==11.3.0
+pyarrow==17.0.0
+pycparser==3.11
+pygame==2.5.2
+pymunk==6.6.0
+shapely==2.0.6
+typing_extensions==4.16.0

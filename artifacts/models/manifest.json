@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "release_asset": "models.zip",
+  "note": "Only the visual checkpoint manifest paths changed; all learned tensor values are exactly equal. Historical audit hashes refer to originals.",
+  "files": [
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_128/best.pt",
+      "source_sha256": "c32bd185658ae6a1138973f5179071711b480ce21d8f1c676244d42ae6ac7162",
+      "published_path": "runs/stages234_20261022/contact_128/best.pt",
+      "published_sha256": "c32bd185658ae6a1138973f5179071711b480ce21d8f1c676244d42ae6ac7162",
+      "bytes": 166409,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_32/best.pt",
+      "source_sha256": "85e428086261634074fd8cb400db47ae8a5d7e840520998494485a54181839a1",
+      "published_path": "runs/stages234_20261022/contact_32/best.pt",
+      "published_sha256": "85e428086261634074fd8cb400db47ae8a5d7e840520998494485a54181839a1",
+      "bytes": 166409,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_endpoint/best.pt",
+      "source_sha256": "5b91d35ac15f981dfb46f6afb9d67c48d2890049b5bcc914e93319b40ff305df",
+      "published_path": "runs/stages234_20261022/contact_endpoint/best.pt",
+      "published_sha256": "5b91d35ac15f981dfb46f6afb9d67c48d2890049b5bcc914e93319b40ff305df",
+      "bytes": 161033,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_gru/best.pt",
+      "source_sha256": "7efab2551bf9bc468f6a595ccc0d05ebf359baf6adfe15f8bdf72e697709bd4d",
+      "published_path": "runs/stages234_20261022/contact_gru/best.pt",
+      "published_sha256": "7efab2551bf9bc468f6a595ccc0d05ebf359baf6adfe15f8bdf72e697709bd4d",
+      "bytes": 186883,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_hard/best.pt",
+      "source_sha256": "65b3dc69ee7cfbf5759c23209a707e83f78856eced643148208d8fd572bd41ec",
+      "published_path": "runs/stages234_20261022/contact_hard/best.pt",
+      "published_sha256": "65b3dc69ee7cfbf5759c23209a707e83f78856eced643148208d8fd572bd41ec",
+      "bytes": 166409,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_main/best.pt",
+      "source_sha256": "3a7dd6a7164dee9f3a30d62149cf8d50ab28632afa932636ea79aed943af3d11",
+      "published_path": "runs/stages234_20261022/contact_main/best.pt",
+      "published_sha256": "3a7dd6a7164dee9f3a30d62149cf8d50ab28632afa932636ea79aed943af3d11",
+      "bytes": 166409,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_no_flow/best.pt",
+      "source_sha256": "bf6264074b05bb1f050e5507f97097dddfabef42d55322f9f926ebfaa1d38e7c",
+      "published_path": "runs/stages234_20261022/contact_no_flow/best.pt",
+      "published_sha256": "bf6264074b05bb1f050e5507f97097dddfabef42d55322f9f926ebfaa1d38e7c",
+      "bytes": 160265,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_seed1/best.pt",
+      "source_sha256": "3a1d8e8863c6bf9454686663cb6b1ad745190ae288771ac04fbe8f26467fa3c0",
+      "published_path": "runs/stages234_20261022/contact_seed1/best.pt",
+      "published_sha256": "3a1d8e8863c6bf9454686663cb6b1ad745190ae288771ac04fbe8f26467fa3c0",
+      "bytes": 166409,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/contact_seed2/best.pt",
+      "source_sha256": "186d936ff91f6db5ca538d91933364eaea96b88df384bce4d5bda218d3a4a70c",
+      "published_path": "runs/stages234_20261022/contact_seed2/best.pt",
+      "published_sha256": "186d936ff91f6db5ca538d91933364eaea96b88df384bce4d5bda218d3a4a70c",
+      "bytes": 166409,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/flow_action/best.pt",
+      "source_sha256": "e2c26101e28712517e781cf2cebfb5667b711347b22fb5735501fa8804c0f72c",
+      "published_path": "runs/stages234_20261022/flow_action/best.pt",
+      "published_sha256": "e2c26101e28712517e781cf2cebfb5667b711347b22fb5735501fa8804c0f72c",
+      "bytes": 171913,
+      "transformation": "unchanged"
+    },
+    {
+      "destination": "models",
+      "source_path": "runs/stages234_20261022/visual_dp/best.pt",
+      "source_sha256": "2acbde007df6913bbb4e1247e2d651fd7b2f33d3ffedaf0a3acc12ae7780a830",
+      "published_path": "runs/stages234_20261022/visual_dp/best.pt",
+      "published_sha256": "5859dfd61c867ad8b751e0a7fd5e4430aae5985da8694a6ba790d5299b620269",
+      "bytes": 23305135,
+      "transformation": "checkpoint_manifest_paths_redacted_tensors_unchanged",
+      "details": {
+        "tensors_exactly_equal": true,
+        "tensor_count": 166,
+        "tensor_elements": 5796130,
+        "tensor_payload_sha256": "c8b1cafa3e5bfdde0b13060adfe4d6c5c2a7fc7cb6677af89c37de7319409e80",
+        "changed_only_checkpoint_field": "manifest"
+      }
+    }
+  ]
+}

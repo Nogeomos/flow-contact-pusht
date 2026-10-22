@@ -1,0 +1,10 @@
+{
+  "epochs": 1,
+  "optimizer_steps": 10,
+  "best_validation_noise_mse": 0.9193446040153503,
+  "best_epoch": 1,
+  "wall_seconds": 1.5879892999982985,
+  "cuda_peak_allocated_bytes": 330142208,
+  "best_checkpoint_sha256": "2124d44087f0d5f4757a9237c07605aca7bd5b9a5b2d2ce157cc81189ddd7d29",
+  "test_evaluated": false
+}
