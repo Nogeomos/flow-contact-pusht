@@ -23,10 +23,10 @@
     {
       "destination": "repository",
       "source_path": "README.md",
-      "source_sha256": "79d6581e609f566b77cc4cca8dfe8cb5b0101e80c2c4289b894abcd7f4bffd42",
+      "source_sha256": "6e9090e2f22be17585dda0bbcae5f42c10c24ef3e6e6e9b7db6c8f5e070cd431",
       "published_path": "README.md",
-      "published_sha256": "79d6581e609f566b77cc4cca8dfe8cb5b0101e80c2c4289b894abcd7f4bffd42",
-      "bytes": 11362,
+      "published_sha256": "6e9090e2f22be17585dda0bbcae5f42c10c24ef3e6e6e9b7db6c8f5e070cd431",
+      "bytes": 11657,
       "transformation": "unchanged"
     },
     {
@@ -13187,6 +13187,15 @@
       "published_sha256": "a50022b0a8bced167f1022df6be60f63188f5863408e2a015c3e8d10efb4e78f",
       "bytes": 5393,
       "transformation": "generated_public_model_provenance"
+    },
+    {
+      "destination": "repository",
+      "source_path": "docs/PROJECT_GOALS_AND_RESULTS.md",
+      "source_sha256": "371bf4b8435064cc5f1f36804e0a3db7772121433f895da84c16d5f435ab5fc8",
+      "published_path": "docs/PROJECT_GOALS_AND_RESULTS.md",
+      "published_sha256": "371bf4b8435064cc5f1f36804e0a3db7772121433f895da84c16d5f435ab5fc8",
+      "bytes": 41359,
+      "transformation": "unchanged"
     }
   ],
   "frozen_scientific_sources": {
@@ -13210,5 +13219,26 @@
     "temporary helpers",
     "probe checkpoints",
     "last checkpoints"
+  ],
+  "documentation_updates": [
+    {
+      "updated_utc": "2026-10-22T12:05:29.203719+00:00",
+      "base_commit": "38de6e588d4176db9b85043ad61baef38f99533f",
+      "files": [
+        {
+          "path": "README.md",
+          "previous_published_sha256": "79d6581e609f566b77cc4cca8dfe8cb5b0101e80c2c4289b894abcd7f4bffd42",
+          "published_sha256": "6e9090e2f22be17585dda0bbcae5f42c10c24ef3e6e6e9b7db6c8f5e070cd431"
+        },
+        {
+          "path": "docs/PROJECT_GOALS_AND_RESULTS.md",
+          "previous_published_sha256": null,
+          "published_sha256": "371bf4b8435064cc5f1f36804e0a3db7772121433f895da84c16d5f435ab5fc8"
+        }
+      ],
+      "scope": "Detailed project goals, implementation, measured results, limits and future work; no scientific code, data, checkpoint or result changes.",
+      "frozen_release": "v1.0.0-experiments",
+      "release_assets_manifest_sha256_unchanged": "142dc3121d47a089083b740acdd7fbe1413243f54561563e072bdc1c74774506"
+    }
   ]
 }
